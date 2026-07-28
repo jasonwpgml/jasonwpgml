@@ -2,6 +2,8 @@
   <a href="./README.md">HUMAN.EN</a> · <a href="./README.ko.md">HUMAN.KO</a> · <strong><code>AGENT://</code></strong>
 </p>
 
+<img src="./assets/agent-matrix.gif" alt="Animated green machine-code signal" width="100%">
+
 # `AGENT://JASONWPGML`
 
 > [!NOTE]
