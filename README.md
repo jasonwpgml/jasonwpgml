@@ -9,6 +9,10 @@ Building practical AI systems across the full stack.
 From RAG database architecture and transformer-based LLMs to end-to-end AI agents,
 I connect data, retrieval, orchestration, backends, and interfaces into usable products.
 
+## Current coordinates
+
+<img src="./assets/dunning-kruger-current-state.svg" alt="Dunning–Kruger curve with a red arrow marking my current state near the end of the peak of Mount Stupid" width="100%">
+
 ## Selected work
 
 | Project | Focus |
