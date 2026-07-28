@@ -1,3 +1,7 @@
+<p align="right">
+  <strong>English</strong> · <a href="./README.ko.md">한국어</a>
+</p>
+
 # Jason
 
 Building practical AI applications and automation tools.
