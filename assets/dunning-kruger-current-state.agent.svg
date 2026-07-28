@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-labelledby="title description">
+  <title id="title">Agent cognitive calibration graph</title>
+  <desc id="description">Machine-readable labels place the current self state at the confidence peak</desc>
+  <style>
+    .title { fill: #7ee787; font: 700 23px Consolas, monospace; }
+    .label { fill: #8b949e; font: 600 14px Consolas, monospace; }
+    .axis-label { fill: #6e7681; font: 500 13px Consolas, monospace; }
+    .axis { stroke: #3d444d; }
+    .guide { stroke: #21262d; }
+    .current { fill: #ffffff; font: 800 16px Consolas, monospace; }
+    .status { fill: #3fb950; font: 500 12px Consolas, monospace; }
+  </style>
+  <defs>
+    <linearGradient id="curve" x1="0" x2="1">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="0.38" stop-color="#a371f7"/>
+      <stop offset="1" stop-color="#3fb950"/>
+    </linearGradient>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff5c5c"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="430" rx="20" fill="#050907"/>
+  <path d="M 0 22 H 1000 M 0 408 H 1000" stroke="#12351d" stroke-width="1"/>
+  <text class="title" x="78" y="38">COGNITIVE_CALIBRATION://DK-01</text>
+  <text class="status" x="710" y="36">NODE:JASON  MODE:LEARNING  STATUS:ONLINE</text>
+  <g fill="none" stroke-linecap="round">
+    <path class="guide" d="M 82 102 H 942 M 82 184 H 942 M 82 266 H 942" stroke-width="1" stroke-dasharray="3 10"/>
+    <path class="axis" d="M 82 60 V 356 H 950" stroke-width="2"/>
+    <path class="axis" d="M 82 60 l -5 11 M 82 60 l 5 11 M 950 356 l -11 -5 M 950 356 l -11 5" stroke-width="2"/>
+    <path d="M 96 338 C 132 320,164 270,202 193 C 238 121,262 77,292 78 C 326 79,339 137,361 202 C 390 286,431 334,486 338 C 557 344,619 273,688 226 C 757 179,824 158,932 158" stroke="url(#curve)" stroke-width="8"/>
+  </g>
+  <text class="axis-label" x="746" y="388">KNOWLEDGE++ + EXPERIENCE++</text>
+  <text class="axis-label" transform="translate(35 200) rotate(-90)">CONFIDENCE_LEVEL</text>
+  <text class="label" x="173" y="66">PEAK::IGNORANCE</text>
+  <text class="label" x="404" y="382">VALLEY::DESPAIR</text>
+  <text class="label" x="592" y="310">SLOPE::ENLIGHTENMENT</text>
+  <text class="label" x="714" y="137">PLATEAU::SUSTAINABILITY</text>
+  <g>
+    <rect x="430" y="55" width="218" height="43" rx="5" fill="#da3633"/>
+    <text class="current" x="539" y="83" text-anchor="middle">SELF_STATE::CURRENT</text>
+    <path d="M 430 92 C 383 92,340 83,301 79" fill="none" stroke="#ff5c5c" stroke-width="4" marker-end="url(#arrow-red)"/>
+    <circle cx="292" cy="78" r="8" fill="#ff5c5c" stroke="#ffffff" stroke-width="3"/>
+  </g>
+</svg>

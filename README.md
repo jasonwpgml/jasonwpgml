@@ -11,7 +11,7 @@ I connect data, retrieval, orchestration, backends, and interfaces into usable p
 
 ## Current coordinates
 
-<img src="./assets/dunning-kruger-current-state.svg" alt="Dunning–Kruger curve with a red arrow marking my current state near the end of the peak of Mount Stupid" width="100%">
+<img src="./assets/dunning-kruger-current-state.en.svg" alt="Dunning–Kruger curve with a red marker placing my current state at the summit of Mount Stupid" width="100%">
 
 ## Selected work
 

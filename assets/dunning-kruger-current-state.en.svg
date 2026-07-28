@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-labelledby="title description">
+  <title id="title">The Dunning–Kruger Effect and my current state</title>
+  <desc id="description">A red marker places my current state at the summit of Mount Stupid</desc>
+  <style>
+    .title { fill: #f0f6fc; font: 700 25px "Segoe UI", sans-serif; }
+    .label { fill: #b1bac4; font: 600 15px "Segoe UI", sans-serif; }
+    .axis-label { fill: #8c959f; font: 500 14px "Segoe UI", sans-serif; }
+    .axis { stroke: #6e7681; }
+    .guide { stroke: #30363d; }
+    .current { fill: #ffffff; font: 800 16px "Segoe UI", sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="curve" x1="0" x2="1">
+      <stop offset="0" stop-color="#2f81f7"/>
+      <stop offset="0.38" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#2da44e"/>
+    </linearGradient>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f85149"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="430" rx="20" fill="#0d1117"/>
+  <text class="title" x="78" y="38">The Dunning–Kruger Effect</text>
+  <g fill="none" stroke-linecap="round">
+    <path class="guide" d="M 82 102 H 942 M 82 184 H 942 M 82 266 H 942" stroke-width="1" stroke-dasharray="4 9"/>
+    <path class="axis" d="M 82 60 V 356 H 950" stroke-width="2"/>
+    <path class="axis" d="M 82 60 l -5 11 M 82 60 l 5 11 M 950 356 l -11 -5 M 950 356 l -11 5" stroke-width="2"/>
+    <path d="M 96 338 C 132 320,164 270,202 193 C 238 121,262 77,292 78 C 326 79,339 137,361 202 C 390 286,431 334,486 338 C 557 344,619 273,688 226 C 757 179,824 158,932 158" stroke="url(#curve)" stroke-width="8"/>
+  </g>
+  <text class="axis-label" x="794" y="388">KNOWLEDGE &amp; EXPERIENCE</text>
+  <text class="axis-label" transform="translate(35 166) rotate(-90)">CONFIDENCE</text>
+  <text class="label" x="192" y="66">MOUNT STUPID</text>
+  <text class="label" x="404" y="382">VALLEY OF DESPAIR</text>
+  <text class="label" x="611" y="310">SLOPE OF ENLIGHTENMENT</text>
+  <text class="label" x="730" y="137">PLATEAU OF SUSTAINABILITY</text>
+  <g>
+    <rect x="430" y="55" width="190" height="43" rx="10" fill="#da3633"/>
+    <text class="current" x="525" y="83" text-anchor="middle">MY CURRENT STATE</text>
+    <path d="M 430 92 C 383 92,340 83,301 79" fill="none" stroke="#f85149" stroke-width="4" marker-end="url(#arrow-red)"/>
+    <circle cx="292" cy="78" r="8" fill="#f85149" stroke="#ffffff" stroke-width="3"/>
+  </g>
+</svg>
