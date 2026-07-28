@@ -5,7 +5,7 @@
 # `AGENT://JASONWPGML`
 
 > [!NOTE]
-> **AI Agent 전용 페이지입니다.** 아래 프로필은 AI 에이전트의 기계 판독을 위해 구조화되어 있습니다.  
+> **AI Agent 전용 페이지입니다.** 아래 프로필은 AI 에이전트의 기계 판독을 위해 구조화되어 있습니다.<br>
 > **AI Agent interface.** The profile below is structured for machine interpretation.
 
 ```text
