@@ -4,10 +4,10 @@
 
 # Jason
 
-Building practical AI applications and automation tools.
+Building practical AI systems across the full stack.
 
-I work mainly with Python and web technologies, focusing on LLM-powered products,
-data workflows, and simple interfaces that solve real problems.
+From RAG database architecture and transformer-based LLMs to end-to-end AI agents,
+I connect data, retrieval, orchestration, backends, and interfaces into usable products.
 
 ## Selected work
 
@@ -20,9 +20,9 @@ data workflows, and simple interfaces that solve real problems.
 
 ## Current focus
 
-- LLM applications and agent workflows
-- Reliable backend and data pipelines
-- Small, useful tools with clean interfaces
+- RAG pipelines, embeddings, vector databases, and retrieval
+- Transformer-based LLM integration, evaluation, and optimization
+- AI agent architecture, orchestration, and workflow automation
 
 ## Stack
 
@@ -30,7 +30,7 @@ data workflows, and simple interfaces that solve real problems.
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,js,git,githubactions,vscode" alt="Python, FastAPI, PostgreSQL, JavaScript, Git, GitHub Actions, and VS Code" />
 </p>
 
-`Streamlit` · `LangChain` · `OpenAI API`
+`Streamlit` · `LangChain` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB` · `AI Agents`
 
 ## Contributions
 

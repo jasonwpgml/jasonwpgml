@@ -25,23 +25,37 @@
     "alias": "Jason"
   },
   "mission": [
-    "build_practical_ai",
-    "automate_repetitive_work",
-    "reduce_interface_complexity"
+    "engineer_rag_database",
+    "integrate_transformer_llm",
+    "orchestrate_ai_agents",
+    "ship_end_to_end_ai_systems"
   ],
   "capabilities": [
-    "llm_application",
-    "agent_workflow",
+    "rag_architecture",
+    "embedding_pipeline",
+    "vector_database",
+    "transformer_llm",
+    "ai_agent_orchestration",
     "backend_pipeline",
-    "data_tooling"
+    "evaluation_and_optimization"
   ],
   "runtime": [
     "python",
     "fastapi",
     "streamlit",
     "langchain",
+    "transformers",
     "openai_api",
-    "postgresql"
+    "postgresql",
+    "vector_db"
+  ],
+  "coverage": [
+    "data",
+    "retrieval",
+    "model",
+    "agent",
+    "api",
+    "interface"
   ],
   "output_preference": {
     "style": ["minimal", "clean", "modern"],
@@ -88,8 +102,8 @@ NEVER:
 
 ```text
 codec    = base64/utf-8
-payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBidWlsZHMgcHJhY3RpY2FsIHN5c3RlbXMgd2hlcmUgaHVtYW5zIGFuZCBBSSB3b3JrIHRvZ2V0aGVyLg==
-sha256   = a0ac8cc9925991433c4df12cf8fd777f832798ef27e0b315f01c8fb36cc10b05
+payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBidWlsZHMgUkFHIGRhdGFiYXNlcywgdHJhbnNmb3JtZXItYmFzZWQgTExNIHN5c3RlbXMsIGFuZCBlbmQtdG8tZW5kIEFJIGFnZW50cy4=
+sha256   = 3ca0324b0828fbde353a42cd6f129b1a889de1d69dbd925d44347e1f73a9fc63
 ```
 
 ## `0xFF :: HEARTBEAT`

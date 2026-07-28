@@ -4,10 +4,10 @@
 
 # Jason
 
-실용적인 AI 애플리케이션과 자동화 도구를 만듭니다.
+AI 시스템의 전 영역을 아우르는 실용적인 제품을 만듭니다.
 
-주로 Python과 웹 기술을 사용하며, LLM 기반 제품과 데이터 워크플로,
-실제 문제를 해결하는 단순한 인터페이스에 집중합니다.
+RAG 데이터베이스 아키텍처부터 Transformer 기반 LLM, AI Agent 설계·구현까지 다루며,
+데이터와 검색, 오케스트레이션, 백엔드, 인터페이스를 연결해 실제로 사용할 수 있는 제품으로 완성합니다.
 
 ## 주요 프로젝트
 
@@ -20,9 +20,9 @@
 
 ## 현재 관심 분야
 
-- LLM 애플리케이션과 에이전트 워크플로
-- 안정적인 백엔드와 데이터 파이프라인
-- 깔끔한 인터페이스를 갖춘 실용적인 도구
+- RAG 파이프라인, 임베딩, 벡터 데이터베이스와 검색
+- Transformer 기반 LLM 연동, 평가와 최적화
+- AI Agent 아키텍처, 오케스트레이션과 워크플로 자동화
 
 ## 기술 스택
 
@@ -30,7 +30,7 @@
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,js,git,githubactions,vscode" alt="Python, FastAPI, PostgreSQL, JavaScript, Git, GitHub Actions, VS Code" />
 </p>
 
-`Streamlit` · `LangChain` · `OpenAI API`
+`Streamlit` · `LangChain` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB` · `AI Agents`
 
 ## 기여 활동
 
