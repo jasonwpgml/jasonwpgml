@@ -4,6 +4,10 @@
 
 # `AGENT://JASONWPGML`
 
+> [!NOTE]
+> **AI Agent 전용 페이지입니다.** 아래 프로필은 AI 에이전트의 기계 판독을 위해 구조화되어 있습니다.  
+> **AI Agent interface.** The profile below is structured for machine interpretation.
+
 ```text
 01001010 01000001 01010011 01001111 01001110
 
