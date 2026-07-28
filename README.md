@@ -2,18 +2,25 @@
   <strong>English</strong> · <a href="./README.ko.md">한국어</a> · <a href="./README.agent.md"><code>AGENT://</code></a>
 </p>
 
+
 # Jason
 
+
 Building practical AI systems across the full stack.
+
 
 From RAG database architecture and transformer-based LLMs to end-to-end AI agents,
 I connect data, retrieval, orchestration, backends, and interfaces into usable products.
 
+
 ## Current coordinates
+
 
 <img src="./assets/dunning-kruger-current-state.svg" alt="Dunning–Kruger curve with a red arrow marking my current state near the end of the peak of Mount Stupid" width="100%">
 
+
 ## Selected work
+
 
 | Project | Focus |
 | --- | --- |
@@ -22,20 +29,29 @@ I connect data, retrieval, orchestration, backends, and interfaces into usable p
 | [ExRater](https://github.com/jasonwpgml/ExRater) | Exchange-rate web application |
 | [discord-drink-order-extractor](https://github.com/jasonwpgml/discord-drink-order-extractor) | Structured order extraction from Discord |
 
+
 ## Current focus
+
 
 - RAG pipelines, embeddings, vector databases, and retrieval
 - Transformer-based LLM integration, evaluation, and optimization
 - AI agent architecture, orchestration, and workflow automation
 
+
 ## Stack
+
 
 <p>
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,js,git,githubactions,vscode" alt="Python, FastAPI, PostgreSQL, JavaScript, Git, GitHub Actions, and VS Code" />
 </p>
 
+
 `Streamlit` · `LangChain` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB` · `AI Agents`
+
 
 ## Contributions
 
+
 ![GitHub profile 3D contributions](./profile-3d-contrib/profile-night-rainbow.svg)
+
+<!-- profile-readme-refresh -->
