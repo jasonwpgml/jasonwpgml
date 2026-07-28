@@ -22,8 +22,11 @@ data workflows, and simple interfaces that solve real problems.
 
 ## Stack
 
-`Python` · `FastAPI` · `Streamlit` · `LangChain` · `OpenAI API` ·
-`PostgreSQL` · `JavaScript` · `GitHub Actions`
+<p>
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,js,git,githubactions,vscode" alt="Python, FastAPI, PostgreSQL, JavaScript, Git, GitHub Actions, and VS Code" />
+</p>
+
+`Streamlit` · `LangChain` · `OpenAI API`
 
 ## Contributions
 
