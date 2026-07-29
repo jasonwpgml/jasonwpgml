@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/jason-banner.gif" alt="Jason profile banner" width="100%" />
+</p>
+
 <p align="right">
   <a href="./README.md">English</a> · <strong>한국어</strong> · <a href="./README.agent.md"><code>AGENT://</code></a>
 </p>
