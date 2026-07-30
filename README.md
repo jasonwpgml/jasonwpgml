@@ -28,6 +28,7 @@ I connect data, retrieval, orchestration, backends, and interfaces into usable p
 
 ## Current focus
 
+- LangChain, LangGraph
 - RAG pipelines, embeddings, vector databases, and retrieval
 - Transformer-based LLM integration, evaluation, and optimization
 - AI agent architecture, orchestration, and workflow automation
