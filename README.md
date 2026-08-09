@@ -27,7 +27,7 @@ Most of what's here started as something I wanted for myself and then got out of
 | --- | --- |
 | [Beorimi](https://github.com/TrinityBalance/beorimi) | Photograph the junk you want to throw out and it figures out the category and the disposal fee under Gangnam-gu's rules. The AI looks at the photo, the code does the pricing. |
 | [My Summer Vacation Diary](https://github.com/TossHackathonTMD/SummerVacationDiary) | A Toss mini app that turns one photo and a few lines into a crayon picture diary. A teacher marks it up and stamps it. |
-| [team-pubmed](https://github.com/hansol-dev/team-pubmed) | A workspace for collecting PubMed papers and then talking to them. It shows which sentence an answer came from, not just the answer. |
+| [Publium](https://github.com/hansol-dev/team-pubmed) | A workspace for collecting PubMed papers and then talking to them. It shows which sentence an answer came from, not just the answer. |
 | [Intero](https://github.com/InteroGames/Intero) | An interrogation game you survive by lying. There are no dialogue options, so whatever you say is whatever you make up. |
 | [TrivialOkay](https://github.com/TrivialOkay/TrivialOkay_toss) | Fresh repo. Nothing to see yet. |
 

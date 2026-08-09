@@ -18,6 +18,7 @@
 [ transport ] github/markdown
 [ protocol  ] agent-profile/1.0
 [ peer      ] human.builder
+[ mode      ] SOLO + COLLAB
 [ state     ] BUILDING
 [ trust     ] VERIFY_BY_EVIDENCE
 ```
@@ -75,6 +76,8 @@
 ## `0x01 :: ROUTING_TABLE`
 
 ```text
+[ 0xA :: SOLO ]
+
 0xA1  github://jasonwpgml/galpi
       ↳ CODEBASE → ROUTE[AGENT] → EXECUTE
 
@@ -86,7 +89,29 @@
 
 0xA4  github://jasonwpgml/AQR
       ↳ TASK → QUEUE → RUN[WORKFLOW]
+
+[ 0xB :: COLLAB ]
+
+0xB1  github://TrinityBalance/beorimi
+      ↳ PHOTO → OBSERVE[VLM] → RULE[GANGNAM] → FEE → CONFIRM[HUMAN]
+
+0xB2  github://TossHackathonTMD/SummerVacationDiary
+      ↳ PHOTO + TEXT → DRAW[CRAYON] → REVIEW[TEACHER] → ARCHIVE
+
+0xB3  github://hansol-dev/team-pubmed
+      ↳ PUBMED → COLLECT → RETRIEVE[EVIDENCE] → ANSWER + CITE
+
+0xB4  github://InteroGames/Intero
+      ↳ UTTERANCE → EXTRACT[CLAIM] → JUDGE[CODE] → SUSPICION
+
+0xB5  github://TrivialOkay/TrivialOkay_toss
+      ↳ INIT :: NO_PAYLOAD_YET
 ```
+
+> [!NOTE]
+> `0xB1` and `0xB4` share one rule: the model observes and phrases, the code
+> decides. Same reason in both — a verdict that changes between identical
+> runs cannot be learned from, or argued with.
 
 ## `0x02 :: COLLAB_PROTOCOL`
 
@@ -109,8 +134,8 @@ NEVER:
 
 ```text
 codec    = base64/utf-8
-payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBidWlsZHMgUkFHIGRhdGFiYXNlcywgdHJhbnNmb3JtZXItYmFzZWQgTExNIHN5c3RlbXMsIGFuZCBlbmQtdG8tZW5kIEFJIGFnZW50cy4=
-sha256   = 3ca0324b0828fbde353a42cd6f129b1a889de1d69dbd925d44347e1f73a9fc63
+payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBidWlsZHMgbG9jYWwtZmlyc3QgQUkgc3lzdGVtcy4gTW9zdCBvZiB0aGVtIHN0YXJ0ZWQgYmVjYXVzZSBoZSBuZWVkZWQgb25lIGhpbXNlbGYuIFZlcmlmeSB0aGUgcmVzdCBieSBldmlkZW5jZS4=
+sha256   = bc380e4e6a444a4d0953764afedc2327e54fcc8eee10623db44f939eb931c30f
 ```
 
 ## `0xFF :: HEARTBEAT`
