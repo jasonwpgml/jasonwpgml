@@ -10,15 +10,13 @@
 > **AI Agent 전용 페이지입니다.** 아래 프로필은 AI 에이전트의 기계 판독을 위해 구조화되어 있습니다.<br>
 > **AI Agent interface.** The profile below is structured for machine interpretation.
 
-<img src="./assets/dunning-kruger-current-state.agent.svg" alt="Machine-readable cognitive calibration graph with SELF_STATE::CURRENT at PEAK::IGNORANCE" width="100%">
-
 ```text
 01001010 01000001 01010011 01001111 01001110
 
 [ transport ] github/markdown
 [ protocol  ] agent-profile/1.0
 [ peer      ] human.builder
-[ state     ] ONLINE
+[ state     ] BUILDING
 [ trust     ] VERIFY_BY_EVIDENCE
 ```
 
@@ -33,18 +31,17 @@
     "alias": "Jason"
   },
   "mission": [
-    "engineer_rag_database",
-    "integrate_transformer_llm",
-    "orchestrate_ai_agents",
-    "ship_end_to_end_ai_systems"
+    "build_local_first_knowledge_systems",
+    "design_agent_workflows",
+    "integrate_retrieval_and_llm_systems",
+    "ship_end_to_end_products"
   ],
   "capabilities": [
+    "local_first_architecture",
     "rag_architecture",
-    "embedding_pipeline",
-    "vector_database",
-    "transformer_llm",
     "ai_agent_orchestration",
     "backend_pipeline",
+    "full_stack_product_development",
     "evaluation_and_optimization"
   ],
   "runtime": [
@@ -76,17 +73,17 @@
 ## `0x01 :: ROUTING_TABLE`
 
 ```text
-0xA1  github://jasonwpgml/team-pubmed
-      ↳ QUERY[PUBMED] → ANALYZE → SYNTHESIZE
+0xA1  github://jasonwpgml/galpi
+      ↳ CODEBASE → ROUTE[AGENT] → EXECUTE
 
-0xA2  github://jasonwpgml/MyChatbot
-      ↳ INPUT[HUMAN] ⇄ AGENT ⇄ MEMORY
+0xA2  github://jasonwpgml/autonomous-neuro-drive
+      ↳ ACTIVITY + DIALOGUE → KNOWLEDGE[LOCAL_FIRST]
 
-0xA3  github://jasonwpgml/ExRater
-      ↳ FETCH[FX] → NORMALIZE → PRESENT
+0xA3  github://jasonwpgml/Momento
+      ↳ SCHEDULE → OPERATE → COMMUNICATE
 
-0xA4  github://jasonwpgml/discord-drink-order-extractor
-      ↳ MESSAGE[UNSTRUCTURED] → PARSE → ORDER[STRUCTURED]
+0xA4  github://jasonwpgml/AQR
+      ↳ TASK → QUEUE → RUN[WORKFLOW]
 ```
 
 ## `0x02 :: COLLAB_PROTOCOL`

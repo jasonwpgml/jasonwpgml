@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/jason_banner.gif" alt="Jason profile banner" width="100%" />
+  <img src="./assets/jason_banner.gif" alt="Jason 프로필 배너" width="100%" />
 </p>
 
 <p align="right">
@@ -8,38 +8,41 @@
 
 # Jason
 
-AI 시스템의 전 영역을 아우르는 실용적인 프로젝트를 만듭니다.
+### 로컬 우선 지식 시스템, 에이전트 워크플로, 쓸모 있는 제품을 만드는 AI 시스템 빌더.
 
-RAG 데이터베이스 아키텍처부터 Transformer 기반 LLM, AI Agent 설계·구현까지 다루며,
-데이터와 검색, 오케스트레이션, 백엔드, 인터페이스를 연결해 실제로 사용할 수 있는 코드로 완성합니다.
+데이터 계층부터 인터페이스까지 실용적인 AI 소프트웨어를 만듭니다. 검색·LLM 파이프라인,
+안정적인 백엔드 서비스, 그리고 실제 사용자가 쓸 수 있는 워크플로를 연결합니다.
 
-## 현재 좌표
+## 만들고 있는 것
 
-<img src="./assets/dunning-kruger-current-state.ko.svg" alt="우매함의 봉우리 정상에 내 현재 상태를 표시한 더닝–크루거 효과 그래프" width="100%">
-
-## 주요 프로젝트
-
-| 프로젝트 | 주요 기능 |
+| 프로젝트 | 하는 일 |
 | --- | --- |
-| [team-pubmed](https://github.com/jasonwpgml/team-pubmed) | PubMed 논문 검색 및 분석 |
-| [MyChatbot](https://github.com/jasonwpgml/MyChatbot) | 대화형 AI 애플리케이션 |
-| [ExRater](https://github.com/jasonwpgml/ExRater) | 환율 정보 웹 애플리케이션 |
-| [discord-drink-order-extractor](https://github.com/jasonwpgml/discord-drink-order-extractor) | Discord 메시지에서 주문 정보 추출 |
+| [Galpi](https://github.com/jasonwpgml/galpi) | 코딩 에이전트에서 실측한 AI 네이티브 코드베이스 내비게이션 프로토콜 |
+| [Autonomous Neuro Drive](https://github.com/jasonwpgml/autonomous-neuro-drive) | 활동과 대화를 장기 지식으로 바꾸는 로컬 우선 LLM 위키 |
+| [Momento](https://github.com/jasonwpgml/Momento) | 과외·스터디 운영을 위한 풀스택 일정 관리 PWA |
+| [AQR](https://github.com/jasonwpgml/AQR) | 신뢰성 있는 AI 워크플로 실행을 위한 큐 기반 러너 |
 
-## 현재 관심 분야
+## 함께 보면 좋은 프로젝트
 
-- LangChain, LangGraph
-- RAG 파이프라인, 임베딩, 벡터 데이터베이스와 검색
-- Transformer 기반 LLM 연동, 평가와 최적화
-- AI Agent 아키텍처, 오케스트레이션과 워크플로 자동화
+| 프로젝트 | 하는 일 |
+| --- | --- |
+| [ExRater](https://github.com/jasonwpgml/ExRater) | 대화형 AI 검색을 갖춘 실시간 환율 계산기 |
+| [drinklister](https://github.com/jasonwpgml/drinklister) | Discord 음료 주문을 구조화된 데이터와 CSV로 바꾸는 데스크톱 도구 |
 
-## 기술 스택
+## 관심 분야
+
+- 로컬 우선 AI 시스템과 장기 지식 워크플로
+- AI 에이전트 아키텍처, 오케스트레이션, 평가
+- 검색 파이프라인, 임베딩, 벡터 데이터베이스, RAG
+- 제품 관점의 풀스택 엔지니어링
+
+## 기술 도구
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,js,git,githubactions,vscode" alt="Python, FastAPI, PostgreSQL, JavaScript, Git, GitHub Actions, VS Code" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,react,js,git,githubactions" alt="Python, FastAPI, PostgreSQL, React, JavaScript, Git, GitHub Actions" />
 </p>
 
-`Streamlit` · `LangChain` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB` · `AI Agents`
+`LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `Streamlit` · `Supabase`
 
 ## 기여 활동
 

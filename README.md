@@ -8,38 +8,41 @@
 
 # Jason
 
-Building practical AI systems across the full stack.
+### AI systems builder — local-first knowledge, agent workflows, and useful products.
 
-From RAG database architecture and transformer-based LLMs to end-to-end AI agents,
-I connect data, retrieval, orchestration, backends, and interfaces into usable products.
+I build practical AI software from the data layer to the interface: retrieval and
+LLM pipelines, reliable backend services, and workflows people can actually use.
 
-## Current coordinates
+## Building now
 
-<img src="./assets/dunning-kruger-current-state.en.svg" alt="Dunning–Kruger curve with a red marker placing my current state at the summit of Mount Stupid" width="100%">
-
-## Selected work
-
-| Project | Focus |
+| Project | What it does |
 | --- | --- |
-| [team-pubmed](https://github.com/jasonwpgml/team-pubmed) | PubMed research and analysis |
-| [MyChatbot](https://github.com/jasonwpgml/MyChatbot) | Conversational AI application |
-| [ExRater](https://github.com/jasonwpgml/ExRater) | Exchange-rate web application |
-| [discord-drink-order-extractor](https://github.com/jasonwpgml/discord-drink-order-extractor) | Structured order extraction from Discord |
+| [Galpi](https://github.com/jasonwpgml/galpi) | AI-native codebase navigation protocol, tested across coding agents |
+| [Autonomous Neuro Drive](https://github.com/jasonwpgml/autonomous-neuro-drive) | Local-first LLM wiki for turning activity and conversations into durable knowledge |
+| [Momento](https://github.com/jasonwpgml/Momento) | Full-stack scheduling PWA for tutoring and study operations |
+| [AQR](https://github.com/jasonwpgml/AQR) | Queue-based runner for dependable AI workflow execution |
 
-## Current focus
+## Also worth a look
 
-- LangChain, LangGraph
-- RAG pipelines, embeddings, vector databases, and retrieval
-- Transformer-based LLM integration, evaluation, and optimization
-- AI agent architecture, orchestration, and workflow automation
+| Project | What it does |
+| --- | --- |
+| [ExRater](https://github.com/jasonwpgml/ExRater) | Live exchange-rate calculator with conversational AI search |
+| [drinklister](https://github.com/jasonwpgml/drinklister) | Desktop tool that turns Discord drink orders into structured, exportable data |
 
-## Stack
+## Focus
+
+- Local-first AI systems and long-term knowledge workflows
+- Agent architecture, orchestration, and evaluation
+- Retrieval pipelines, embeddings, vector databases, and RAG
+- Product-minded full-stack engineering
+
+## Toolbox
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,js,git,githubactions,vscode" alt="Python, FastAPI, PostgreSQL, JavaScript, Git, GitHub Actions, and VS Code" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,react,js,git,githubactions" alt="Python, FastAPI, PostgreSQL, React, JavaScript, Git, and GitHub Actions" />
 </p>
 
-`Streamlit` · `LangChain` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB` · `AI Agents`
+`LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `Streamlit` · `Supabase`
 
 ## Contributions
 
