@@ -13,6 +13,10 @@
 데이터 계층부터 인터페이스까지 실용적인 AI 소프트웨어를 만듭니다. 검색·LLM 파이프라인,
 안정적인 백엔드 서비스, 그리고 실제 사용자가 쓸 수 있는 워크플로를 연결합니다.
 
+## 현재 좌표 (재미로)
+
+<img src="./assets/dunning-kruger-current-state.ko.svg" alt="우매함의 봉우리 정상에 내 현재 상태를 표시한 더닝–크루거 효과 그래프" width="100%">
+
 ## 만들고 있는 것
 
 | 프로젝트 | 하는 일 |
@@ -39,10 +43,10 @@
 ## 기술 도구
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,react,js,git,githubactions" alt="Python, FastAPI, PostgreSQL, React, JavaScript, Git, GitHub Actions" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,nodejs,typescript,react,vite,supabase,git,githubactions" alt="Python, FastAPI, PostgreSQL, Node.js, TypeScript, React, Vite, Supabase, Git, GitHub Actions" />
 </p>
 
-`LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `Streamlit` · `Supabase`
+`Streamlit` · `LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB`
 
 ## 기여 활동
 

@@ -13,6 +13,10 @@
 I build practical AI software from the data layer to the interface: retrieval and
 LLM pipelines, reliable backend services, and workflows people can actually use.
 
+## Current coordinates (for fun)
+
+<img src="./assets/dunning-kruger-current-state.en.svg" alt="Dunning–Kruger curve with a red marker placing my current state at the summit of Mount Stupid" width="100%">
+
 ## Building now
 
 | Project | What it does |
@@ -39,10 +43,10 @@ LLM pipelines, reliable backend services, and workflows people can actually use.
 ## Toolbox
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,react,js,git,githubactions" alt="Python, FastAPI, PostgreSQL, React, JavaScript, Git, and GitHub Actions" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,nodejs,typescript,react,vite,supabase,git,githubactions" alt="Python, FastAPI, PostgreSQL, Node.js, TypeScript, React, Vite, Supabase, Git, and GitHub Actions" />
 </p>
 
-`LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `Streamlit` · `Supabase`
+`Streamlit` · `LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB`
 
 ## Contributions
 
