@@ -20,6 +20,16 @@
 
 <img src="./assets/dunning-kruger-current-state.ko.svg" alt="우매함의 봉우리 정상에 내 현재 상태를 표시한 더닝–크루거 효과 그래프" width="100%">
 
+## 같이 만드는 것
+
+| 프로젝트 | 한 줄 설명 |
+| --- | --- |
+| [버리미](https://github.com/TrinityBalance/beorimi) | 버릴 물건을 사진으로 찍으면 강남구 기준 품목이랑 예상 수수료를 뽑아 줍니다. 사진은 AI가 보고, 금액은 코드가 규정대로 계산합니다. |
+| [나의 여름방학 일기](https://github.com/TossHackathonTMD/SummerVacationDiary) | 사진 한 장에 몇 줄 적으면 크레파스 그림일기가 나오는 토스 미니앱입니다. 선생님이 첨삭해 주고 도장도 찍어 줍니다. |
+| [team-pubmed](https://github.com/hansol-dev/team-pubmed) | PubMed 논문을 모아놓고 그걸 근거로 대화하는 연구용 작업 공간입니다. 답만 던지지 않고 어느 문장에서 나왔는지 같이 보여줍니다. |
+| [Intero](https://github.com/InteroGames/Intero) | 취조실에서 형사 상대로 거짓말 버티는 게임입니다. 선택지가 없어서 할 말은 직접 지어내야 합니다. |
+| [TrivialOkay](https://github.com/TrivialOkay/TrivialOkay_toss) | 이제 막 저장소만 판 상태입니다. |
+
 ## 요즘 만드는 것
 
 | 프로젝트 | 한 줄 설명 |
