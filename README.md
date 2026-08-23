@@ -66,4 +66,14 @@ Most of what's here started as something I wanted for myself and then got out of
 
 ![GitHub profile 3D contributions](./profile-3d-contrib/profile-night-rainbow.svg)
 
+## License
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](./LICENSE)
+
+© 2026 Jason ([@jasonwpgml](https://github.com/jasonwpgml)). Original content in
+this repo is licensed under [CC BY 4.0](./LICENSE) — reuse and adapt freely, but
+**keep a visible credit** that your work is based on this repository. Ready-made
+credit snippets live in [ATTRIBUTION.md](./ATTRIBUTION.md).
+
 <!-- profile-readme-refresh -->
+<!-- © 2026 Jason (github.com/jasonwpgml) · CC BY 4.0 · If you adapt this profile, keep this notice or an equivalent credit. -->

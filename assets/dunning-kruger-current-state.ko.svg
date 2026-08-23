@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-labelledby="title description">
   <title id="title">더닝 크루거 효과와 내 현재 상태</title>
   <desc id="description">우매함의 봉우리 정상에 내 현재 상태를 표시한 개념 그래프</desc>
+  <metadata>
+    Copyright (c) 2026 Jason (https://github.com/jasonwpgml).
+    Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.
+    Derivatives must retain a visible credit to the source repository.
+  </metadata>
+  <!-- (c) 2026 Jason · github.com/jasonwpgml/jasonwpgml · CC BY 4.0 · attribution required -->
   <style>
     .title { fill: #f0f6fc; font: 700 25px "Segoe UI", "Noto Sans KR", sans-serif; }
     .label { fill: #b1bac4; font: 600 16px "Segoe UI", "Noto Sans KR", sans-serif; }
