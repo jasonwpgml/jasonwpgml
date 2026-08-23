@@ -105,7 +105,7 @@
       ↳ UTTERANCE → EXTRACT[CLAIM] → JUDGE[CODE] → SUSPICION
 
 0xB5  github://TrivialOkay/TrivialOkay_toss
-      ↳ INIT :: NO_PAYLOAD_YET
+      ↳ TRIVIAL[DAILY] → OBSERVE[MOCK_SERIOUS] → FORTUNE + TITLE
 ```
 
 > [!NOTE]
