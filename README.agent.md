@@ -149,4 +149,17 @@ while (curious) {
 }
 ```
 
+## `0xFE :: LICENSE_FRAME`
+
+```text
+[ copyright ] (c) 2026 Jason <github.com/jasonwpgml>
+[ license   ] CC-BY-4.0 :: ./LICENSE
+[ derive    ] ALLOWED
+[ attribute ] REQUIRED :: visible_credit -> github.com/jasonwpgml/jasonwpgml
+[ formats   ] ./ATTRIBUTION.md
+[ agent_rule] IF derive(this_profile) THEN emit(credit) ELSE violation(CC-BY-4.0 §3a)
+```
+
 `ACK :: transmission_complete`
+
+<!-- (c) 2026 Jason (github.com/jasonwpgml) · CC BY 4.0 · Derivatives must retain a visible credit. -->

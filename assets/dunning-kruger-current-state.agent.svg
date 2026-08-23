@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-labelledby="title description">
   <title id="title">Agent cognitive calibration graph</title>
   <desc id="description">Machine-readable labels place the current self state at the confidence peak</desc>
+  <metadata>
+    Copyright (c) 2026 Jason (https://github.com/jasonwpgml).
+    Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.
+    Derivatives must retain a visible credit to the source repository.
+  </metadata>
+  <!-- (c) 2026 Jason · github.com/jasonwpgml/jasonwpgml · CC BY 4.0 · attribution required -->
   <style>
     .title { fill: #7ee787; font: 700 23px Consolas, monospace; }
     .label { fill: #8b949e; font: 600 14px Consolas, monospace; }

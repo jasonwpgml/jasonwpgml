@@ -64,3 +64,14 @@
 ## 기여 활동
 
 ![GitHub 프로필 3D 기여도](./profile-3d-contrib/profile-night-rainbow.svg)
+
+## 라이선스
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](./LICENSE)
+
+© 2026 Jason ([@jasonwpgml](https://github.com/jasonwpgml)). 이 저장소의 원본
+콘텐츠는 [CC BY 4.0](./LICENSE)입니다. 자유롭게 가져다 쓰고 고쳐 써도 되지만,
+**이 저장소를 참고했다는 표시는 보이는 곳에 남겨 주세요.** 복사해 쓸 수 있는
+크레딧 문구는 [ATTRIBUTION.md](./ATTRIBUTION.md)에 있습니다.
+
+<!-- © 2026 Jason (github.com/jasonwpgml) · CC BY 4.0 · 이 프로필을 변형해 쓸 경우 이 표시 또는 그에 준하는 크레딧을 유지해 주세요. -->
