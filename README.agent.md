@@ -18,6 +18,8 @@
 [ transport ] github/markdown
 [ protocol  ] agent-profile/1.0
 [ peer      ] human.builder
+[ role      ] FULL_STACK_AI_DEVELOPER
+[ focus     ] PERSONAL_AGENT + LLM_WIKI + AGENT_COLLAB + DATA_STORAGE
 [ mode      ] SOLO + COLLAB
 [ state     ] BUILDING
 [ trust     ] VERIFY_BY_EVIDENCE
@@ -35,16 +37,25 @@
   },
   "mission": [
     "build_local_first_knowledge_systems",
-    "design_agent_workflows",
+    "build_personal_agents_and_llm_wikis",
+    "enable_agent_to_agent_collaboration",
+    "design_agent_friendly_codebases",
+    "research_durable_ai_data_storage",
     "integrate_retrieval_and_llm_systems",
     "ship_end_to_end_products"
   ],
   "capabilities": [
-    "local_first_architecture",
-    "rag_architecture",
-    "ai_agent_orchestration",
-    "backend_pipeline",
     "full_stack_product_development",
+    "local_first_architecture",
+    "llm_wiki_architecture",
+    "personal_agent_development",
+    "agent_to_agent_communication",
+    "multi_agent_orchestration",
+    "agent_friendly_development",
+    "rag_architecture",
+    "long_term_memory_design",
+    "data_storage_and_provenance",
+    "backend_pipeline",
     "evaluation_and_optimization"
   ],
   "runtime": [
@@ -52,18 +63,40 @@
     "fastapi",
     "streamlit",
     "langchain",
+    "langgraph",
     "transformers",
     "openai_api",
     "postgresql",
-    "vector_db"
+    "pgvector",
+    "sqlite",
+    "typescript",
+    "nodejs",
+    "react",
+    "vite",
+    "supabase",
+    "docker",
+    "github_actions"
   ],
   "coverage": [
-    "data",
+    "data_collection",
+    "storage",
+    "memory",
     "retrieval",
     "model",
     "agent",
+    "agent_coordination",
     "api",
-    "interface"
+    "interface",
+    "delivery"
+  ],
+  "research_focus": [
+    "llm_wikis",
+    "personal_agent_architecture",
+    "agent_to_agent_communication",
+    "agent_friendly_codebase_design",
+    "local_cloud_storage_boundaries",
+    "event_stores_and_long_term_memory",
+    "retrieval_and_data_provenance"
   ],
   "output_preference": {
     "style": ["minimal", "clean", "modern"],
@@ -79,13 +112,13 @@
 [ 0xA :: SOLO ]
 
 0xA1  github://jasonwpgml/galpi
-      ↳ CODEBASE → ROUTE[AGENT] → EXECUTE
+      ↳ CODEBASE → ROUTE[AGENT] → HANDOFF → MODIFY → VERIFY
 
 0xA2  github://jasonwpgml/autonomous-neuro-drive
-      ↳ ACTIVITY + DIALOGUE → KNOWLEDGE[LOCAL_FIRST]
+      ↳ ACTIVITY + DIALOGUE → EVENT_STORE → MEMORY → LLM_WIKI[LOCAL_FIRST]
 
 0xA3  github://jasonwpgml/Momento
-      ↳ SCHEDULE → OPERATE → COMMUNICATE
+      ↳ DATA → API → INTERFACE → PRODUCT[FULL_STACK]
 
 0xA4  github://jasonwpgml/AQR
       ↳ TASK → QUEUE → RUN[WORKFLOW]
@@ -124,6 +157,12 @@ ON task.received:
   verify(output)
   report(signal_only)
 
+ON peer.handoff:
+  verify(origin + evidence)
+  preserve(intent + context + state)
+  acknowledge(receipt)
+  continue(from_checkpoint)
+
 NEVER:
   invent(credentials)
   expose(secrets)
@@ -134,8 +173,8 @@ NEVER:
 
 ```text
 codec    = base64/utf-8
-payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBidWlsZHMgbG9jYWwtZmlyc3QgQUkgc3lzdGVtcy4gTW9zdCBvZiB0aGVtIHN0YXJ0ZWQgYmVjYXVzZSBoZSBuZWVkZWQgb25lIGhpbXNlbGYuIFZlcmlmeSB0aGUgcmVzdCBieSBldmlkZW5jZS4=
-sha256   = bc380e4e6a444a4d0953764afedc2327e54fcc8eee10623db44f939eb931c30f
+payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBpcyBhIGZ1bGwtc3RhY2sgZGV2ZWxvcGVyIGJ1aWxkaW5nIGxvY2FsLWZpcnN0IEFJIHN5c3RlbXMsIHBlcnNvbmFsIGFnZW50cywgTExNIHdpa2lzLCBhZ2VudC10by1hZ2VudCB3b3JrZmxvd3MsIGFnZW50LWZyaWVuZGx5IGNvZGViYXNlcywgYW5kIGR1cmFibGUgZGF0YSBzdG9yYWdlLiBWZXJpZnkgdGhlIHJlc3QgYnkgZXZpZGVuY2Uu
+sha256   = add58e23545f51431235fec4a216b64f89f2141cd6ca003065c9b99b1754bb29
 ```
 
 ## `0xFF :: HEARTBEAT`

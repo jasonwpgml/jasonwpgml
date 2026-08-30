@@ -8,14 +8,20 @@
 
 # Jason
 
-### I build AI systems, mostly local-first ones.
+### Full-stack developer building local-first AI systems.
 
-I work across the whole stack of an AI product: the data underneath, the retrieval
-and LLM pipelines on top of it, the backend that serves all of it, and the screen
-someone eventually clicks. The last part is the one I keep coming back to. A
-pipeline nobody opens twice is just an expensive cron job.
+I work across the full stack of an AI product: data collection and storage,
+retrieval and LLM pipelines, the backend that serves them, and the interfaces
+people actually use.
 
-Most of what's here started as something I wanted for myself and then got out of hand.
+Right now, I'm building a personal AI agent and an LLM wiki. I'm also exploring
+how agents exchange context and coordinate work, and how to make codebases easier
+for coding agents to understand, change, and verify.
+
+Much of that work comes back to data: raw archives, event stores, long-term memory,
+search indexes, provenance, and the boundary between local and cloud storage. I
+like taking these ideas beyond experiments and turning them into products I can
+actually use. Most of what's here started that way.
 
 ## Where I currently am (allegedly)
 
@@ -49,18 +55,25 @@ Most of what's here started as something I wanted for myself and then got out of
 
 ## What I keep thinking about
 
-- Keeping AI systems local, and keeping what they learn around for the long haul
-- How to structure agents, run them together, and tell whether they're any good
-- Retrieval: pipelines, embeddings, vector DBs, all the RAG plumbing
-- Building full stack with the product in mind, not just the repo
+- Personal agents and LLM wikis that turn activity and conversations into durable knowledge
+- Agent-to-agent communication: exchanging context, dividing roles, and handing work off without losing intent
+- Agent-friendly development: codebases that coding agents can navigate, change, and verify reliably
+- Storage architecture for AI memory: raw archives, event stores, search indexes, provenance, and local/cloud boundaries
+- Shipping full-stack products from the data layer to the interface
 
 ## What I reach for
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,nodejs,typescript,react,vite,supabase,git,githubactions" alt="Python, FastAPI, PostgreSQL, Node.js, TypeScript, React, Vite, Supabase, Git, and GitHub Actions" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, and GitHub Actions" />
 </p>
 
-`Streamlit` · `LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `RAG` · `Vector DB`
+`Streamlit` · `LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `MCP` · `RAG` · `pgvector` · `Event Store` · `Multi-agent Systems` · `Long-term Memory` · `Data Provenance`
+
+## AI-assisted work
+
+<!--START_SECTION:ai_usage-->
+> Live stats will appear here after WakaTime is connected.
+<!--END_SECTION:ai_usage-->
 
 ## Contributions
 
