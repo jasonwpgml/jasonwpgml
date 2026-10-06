@@ -50,6 +50,11 @@ p{margin:0}
 /* cover */
 .cover{padding-block:clamp(120px,16vw,200px) clamp(64px,8vw,112px)}
 .name{font:700 clamp(4.5rem,13vw,12rem)/.9 var(--serif);letter-spacing:-.035em;margin-left:-.05em}
+.name .mask{display:inline-flex;overflow:hidden;padding:.06em .04em .22em;margin:-.06em -.04em -.22em}
+.name .cap{position:relative}
+.name .int{position:absolute;inset:0 auto auto 0;opacity:0;transform:translateX(-.3em)}
+.name .j{display:inline-block}
+.name .l{display:inline-block}
 .cover-foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;margin-top:56px;align-items:end}
 .lede{font:400 clamp(1.25rem,2.1vw,1.75rem)/1.55 var(--serif);max-width:24em}
 .lede-sub{color:var(--ink-2);margin-top:16px;font-size:15px}
@@ -90,6 +95,7 @@ p{margin:0}
 .did dt{font-family:var(--serif);font-weight:600;font-size:1.2rem;line-height:1.4}
 .did dd{margin:6px 0 0;color:#222}
 .shot{margin:0}
+.bleed{overflow:hidden}
 .shot figcaption{font-size:14px;color:var(--ink-2);margin-top:12px}
 .bleed{margin-inline:calc(var(--gutter) * -1)}
 .bleed img{width:100%}
@@ -111,7 +117,7 @@ p{margin:0}
 .trouble-q{font:400 clamp(1.7rem,3.6vw,3rem)/1.3 var(--serif);max-width:20em;letter-spacing:-.01em}
 
 .flow{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));counter-reset:f}
-.flow li{counter-increment:f;padding:18px 16px 0 0;border-top:2px solid var(--ink);font-size:15px;line-height:1.5}
+.flow li{counter-increment:f;padding:18px 16px 0 0;border-top:2px solid var(--ink);font-size:15px;line-height:1.5;position:relative}
 .flow li::before{content:counter(f,decimal-leading-zero);display:block;font-family:var(--serif);color:var(--ink-2);margin-bottom:6px}
 
 .phones{display:flex;gap:clamp(16px,3vw,40px);align-items:flex-start}
@@ -156,12 +162,37 @@ html[data-edition="agent"] body{background:#000}
 html[data-edition="agent"] .head .now{visibility:hidden}
 
 /* scroll-linked drift for the giant numerals, only where supported */
-@supports (animation-timeline:view()){
-  @media (prefers-reduced-motion:no-preference){
+/* motion: one load sequence on the cover, scroll-linked movement elsewhere; everything rests visible */
+@media (prefers-reduced-motion:no-preference){
+  .name .l,.name .cap{animation:rise .9s cubic-bezier(.2,.75,0,1) both;animation-delay:calc(var(--i,0) * 70ms + 150ms)}
+  .name .int{animation:int-out 1.9s cubic-bezier(.6,0,.2,1) both}
+  .name .j{animation:j-in 1.9s cubic-bezier(.6,0,.2,1) both}
+  .cover-foot>*{animation:settle .9s cubic-bezier(.2,.75,0,1) both;animation-delay:1.25s}
+  .cover-foot>nav{animation-delay:1.4s}
+  @keyframes rise{from{transform:translateY(105%)}}
+  @keyframes int-out{0%,55%{opacity:1;transform:translateX(-.3em)}100%{opacity:0;transform:translateX(-.34em) rotate(-24deg)}}
+  @keyframes j-in{0%,55%{opacity:0;transform:rotate(18deg);margin-right:.14em}100%{opacity:1;transform:none;margin-right:0}}
+  @keyframes settle{from{opacity:0;transform:translateY(14px)}}
+
+  @supports (animation-timeline:view()){
+    .opener{animation:open linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+    @keyframes open{from{clip-path:inset(0 4vw round 32px)}to{clip-path:inset(0 0 round 0)}}
     .opener .num{animation:drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
     @keyframes drift{from{transform:translateY(-14%)}to{transform:translateY(18%)}}
+    .bleed img{animation:zoom linear both;animation-timeline:view();animation-range:entry 0% cover 50%}
+    @keyframes zoom{from{transform:scale(1.12)}}
+    .phones.tilt .shot:nth-child(2){animation:float linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+    @keyframes float{from{transform:translateY(48px)}to{transform:translateY(-48px)}}
+    .flow{view-timeline-name:--flow}
+    .flow li{border-top-color:#d6d6d6}
+    .flow li::after{content:"";position:absolute;inset:-2px 0 auto;height:2px;background:var(--ink);transform-origin:left;
+      animation:draw linear both;animation-timeline:--flow;animation-range:cover calc(18% + var(--n) * 7%) cover calc(25% + var(--n) * 7%)}
+    .flow li:nth-child(1){--n:0}.flow li:nth-child(2){--n:1}.flow li:nth-child(3){--n:2}.flow li:nth-child(4){--n:3}.flow li:nth-child(5){--n:4}
+    @keyframes draw{from{transform:scaleX(0)}}
   }
 }
+/* edition switch: the new edition opens as a circle from the toggle */
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
 
 @media (max-width:860px){
   body{font-size:16px}
@@ -202,7 +233,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
 
 <section class="cover wrap" data-run="표지">
   <div>
-    <h1 class="name">Jason</h1>
+    <h1 class="name" aria-label="Jason"><span class="mask" aria-hidden="true"><span class="cap"><span class="int">∫</span><span class="j">J</span></span><span class="l" style="--i:1">a</span><span class="l" style="--i:2">s</span><span class="l" style="--i:3">o</span><span class="l" style="--i:4">n</span></span></h1>
   </div>
   <div class="cover-foot">
     <div>
@@ -589,8 +620,17 @@ html[data-edition="agent"] .head .now{visibility:hidden}
     if (mode === 'agent') { animate ? decode() : (out.textContent = text); scrollTo({ top: 0 }); }
     try { localStorage.setItem('edition', mode); } catch {}
   };
-  bHuman.addEventListener('click', () => set('human', true));
-  bAgent.addEventListener('click', () => set('agent', true));
+  const go = (mode, btn) => {
+    if (root.dataset.edition === mode || (!root.dataset.edition && mode === 'human')) return;
+    if (reduce || !document.startViewTransition) return set(mode, true);
+    const r = btn.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+    const end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    document.startViewTransition(() => set(mode, true)).ready.then(() => root.animate(
+      { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${end}px at ${x}px ${y}px)`] },
+      { duration: 700, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }));
+  };
+  bHuman.addEventListener('click', () => go('human', bHuman));
+  bAgent.addEventListener('click', () => go('agent', bAgent));
   let saved = 'human';
   try { saved = localStorage.getItem('edition') || 'human'; } catch {}
   if (location.hash === '#agent') saved = 'agent';
