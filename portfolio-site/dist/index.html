@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>손제희 포트폴리오</title>
-<meta name="description" content="외부 데이터 수집부터 LLM 처리, 백엔드, 배포까지 직접 구현하는 개발자 손제희의 포트폴리오, 2026년 판.">
+<title>Jason 포트폴리오</title>
+<meta name="description" content="외부 데이터 수집부터 LLM 처리, 백엔드, 배포까지 직접 구현하는 개발자 Jason의 포트폴리오, 2026년 판.">
 <style>
 /* Layout: a printed edition on screen. White text pages alternate with black chapter openers; a running head floats over both. */
 @font-face{font-family:"Maru Buri";font-weight:400;font-display:swap;src:url("fonts/MaruBuri-Regular.woff2") format("woff2")}
@@ -48,10 +48,8 @@ p{margin:0}
 .mode button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
 /* cover */
-.cover{min-height:100svh;display:grid;grid-template-rows:1fr auto;padding-block:120px 56px}
-.name{font:700 clamp(7rem,31vw,30rem)/.86 var(--serif);letter-spacing:-.04em;margin-left:-.04em;align-self:end;white-space:nowrap}
-.name .typed{display:inline-block;min-width:1ch}
-.roman{font:400 clamp(1.1rem,1.6vw,1.5rem)/1.4 var(--serif);color:var(--ink-2);margin-top:12px}
+.cover{padding-block:clamp(120px,16vw,200px) clamp(64px,8vw,112px)}
+.name{font:700 clamp(4.5rem,13vw,12rem)/.9 var(--serif);letter-spacing:-.035em;margin-left:-.05em}
 .cover-foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;margin-top:56px;align-items:end}
 .lede{font:400 clamp(1.25rem,2.1vw,1.75rem)/1.55 var(--serif);max-width:24em}
 .lede-sub{color:var(--ink-2);margin-top:16px;font-size:15px}
@@ -204,8 +202,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
 
 <section class="cover wrap" data-run="표지">
   <div>
-    <h1 class="name" aria-label="손제희"><span class="typed" id="typed" aria-hidden="true">손제희</span></h1>
-    <p class="roman">Son Jaehee</p>
+    <h1 class="name">Jason</h1>
   </div>
   <div class="cover-foot">
     <div>
@@ -498,7 +495,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   <div class="colophon">
     <span>Portfolio, 2026 edition</span>
     <span>제목 마루 부리, 본문 Wanted Sans</span>
-    <span>© 2026 손제희</span>
+    <span>© 2026 Jason</span>
   </div>
 </section>
 
@@ -511,7 +508,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
 <script type="application/json" id="profile-data">
 {
   "$schema": "agent-profile/1.0",
-  "subject": {"id": "github:jasonwpgml", "name": "손제희", "latin": "Son Jaehee", "role": "full_stack_ai_developer"},
+  "subject": {"id": "github:jasonwpgml", "name": "Jason", "role": "full_stack_ai_developer"},
   "summary": "외부 데이터 수집부터 LLM 처리, 백엔드, 배포까지 직접 구현. 수학 교육 9년.",
   "status": {
     "employment": {"since": "2026-10-06", "org": "AICE 자격증 관련 회사"},
@@ -545,19 +542,6 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Cover: type the name the way a Korean IME composes it, jamo by jamo.
-  const typed = document.getElementById('typed');
-  const steps = ['ㅅ', '소', '손', '손ㅈ', '손제', '손제ㅎ', '손제흐', '손제희'];
-  if (!reduce) {
-    let i = 0;
-    typed.textContent = steps[0];
-    const tick = () => {
-      typed.textContent = steps[i];
-      if (++i < steps.length) setTimeout(tick, i === 3 || i === 5 ? 190 : 120);
-    };
-    setTimeout(tick, 250);
-  }
-
   // Running head shows the section under it.
   const running = document.getElementById('running');
   const io = new IntersectionObserver(es => {
@@ -576,7 +560,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
       .map(([k, x]) => '\n' + pad + k + ': ' + render(x, pad + '  ')).join('');
     return String(v);
   };
-  const text = 'AGENT://SONJAEHEE  edition=2026  transport=html  verify=required\n'
+  const text = 'AGENT://JASON  edition=2026  transport=html  verify=required\n'
     + '# 사람용 판본과 같은 사실을 구조화한 것. 원본 JSON은 이 페이지의 #profile-data에 있음.\n'
     + render(data) + '\n\nACK :: transmission_complete';
   const glyphs = '01ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ{}[]:/<>=_';
