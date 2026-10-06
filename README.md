@@ -25,7 +25,7 @@ actually use. Most of what's here started that way.
 
 ## Lately
 
-- **Since Oct 6, 2026**, I've been working at a company working on the AICE AI certification.
+- **Since Oct 6, 2026**, I've been working at a company working on the AICE AI certification, and I also teach machine learning and deep learning certification courses.
 - I led my team through our PoC and we wrapped it up well. Both top-trainee awards in the program went to people on that team.
 
 ## Where I currently am (allegedly)
