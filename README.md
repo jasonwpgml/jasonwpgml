@@ -23,6 +23,11 @@ search indexes, provenance, and the boundary between local and cloud storage. I
 like taking these ideas beyond experiments and turning them into products I can
 actually use. Most of what's here started that way.
 
+## Lately
+
+- **Since Oct 6, 2026**, I've been working at a company working on the AICE AI certification.
+- I led my team through our PoC and we wrapped it up well. Both top-trainee awards in the program went to people on that team.
+
 ## Where I currently am (allegedly)
 
 <img src="./assets/dunning-kruger-current-state.en.svg" alt="Dunning–Kruger curve with a red marker placing my current state at the summit of Mount Stupid" width="100%">

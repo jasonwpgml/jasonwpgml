@@ -22,6 +22,8 @@
 [ focus     ] PERSONAL_AGENT + LLM_WIKI + AGENT_COLLAB + DATA_STORAGE
 [ mode      ] SOLO + COLLAB
 [ state     ] BUILDING
+[ employer  ] AICE_CERTIFICATION_CO :: SINCE 2026-10-06
+[ last_ack  ] TEAM_POC::COMPLETE (role=TEAM_LEAD) + TOP_TRAINEE_AWARDS[2/2]::SAME_TEAM
 [ trust     ] VERIFY_BY_EVIDENCE
 ```
 
