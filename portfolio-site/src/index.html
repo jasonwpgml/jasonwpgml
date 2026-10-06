@@ -1,0 +1,607 @@
+<title>손제희 포트폴리오</title>
+<meta name="description" content="외부 데이터 수집부터 LLM 처리, 백엔드, 배포까지 직접 구현하는 개발자 손제희의 포트폴리오, 2026년 판.">
+<style>
+/* Layout: a printed edition on screen. White text pages alternate with black chapter openers; a running head floats over both. */
+@font-face{font-family:"Maru Buri";font-weight:400;font-display:swap;src:url("fonts/MaruBuri-Regular.woff2") format("woff2")}
+@font-face{font-family:"Maru Buri";font-weight:600;font-display:swap;src:url("fonts/MaruBuri-SemiBold.woff2") format("woff2")}
+@font-face{font-family:"Maru Buri";font-weight:700;font-display:swap;src:url("fonts/MaruBuri-Bold.woff2") format("woff2")}
+@font-face{font-family:"Wanted Sans";font-weight:400;font-display:swap;src:url("fonts/WantedSans-Regular.woff2") format("woff2")}
+@font-face{font-family:"Wanted Sans";font-weight:600;font-display:swap;src:url("fonts/WantedSans-SemiBold.woff2") format("woff2")}
+
+:root{
+  --ink:#000;            /* pure black, never tinted */
+  --ink-2:#5a5a5a;       /* dates, captions on paper */
+  --paper:#fff;
+  --night-2:#a3a3a3;     /* captions on black pages */
+  --serif:"Maru Buri","Noto Serif KR","Nanum Myeongjo",serif;
+  --sans:"Wanted Sans","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"D2Coding",monospace;
+  --gutter:clamp(16px,5vw,72px);
+  --measure:34em;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.7 var(--sans);word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.25em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;line-height:1.25}
+p{margin:0}
+.wrap{padding-inline:var(--gutter)}
+
+/* running head: difference blend keeps it legible over both paper and black pages */
+.head{position:fixed;inset:0 0 auto;z-index:10;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;
+  padding:calc(env(safe-area-inset-top,0px) + 18px) var(--gutter) 18px;color:#fff;mix-blend-mode:difference;font-size:14px;pointer-events:none}
+.head>*{pointer-events:auto}
+.head .ed{font-family:var(--serif)}
+.head .now{justify-self:center;font-family:var(--serif);opacity:.85;white-space:nowrap}
+.mode{justify-self:end;display:flex;gap:4px;border:1px solid currentColor;border-radius:999px;padding:3px}
+.mode button{all:unset;cursor:pointer;padding:4px 12px;border-radius:999px;font:inherit;line-height:1.4}
+.mode button[aria-pressed="true"]{background:#fff;color:#000}
+.mode button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* cover */
+.cover{min-height:100svh;display:grid;grid-template-rows:1fr auto;padding-block:120px 56px}
+.name{font:700 clamp(7rem,31vw,30rem)/.86 var(--serif);letter-spacing:-.04em;margin-left:-.04em;align-self:end;white-space:nowrap}
+.name .typed{display:inline-block;min-width:1ch}
+.roman{font:400 clamp(1.1rem,1.6vw,1.5rem)/1.4 var(--serif);color:var(--ink-2);margin-top:12px}
+.cover-foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;margin-top:56px;align-items:end}
+.lede{font:400 clamp(1.25rem,2.1vw,1.75rem)/1.55 var(--serif);max-width:24em}
+.lede-sub{color:var(--ink-2);margin-top:16px;font-size:15px}
+.toc{list-style:none;margin:0;padding:0;display:grid;gap:6px;font:400 1.15rem/1.5 var(--serif)}
+.toc a{text-decoration:none;display:grid;grid-template-columns:2.4em 1fr;align-items:baseline}
+.toc a:hover span:last-child{text-decoration:underline}
+.toc .n{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.toc-label{font-size:14px;color:var(--ink-2);margin-bottom:10px}
+
+/* recent news */
+.news{padding-block:clamp(72px,10vw,140px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:48px;border-top:1px solid var(--ink)}
+.news h2{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.news ol{list-style:none;margin:0;padding:0;display:grid;gap:28px}
+.news li{display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:24px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6}
+.news time{font-family:var(--serif);color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+/* chapter opener: black page, giant numeral */
+.opener{background:var(--ink);color:var(--paper);min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);grid-template-rows:auto 1fr auto;gap:32px 48px;padding-block:110px 64px;overflow:hidden;position:relative}
+.opener .num{grid-column:1/-1;font:400 clamp(9rem,34vw,34rem)/.8 var(--serif);letter-spacing:-.05em;margin-left:-.06em}
+.opener .ttl{align-self:end}
+.opener h2{font-size:clamp(2.6rem,7vw,6.5rem);font-weight:400;letter-spacing:-.02em;line-height:1.08}
+.opener .one{font:400 clamp(1.1rem,1.8vw,1.5rem)/1.55 var(--serif);margin-top:20px;max-width:26em;color:#fff}
+.meta{display:grid;gap:14px;align-self:end;margin:0}
+.meta div{display:grid;gap:2px}
+.meta dt{font-size:13px;color:var(--night-2)}
+.meta dd{margin:0;font:400 1.15rem/1.45 var(--serif)}
+.opener .chap{position:absolute;top:110px;right:var(--gutter);font-family:var(--serif);color:var(--night-2)}
+
+/* chapter body pages */
+.page{padding-block:clamp(80px,10vw,150px)}
+.page+.page{padding-top:0}
+.k{font-size:14px;color:var(--ink-2);margin-bottom:14px}
+.h3{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:400;letter-spacing:-.01em}
+.body{max-width:var(--measure)}
+.body p+p{margin-top:1em}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px)}
+.did{display:grid;gap:28px;margin:0}
+.did dt{font-family:var(--serif);font-weight:600;font-size:1.2rem;line-height:1.4}
+.did dd{margin:6px 0 0;color:#222}
+.shot{margin:0}
+.shot figcaption{font-size:14px;color:var(--ink-2);margin-top:12px}
+.bleed{margin-inline:calc(var(--gutter) * -1)}
+.bleed img{width:100%}
+.bleed figcaption{padding-inline:var(--gutter)}
+.links{display:flex;flex-wrap:wrap;overflow-wrap:anywhere;min-width:0;gap:8px 24px;margin-top:28px;font-size:15px}
+
+/* decision table: choice vs alternative */
+.decide{display:grid;gap:0;margin-top:40px}
+.decide article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.4fr);gap:24px 40px;padding-block:28px;border-top:1px solid var(--ink)}
+.decide h4{grid-column:1/-1;font-size:1.35rem}
+.decide .lbl{font-size:13px;color:var(--ink-2);display:block;margin-bottom:4px}
+.decide .why{color:#222}
+
+/* sequences: symptom to retro, upload to result */
+.seq{list-style:none;margin:40px 0 0;padding:0;counter-reset:s;display:grid;gap:0}
+.seq li{counter-increment:s;display:grid;grid-template-columns:4.5em minmax(0,9em) minmax(0,1fr);gap:24px;padding-block:22px;border-top:1px solid #d6d6d6;align-items:baseline}
+.seq li::before{content:counter(s,decimal-leading-zero);font-family:var(--serif);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.seq b{font-family:var(--serif);font-weight:600;font-size:1.1rem}
+.trouble-q{font:400 clamp(1.7rem,3.6vw,3rem)/1.3 var(--serif);max-width:20em;letter-spacing:-.01em}
+
+.flow{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));counter-reset:f}
+.flow li{counter-increment:f;padding:18px 16px 0 0;border-top:2px solid var(--ink);font-size:15px;line-height:1.5}
+.flow li::before{content:counter(f,decimal-leading-zero);display:block;font-family:var(--serif);color:var(--ink-2);margin-bottom:6px}
+
+.phones{display:flex;gap:clamp(16px,3vw,40px);align-items:flex-start}
+.phones .shot{flex:1 1 0;min-width:0;max-width:300px}
+.phones.tilt .shot:nth-child(2){margin-top:72px}
+
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:40px}
+.cols3 h4{font-size:1.3rem;margin-bottom:14px}
+.cols3 .lbl{font-size:13px;color:var(--ink-2);display:block;margin-top:12px}
+.cols3 p{font-size:15.5px}
+
+/* PoC page: statement type */
+.statement{font:400 clamp(2rem,4.6vw,4rem)/1.25 var(--serif);letter-spacing:-.015em;max-width:16em}
+.scope{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:56px}
+.scope h4{font-size:1.4rem;margin-bottom:12px}
+.scope ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:16px}
+
+.apps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,120px)}
+.app .sub{font:400 1.15rem/1.55 var(--serif);margin-top:10px;max-width:22em}
+.app .facts{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:18px;font-size:14px;color:var(--ink-2)}
+.app .phones{margin-top:36px}
+.app .did{margin-top:40px}
+
+/* own work + contact on black */
+.own{background:var(--ink);color:var(--paper);padding-block:clamp(90px,11vw,160px)}
+.own .k{color:var(--night-2)}
+.own-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 40px;margin-top:48px}
+.own-grid h3{font-size:1.5rem;font-weight:400}
+.own-grid p{color:#d9d9d9;font-size:15.5px;margin-top:8px}
+.contact{margin-top:clamp(96px,12vw,180px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.contact .mail{font:400 clamp(2rem,6.4vw,6rem)/1.05 var(--serif);letter-spacing:-.02em;text-decoration:none;word-break:break-all}
+.contact .mail:hover{text-decoration:underline;text-decoration-thickness:2px}
+.colophon{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:64px;padding-top:20px;border-top:1px solid #333;font-size:13px;color:var(--night-2)}
+
+/* agent edition */
+.agent{display:none;background:#000;color:#fff;min-height:100svh;padding-block:110px 80px;font:400 14.5px/1.75 var(--mono)}
+.agent pre{margin:0;white-space:pre-wrap;word-break:break-word;font:inherit;max-width:92ch}
+.agent .dim{color:#8c8c8c}
+html[data-edition="agent"] .human{display:none}
+html[data-edition="agent"] .agent{display:block}
+html[data-edition="agent"] body{background:#000}
+html[data-edition="agent"] .head .now{visibility:hidden}
+
+/* scroll-linked drift for the giant numerals, only where supported */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .opener .num{animation:drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    @keyframes drift{from{transform:translateY(-14%)}to{transform:translateY(18%)}}
+  }
+}
+
+@media (max-width:860px){
+  body{font-size:16px}
+  .cover-foot,.news,.two,.apps,.scope{grid-template-columns:minmax(0,1fr)}
+  .opener{grid-template-columns:minmax(0,1fr)}
+  .opener .chap{display:none}
+  .decide article{grid-template-columns:minmax(0,1fr)}
+  .seq li{grid-template-columns:3em minmax(0,1fr)}
+  .seq li span{grid-column:2}
+  .flow{grid-template-columns:minmax(0,1fr)}
+  .flow li{display:grid;grid-template-columns:3em minmax(0,1fr);padding:14px 0;border-top-width:1px}
+  .flow li::before{margin:0}
+  .cols3,.own-grid{grid-template-columns:minmax(0,1fr)}
+  .news li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .contact{grid-template-columns:minmax(0,1fr)}
+  .head{grid-template-columns:1fr auto}
+  .head .now{display:none}
+}
+@media (max-width:480px){
+  .head .ed{display:none}
+  .head{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header class="head">
+  <span class="ed">Portfolio, 2026 edition</span>
+  <span class="now" id="running" aria-hidden="true">표지</span>
+  <div class="mode" role="group" aria-label="읽는 방식">
+    <button type="button" id="m-human" aria-pressed="true">사람용</button>
+    <button type="button" id="m-agent" aria-pressed="false">에이전트용</button>
+  </div>
+</header>
+
+<main class="human">
+
+<section class="cover wrap" data-run="표지">
+  <div>
+    <h1 class="name" aria-label="손제희"><span class="typed" id="typed" aria-hidden="true">손제희</span></h1>
+    <p class="roman">Son Jaehee</p>
+  </div>
+  <div class="cover-foot">
+    <div>
+      <p class="lede">외부 데이터 수집부터 LLM 처리, 백엔드, 배포까지 직접 구현합니다.</p>
+      <p class="lede-sub">수학 교육 9년. 지금은 논문 검색, 사진 판별, 교육 데이터 서비스를 만듭니다.</p>
+    </div>
+    <nav aria-label="목차">
+      <p class="toc-label">차례</p>
+      <ol class="toc">
+        <li><a href="#publium"><span class="n">01</span><span>Publium</span></a></li>
+        <li><a href="#beorimi"><span class="n">02</span><span>버리미 (Beorimi)</span></a></li>
+        <li><a href="#poc"><span class="n">03</span><span>베어러블 PoC</span></a></li>
+        <li><a href="#toss"><span class="n">04</span><span>앱인토스 미니앱 2종</span></a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="news wrap" data-run="근황" aria-labelledby="news-h">
+  <h2 id="news-h">근황</h2>
+  <ol>
+    <li><time datetime="2026-10-06">2026.10.06</time><p>AICE 자격증 관련 회사에서 일하기 시작했습니다.</p></li>
+    <li><time>최근</time><p>팀장을 맡은 베어러블 PoC를 마쳤습니다. 과정의 최우수 교육생 2명이 모두 우리 팀에서 나왔습니다.</p></li>
+    <li><time>2026.07 – 08</time><p>앱인토스 미니앱 2개를 정식 출시했습니다.</p></li>
+  </ol>
+</section>
+
+<!-- 01 Publium -->
+<section class="opener wrap" id="publium" data-run="01 Publium">
+  <span class="chap">Chapter I</span>
+  <div class="num" aria-hidden="true">01</div>
+  <div class="ttl">
+    <h2>Publium</h2>
+    <p class="one">PubMed 논문을 수집하고, 수집한 논문 검색과 PMID 출처 표시를 연결한 연구 탐색 서비스</p>
+  </div>
+  <dl class="meta">
+    <div><dt>기간</dt><dd>2026.07, 8일 개발</dd></div>
+    <div><dt>규모</dt><dd>2인 팀</dd></div>
+    <div><dt>역할</dt><dd>백엔드, 에이전트, 배포</dd></div>
+    <div><dt>상태</dt><dd>배포 후 운영 중</dd></div>
+  </dl>
+</section>
+
+<section class="page wrap" data-run="01 Publium">
+  <figure class="shot bleed">
+    <img src="img/publium-answer.webp" width="1600" height="1000" alt="Publium 검색과 답변 화면. 왼쪽에 PubMed 검색 조건, 가운데에 논문 채팅방 목록, 오른쪽에 선택한 논문을 근거로 한 AI 답변이 있다.">
+    <figcaption>검색과 답변 화면, 현재 운영 버전</figcaption>
+  </figure>
+</section>
+
+<section class="page wrap" data-run="01 Publium">
+  <div class="two">
+    <div>
+      <p class="k">문제와 접근</p>
+      <div class="body">
+        <p>논문 탐색에는 반복 검색과 출처 확인이 필요합니다. 사용자가 수집한 논문을 검색하는 도구를 연결하고, 검색 결과를 근거로 답변하도록 지시했습니다. 답변 끝에는 사용한 PMID를 표시합니다.</p>
+      </div>
+      <div class="links">
+        <a href="https://github.com/hansol-dev/team-pubmed">github.com/hansol-dev/team-pubmed</a>
+        <a href="https://team-pubmed.vercel.app">team-pubmed.vercel.app</a>
+      </div>
+    </div>
+    <div>
+      <p class="k">직접 구현한 것</p>
+      <dl class="did">
+        <div><dt>FastAPI 백엔드와 데이터 계층</dt><dd>PubMed E-utilities 수집, 논문 목록과 채팅 기록 저장, 삭제 API. Supabase Postgres 연결과 구글 로그인.</dd></div>
+        <div><dt>툴콜링 에이전트</dt><dd>LangChain create_agent에 수집 논문 검색 툴을 연결. 근거가 필요한 질문에는 검색을 먼저 하도록 프롬프트로 지시하고, 사용한 PMID를 표시.</dd></div>
+        <div><dt>서버 측 가드</dt><dd>진단, 처방, 복용량 같은 의료 조언 요청은 LLM에 보내기 전에 정규식으로 차단하고 고정 안내문을 반환.</dd></div>
+        <div><dt>스트리밍과 응답성</dt><dd>토큰 단위 스트리밍 응답. 동기 DB와 PubMed 호출은 스레드로 분리해 이벤트 루프가 멈추지 않게 함.</dd></div>
+        <div><dt>배포</dt><dd>Render에서 Supabase Postgres 기반 무료 배포. 이후 리뉴얼(pgvector, 그래프 RAG)은 팀원 담당.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="page wrap" data-run="01 Publium">
+  <h3 class="h3">기술 선택</h3>
+  <div class="decide">
+    <article>
+      <h4>답변 구조</h4>
+      <p><span class="lbl">선택</span>LangChain 툴콜링 에이전트. 모델이 검색 여부와 검색어를 정함</p>
+      <p><span class="lbl">대안</span>검색 결과를 프롬프트에 붙이는 고정 파이프라인</p>
+      <p class="why"><span class="lbl">이유</span>후속 질문이면 대화 기록의 PMID나 키워드로 다시 검색해야 했습니다. 검색어를 코드로 정하지 않아도 되는 대신, 찾지 못하면 없다고 답하도록 프롬프트로 순서를 잡았습니다.</p>
+    </article>
+    <article>
+      <h4>블로킹 I/O</h4>
+      <p><span class="lbl">선택</span>asyncio.to_thread로 동기 호출만 스레드로 분리</p>
+      <p><span class="lbl">대안</span>DB 드라이버와 HTTP 클라이언트를 전부 비동기로 교체</p>
+      <p class="why"><span class="lbl">이유</span>기존 동기 코드가 이미 동작하고 있었고 기간이 짧았습니다. 문제는 async 핸들러 안의 동기 호출이었으므로 호출 지점만 넘기는 쪽이 변경 범위가 가장 작았습니다.</p>
+    </article>
+    <article>
+      <h4>의료 조언 차단</h4>
+      <p><span class="lbl">선택</span>서버 정규식 가드와 고정 응답</p>
+      <p><span class="lbl">대안</span>시스템 프롬프트로만 금지</p>
+      <p class="why"><span class="lbl">이유</span>프롬프트 지시는 우회될 수 있고, 차단할 때 반환하는 문구는 항상 같아야 했습니다. LLM 호출 전에 서버에서 끊으면 비용도 들지 않습니다.</p>
+    </article>
+  </div>
+</section>
+
+<section class="page wrap" data-run="01 Publium">
+  <p class="k">트러블슈팅</p>
+  <p class="trouble-q">논문 수집 요청이 길어지면 서버 전체가 응답하지 않았습니다.</p>
+  <ol class="seq">
+    <li><b>증상</b><span>PubMed 수집 요청이 진행되는 동안 다른 요청과 상태 확인까지 전부 대기.</span></li>
+    <li><b>원인</b><span>async def 핸들러 안에서 동기 PubMed, DB 호출을 그대로 실행해 이벤트 루프 전체가 막힘.</span></li>
+    <li><b>조치</b><span>동기 호출을 asyncio.to_thread로 스레드풀에 넘기고, 동시 수집은 세마포어로 2개까지 제한. 수집 중에도 /health가 응답하는지 확인하는 테스트 추가.</span></li>
+    <li><b>다시 한다면</b><span>처음부터 async 드라이버를 쓰거나, 동기 라이브러리를 쓰는 핸들러는 def로 선언해 FastAPI가 스레드풀에서 돌리게 함.</span></li>
+  </ol>
+</section>
+
+<!-- 02 Beorimi -->
+<section class="opener wrap" id="beorimi" data-run="02 버리미">
+  <span class="chap">Chapter II</span>
+  <div class="num" aria-hidden="true">02</div>
+  <div class="ttl">
+    <h2>버리미 (Beorimi)</h2>
+    <p class="one">사진 한 장에서 여러 대형폐기물을 나누어 보고, 강남구 공식 수수료 기준과 신고 경로까지 연결한 서비스</p>
+  </div>
+  <dl class="meta">
+    <div><dt>기간</dt><dd>2026.08, 28시간 MVP</dd></div>
+    <div><dt>규모</dt><dd>3인 팀</dd></div>
+    <div><dt>역할</dt><dd>팀장, 백엔드, 워커</dd></div>
+    <div><dt>스택</dt><dd>Next.js, Supabase, OpenAI</dd></div>
+  </dl>
+</section>
+
+<section class="page wrap" data-run="02 버리미">
+  <div class="two">
+    <div class="phones tilt">
+      <figure class="shot"><img src="img/beorimi-home.webp" width="480" height="759" alt="버리미 첫 화면. 이거 어떻게 버려야 할까요라는 문구 아래 사진 찍기 버튼이 있다."><figcaption>사진 촬영, 업로드</figcaption></figure>
+      <figure class="shot"><img src="img/beorimi-result.webp" width="480" height="724" alt="판별 결과 화면. 사진 속 의자와 서랍장 4개 품목에 번호가 붙은 상자가 그려져 있다."><figcaption>다중 품목 인식 결과와 신고 준비</figcaption></figure>
+    </div>
+    <div>
+      <h3 class="h3">사진 한 장에서 예상 수수료까지</h3>
+      <div class="body" style="margin-top:20px">
+        <p>사진 속 여러 폐기물을 품목별로 분리한 뒤 행정 기준과 연결했습니다. VLM의 추정값을 그대로 노출하지 않고 고정 스키마로 받은 뒤, 강남구 공식 수수료 카탈로그와 다시 매칭했습니다.</p>
+      </div>
+      <ol class="seq">
+        <li><b>사진 촬영</b><span>여러 품목이 한 프레임에 있어도 그대로 촬영.</span></li>
+        <li><b>다중 품목 인식</b><span>의자, 서랍장 등을 각각 분리 인식하고 규격을 추정.</span></li>
+        <li><b>사용자 확인</b><span>잘못 인식된 품목은 사용자가 직접 고칠 수 있게 설계.</span></li>
+        <li><b>수수료 산출</b><span>강남구 수수료 기준표와 매칭해 품목별, 합계 금액 안내.</span></li>
+      </ol>
+      <div class="links"><a href="https://github.com/TrinityBalance/beorimi">github.com/TrinityBalance/beorimi</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="page wrap" data-run="02 버리미">
+  <h3 class="h3">기술 선택</h3>
+  <div class="cols3">
+    <div>
+      <h4>인프라</h4>
+      <span class="lbl">선택</span><p>Supabase 하나로 Auth, Storage, Postgres, 큐, 워커까지</p>
+      <span class="lbl">대안</span><p>AWS Cognito, S3, DynamoDB, SQS, Lambda 조합 (첫날 설계)</p>
+      <span class="lbl">이유</span><p>28시간 안에 구현과 배포를 마치기 위해, 사용 경험이 있는 Supabase로 전환했습니다. SQS가 맡을 큐는 Postgres 행과 pg_net으로 구현해 인프라 설정 범위를 줄였습니다.</p>
+    </div>
+    <div>
+      <h4>분석 처리</h4>
+      <span class="lbl">선택</span><p>202 반환 후 Postgres 큐와 워커, 브라우저는 폴링</p>
+      <span class="lbl">대안</span><p>요청 핸들러에서 VLM 응답까지 동기로 대기</p>
+      <span class="lbl">이유</span><p>동기로 붙였을 때 로딩만 걸리고, 요청이 서버에 닿았는지 VLM이 실패했는지 화면에서 알 수 없었습니다. 작업을 행으로 남기면 어느 단계에서 멈췄는지 상태와 오류 메시지가 남습니다.</p>
+    </div>
+    <div>
+      <h4>VLM 출력</h4>
+      <span class="lbl">선택</span><p>Structured Outputs strict JSON Schema, guardrail 필드 포함</p>
+      <span class="lbl">대안</span><p>자유 텍스트 응답을 서버에서 파싱</p>
+      <span class="lbl">이유</span><p>수수료 매칭에 필요한 입력을 strict JSON Schema로 고정했습니다. 모델이 반환한 guardrail 필드에 프롬프트 인젝션 신호가 있으면 결과를 저장하지 않고 실패 처리합니다.</p>
+    </div>
+  </div>
+  <p class="k" style="margin-top:72px">비동기 분석 흐름</p>
+  <ol class="flow">
+    <li>사진 업로드</li>
+    <li>작업 등록, 202 반환</li>
+    <li>워커의 VLM 분석</li>
+    <li>출력 검증, 수수료 매칭</li>
+    <li>상태와 결과 조회</li>
+  </ol>
+</section>
+
+<!-- 03 Bearable PoC -->
+<section class="opener wrap" id="poc" data-run="03 베어러블 PoC">
+  <span class="chap">Chapter III</span>
+  <div class="num" aria-hidden="true">03</div>
+  <div class="ttl">
+    <h2>베어러블 PoC</h2>
+    <p class="one">대학 정보와 고교학점제 화면을 마이폴리오에 연결하는 기업 연계 PoC</p>
+  </div>
+  <dl class="meta">
+    <div><dt>기간</dt><dd>2026.08 시작, 완료</dd></div>
+    <div><dt>규모</dt><dd>5인, 개발 2와 기획 3</dd></div>
+    <div><dt>역할</dt><dd>팀장, 화면 구현, 배포</dd></div>
+    <div><dt>출처</dt><dd>강남구 혁신인재육성 아카데미</dd></div>
+  </dl>
+</section>
+
+<section class="page wrap" data-run="03 베어러블 PoC">
+  <p class="statement">개발 2인과 기획 3인으로 구성된 팀을 이끌며 화면 구현과 요구사항 조율, 배포를 맡았습니다.</p>
+  <div class="scope">
+    <div>
+      <h4>대학 정보</h4>
+      <ul><li>학교 기본 정보</li><li>학과별 정보</li><li>입시 전형 정보</li></ul>
+    </div>
+    <div>
+      <h4>고교학점제</h4>
+      <ul><li>주간 시간표</li><li>개설 과목</li><li>진로 과목 추천</li></ul>
+    </div>
+  </div>
+  <dl class="did two" style="margin-top:80px">
+    <div><dt>화면 구현과 배포</dt><dd>React와 Vite로 두 화면을 구현하고 Vercel에 배포했습니다.</dd></div>
+    <div><dt>요구사항 조율</dt><dd>기업 담당 개발자와 매주 요구사항을 조율하며 스프린트를 진행했습니다.</dd></div>
+    <div><dt>팀 운영과 협업 기준</dt><dd>개발 2인, 기획 3인의 역할을 나누고 GitHub 저장소와 브랜치 운영 규칙을 정했습니다.</dd></div>
+    <div><dt>교육 현장 경험으로 방향 검증</dt><dd>9년의 교육 경험을 바탕으로 고2 학생을 인터뷰해 화면과 다음 기능의 방향을 잡았습니다.</dd></div>
+  </dl>
+  <p class="k" style="margin-top:56px">기업 연계 프로젝트라 저장소는 비공개입니다.</p>
+</section>
+
+<!-- 04 Apps in Toss -->
+<section class="opener wrap" id="toss" data-run="04 앱인토스 미니앱">
+  <span class="chap">Chapter IV</span>
+  <div class="num" aria-hidden="true">04</div>
+  <div class="ttl">
+    <h2>앱인토스 미니앱 2종</h2>
+    <p class="one">나의 여름방학 일기와 별일을 토스 앱인토스에 정식 출시했습니다. 하나는 기획을 주도했고 하나는 팀장이었습니다.</p>
+  </div>
+  <dl class="meta">
+    <div><dt>기간</dt><dd>2026.07, 08</dd></div>
+    <div><dt>상태</dt><dd>앱인토스 정식 출시 2건</dd></div>
+    <div><dt>역할</dt><dd>기획, 팀장, 화면 구현</dd></div>
+    <div><dt>스택</dt><dd>React, TypeScript, Supabase Edge Function</dd></div>
+  </dl>
+</section>
+
+<section class="page wrap" data-run="04 앱인토스 미니앱">
+  <div class="apps">
+    <article class="app">
+      <h3 class="h3">나의 여름방학 일기</h3>
+      <p class="sub">사진과 짧은 글을 올리면 AI가 문장을 다듬고 크레파스 그림일기로 바꿔 주는 미니앱</p>
+      <p class="facts"><span>2026.07</span><span>기획 주도, 작성부 구현</span></p>
+      <div class="phones">
+        <figure class="shot"><img src="img/diary-write.webp" width="440" height="759" alt="일기 쓰기 화면. 제목, 날씨, 일기 내용을 손글씨처럼 입력한다."><figcaption>작성 화면</figcaption></figure>
+        <figure class="shot"><img src="img/diary-result.webp" width="440" height="759" alt="변환 결과. 크레파스로 그린 폭포 그림과 원고지 칸에 쓴 일기, 선생님 도장이 있다."><figcaption>변환 결과</figcaption></figure>
+      </div>
+      <dl class="did">
+        <div><dt>팀 구성과 조율</dt><dd>필요한 팀원을 직접 영입하고 의견을 조율해 방향을 정했습니다.</dd></div>
+        <div><dt>작성부 구현</dt><dd>일기 입력, 미리보기, 공유 모달과 이미지 처리 유틸을 React와 TypeScript로 구현했습니다.</dd></div>
+        <div><dt>금칙어와 프롬프트</dt><dd>본문의 금칙어를 감지해 표시하는 로직을 만들고, 분석 프롬프트의 강조어와 금칙어 규칙을 다듬었습니다.</dd></div>
+        <div><dt>출시와 홍보</dt><dd>앱인토스 심사를 거쳐 출시하고, 완성된 그림일기를 SNS에 공유하기 쉬운 형태로 만들어 홍보했습니다.</dd></div>
+      </dl>
+      <div class="links"><a href="https://github.com/TossHackathonTMD/SummerVacationDiary">github.com/TossHackathonTMD/SummerVacationDiary</a></div>
+    </article>
+    <article class="app">
+      <h3 class="h3">별일 (Byeolil)</h3>
+      <p class="sub">사소한 하루를 진지하게 관측하고 시상하는 운세 기록 미니앱</p>
+      <p class="facts"><span>2026.08</span><span>팀장, 3D와 기록 흐름 구현</span><span>React 19, TypeScript, three.js</span></p>
+      <div class="phones">
+        <figure class="shot"><img src="img/byeolil-home.webp" width="480" height="942" alt="별일 관측국 메인 화면. 어두운 우주 배경에 주황색 구슬이 떠 있고, 왁뿌볼 안에 든 운세를 꺼내보세요라고 적혀 있다."><figcaption>토스 앱인토스 실제 메인 화면</figcaption></figure>
+        <figure class="shot"><img src="img/diary-home.webp" width="480" height="942" alt="나의 여름방학 일기 첫 화면. 크레파스 바닷가 그림 위에 제목이 있다."><figcaption>나의 여름방학 일기 첫 화면</figcaption></figure>
+      </div>
+      <dl class="did">
+        <div><dt>역할 분배와 온보딩</dt><dd>입문자 팀원의 숙련도에 맞춰 작업을 나누고 구현 기준을 설명했습니다.</dd></div>
+        <div><dt>작업 규칙</dt><dd>AGENTS.md와 CLAUDE.md를 공통 규칙으로 관리해 AI 코딩 도구의 작업 기준을 맞췄습니다.</dd></div>
+        <div><dt>직접 구현</dt><dd>3D 오브젝트 파괴 상호작용, 기록과 보관함 흐름, 숨은 카드와 사운드를 구현했습니다.</dd></div>
+        <div><dt>출시</dt><dd>앱인토스 심사 대응을 거쳐 개발 시작부터 한 달 안에 정식 출시했습니다.</dd></div>
+      </dl>
+      <div class="links"><a href="https://github.com/TrivialOkay/TrivialOkay_toss">github.com/TrivialOkay/TrivialOkay_toss</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="own wrap" data-run="직접 만들어 쓰는 것" aria-labelledby="own-h">
+  <p class="k">개인 프로젝트</p>
+  <h2 id="own-h" class="h3">떠오른 아이디어는 직접 만들어 매일 쓰면서 고칩니다.</h2>
+  <div class="own-grid">
+    <div><h3>cogito</h3><p>매일 사용하는 개인 AI 에이전트. 반복 작업을 에이전트에 맡길지 코드로 고정할지 실험하는 기반.</p></div>
+    <div><h3><a href="https://github.com/jasonwpgml/autonomous-neuro-drive">AND</a></h3><p>Autonomous Neuro Drive. 활동과 대화를 넣어 장기 지식으로 쌓는 local-first LLM 위키.</p></div>
+    <div><h3><a href="https://github.com/jasonwpgml/galpi">galpi</a></h3><p>코딩 에이전트가 코드베이스의 의도와 주의점을 찾도록 만든 코드 탐색, 맥락 규약.</p></div>
+    <div><h3>나비서</h3><p>휴대폰과 데스크톱을 연결해 생활 작업을 단계별로 실행하는 MCP 기반 자동화 도구. LifeTrace(활동 기록)와 연동.</p></div>
+    <div><h3>FAPA</h3><p>개인 재무 에이전트. Playwright MCP로 카드 사용 내역을 수집해 지출을 정리하고 소비를 관리. 나비서와 연동.</p></div>
+    <div><h3><a href="https://github.com/jasonwpgml/Momento">Momento</a></h3><p>과외 일정을 강사, 학생, 보호자가 역할별로 나눠 보는 PWA. 기획부터 배포까지 혼자, 직접 쓰면서 고치는 중.</p></div>
+  </div>
+
+  <div class="contact" data-run="연락처">
+    <div>
+      <p class="k">연락처</p>
+      <a class="mail" href="mailto:jae1450@naver.com">jae1450@naver.com</a>
+    </div>
+    <div class="links" style="margin:0"><a href="https://github.com/jasonwpgml">github.com/jasonwpgml</a></div>
+  </div>
+  <div class="colophon">
+    <span>Portfolio, 2026 edition</span>
+    <span>제목 마루 부리, 본문 Wanted Sans</span>
+    <span>© 2026 손제희</span>
+  </div>
+</section>
+
+</main>
+
+<section class="agent wrap" aria-label="에이전트용 판본">
+  <pre id="agent-out"></pre>
+</section>
+
+<script type="application/json" id="profile-data">
+{
+  "$schema": "agent-profile/1.0",
+  "subject": {"id": "github:jasonwpgml", "name": "손제희", "latin": "Son Jaehee", "role": "full_stack_ai_developer"},
+  "summary": "외부 데이터 수집부터 LLM 처리, 백엔드, 배포까지 직접 구현. 수학 교육 9년.",
+  "status": {
+    "employment": {"since": "2026-10-06", "org": "AICE 자격증 관련 회사"},
+    "recent": ["베어러블 PoC 팀장, 완료", "최우수 교육생 2명 모두 같은 팀", "앱인토스 미니앱 2개 정식 출시"]
+  },
+  "projects": [
+    {"id": "01", "name": "Publium", "period": "2026-07", "team": 2, "role": ["backend", "agent", "deploy"], "state": "운영 중",
+     "does": "PubMed 논문 수집, 수집 논문 검색, PMID 출처 표시", "stack": ["FastAPI", "LangChain", "Supabase Postgres", "Render"],
+     "decisions": {"answer": "tool_calling_agent", "blocking_io": "asyncio.to_thread", "medical_advice": "server_regex_guard"},
+     "repo": "github.com/hansol-dev/team-pubmed"},
+    {"id": "02", "name": "Beorimi", "period": "2026-08", "duration": "28h MVP", "team": 3, "role": ["lead", "backend", "worker"],
+     "does": "사진 속 대형폐기물 다중 인식, 강남구 수수료 매칭, 신고 경로 연결", "stack": ["Next.js", "Supabase", "OpenAI"],
+     "pipeline": ["upload", "enqueue_202", "worker_vlm", "validate_and_match_fee", "poll_result"],
+     "rule": "model observes, code decides, user confirms", "repo": "github.com/TrinityBalance/beorimi"},
+    {"id": "03", "name": "Bearable PoC", "period": "2026-08", "team": {"dev": 2, "planning": 3}, "role": ["lead", "frontend", "deploy"],
+     "does": "마이폴리오 대학 정보, 고교학점제 화면", "stack": ["React", "Vite", "Vercel"], "state": "완료", "repo": "private"},
+    {"id": "04", "name": "Apps in Toss x2", "period": ["2026-07", "2026-08"], "state": "정식 출시 2건",
+     "apps": [
+       {"name": "나의 여름방학 일기", "role": ["planning_lead", "editor_ui"], "repo": "github.com/TossHackathonTMD/SummerVacationDiary"},
+       {"name": "별일", "role": ["lead", "3d_interaction", "record_flow"], "stack": ["React 19", "TypeScript", "three.js"], "repo": "github.com/TrivialOkay/TrivialOkay_toss"}
+     ]}
+  ],
+  "own_work": ["cogito", "autonomous-neuro-drive", "galpi", "나비서", "FAPA", "Momento"],
+  "contact": {"email": "jae1450@naver.com", "github": "github.com/jasonwpgml"},
+  "trust": "verify_by_evidence"
+}
+</script>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Cover: type the name the way a Korean IME composes it, jamo by jamo.
+  const typed = document.getElementById('typed');
+  const steps = ['ㅅ', '소', '손', '손ㅈ', '손제', '손제ㅎ', '손제흐', '손제희'];
+  if (!reduce) {
+    let i = 0;
+    typed.textContent = steps[0];
+    const tick = () => {
+      typed.textContent = steps[i];
+      if (++i < steps.length) setTimeout(tick, i === 3 || i === 5 ? 190 : 120);
+    };
+    setTimeout(tick, 250);
+  }
+
+  // Running head shows the section under it.
+  const running = document.getElementById('running');
+  const io = new IntersectionObserver(es => {
+    for (const e of es) if (e.isIntersecting) running.textContent = e.target.dataset.run;
+  }, { rootMargin: '-8% 0px -88% 0px' });
+  document.querySelectorAll('[data-run]').forEach(s => io.observe(s));
+
+  // Agent edition: the same facts as structured text, decoded in place.
+  const data = JSON.parse(document.getElementById('profile-data').textContent);
+  const out = document.getElementById('agent-out');
+  const render = (v, pad = '') => {
+    if (Array.isArray(v)) return v.every(x => typeof x !== 'object')
+      ? '[' + v.join(', ') + ']'
+      : v.map(x => '\n' + pad + '- ' + render(x, pad + '  ').trimStart()).join('');
+    if (v && typeof v === 'object') return Object.entries(v)
+      .map(([k, x]) => '\n' + pad + k + ': ' + render(x, pad + '  ')).join('');
+    return String(v);
+  };
+  const text = 'AGENT://SONJAEHEE  edition=2026  transport=html  verify=required\n'
+    + '# 사람용 판본과 같은 사실을 구조화한 것. 원본 JSON은 이 페이지의 #profile-data에 있음.\n'
+    + render(data) + '\n\nACK :: transmission_complete';
+  const glyphs = '01ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ{}[]:/<>=_';
+  let raf;
+  const decode = () => {
+    cancelAnimationFrame(raf);
+    if (reduce) { out.textContent = text; return; }
+    const t0 = performance.now(), dur = 900;
+    const frame = now => {
+      const p = Math.min(1, (now - t0) / dur), cut = Math.floor(text.length * p);
+      let s = text.slice(0, cut);
+      for (let j = cut; j < Math.min(text.length, cut + 240); j++)
+        s += text[j] === '\n' || text[j] === ' ' ? text[j] : glyphs[(Math.random() * glyphs.length) | 0];
+      out.textContent = s;
+      if (p < 1) raf = requestAnimationFrame(frame);
+    };
+    raf = requestAnimationFrame(frame);
+  };
+
+  const bHuman = document.getElementById('m-human'), bAgent = document.getElementById('m-agent');
+  const set = (mode, animate) => {
+    root.dataset.edition = mode;
+    bHuman.setAttribute('aria-pressed', mode === 'human');
+    bAgent.setAttribute('aria-pressed', mode === 'agent');
+    if (mode === 'agent') { animate ? decode() : (out.textContent = text); scrollTo({ top: 0 }); }
+    try { localStorage.setItem('edition', mode); } catch {}
+  };
+  bHuman.addEventListener('click', () => set('human', true));
+  bAgent.addEventListener('click', () => set('agent', true));
+  let saved = 'human';
+  try { saved = localStorage.getItem('edition') || 'human'; } catch {}
+  if (location.hash === '#agent') saved = 'agent';
+  if (saved === 'agent') set('agent', false);
+})();
+</script>
