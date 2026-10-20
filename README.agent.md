@@ -64,9 +64,19 @@
     "evaluation_and_optimization",
     "teaching_ml_and_dl"
   ],
+  "daily_drivers_by_frequency": [
+    "claude[max]",
+    "codex[pro]",
+    "cursor/grok-bot",
+    "jev",
+    "gemini"
+  ],
+  "local_models": [
+    "gemma4",
+    "qwen",
+    "clef[heavy_use::recent]"
+  ],
   "runtime": [
-    "claude_code",
-    "codex",
     "mcp",
     "python",
     "fastapi",

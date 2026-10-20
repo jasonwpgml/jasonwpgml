@@ -70,7 +70,12 @@ Most of what's here started because I wanted to use it myself.
 
 ## What I reach for
 
-`Claude Code` · `Codex` · `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `Multi-agent Systems` · `Long-term Memory` · `Event Store` · `Data Provenance` · `Streamlit`
+**Daily drivers**, most-used first:
+`Claude (Max)` → `Codex (Pro)` → `Cursor / grok-bot` → `jev` → `Gemini`
+
+**Running locally:** `Gemma 4` · `Qwen` · `clef` (using this one a lot lately)
+
+**Building with:** `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `Multi-agent Systems` · `Long-term Memory` · `Event Store` · `Data Provenance` · `Streamlit`
 
 <p>
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, and GitHub Actions" />

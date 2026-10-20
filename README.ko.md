@@ -70,7 +70,12 @@ AI 에이전트가 가장 빠르게 바뀌는 곳에서 대부분의 시간을 �
 
 ## 자주 쓰는 도구
 
-`Claude Code` · `Codex` · `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `멀티 에이전트 시스템` · `장기 기억` · `Event Store` · `데이터 계보` · `Streamlit`
+**주력**, 자주 쓰는 순서대로:
+`Claude (Max)` → `Codex (Pro)` → `Cursor / grok-bot` → `jev` → `Gemini`
+
+**로컬:** `Gemma 4` · `Qwen` · `clef` (요즘 제일 잘 쓰는 중)
+
+**만들 때 쓰는 것:** `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `멀티 에이전트 시스템` · `장기 기억` · `Event Store` · `데이터 계보` · `Streamlit`
 
 <p>
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, GitHub Actions" />
