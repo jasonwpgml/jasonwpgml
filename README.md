@@ -8,20 +8,22 @@
 
 # Jason
 
-### Full-stack developer building local-first AI systems.
+### On the bleeding edge of the agent era, building how people and agents work together. Occasionally bleeding.
 
-I work across the full stack of an AI product: data collection and storage,
-retrieval and LLM pipelines, the backend that serves them, and the interfaces
-people actually use.
+I spend most of my time where AI agents are changing fastest. When a new model or
+agent tool lands, I try it, build something with it, and find out where it breaks.
 
-Right now, I'm building a personal AI agent and an LLM wiki. I'm also exploring
-how agents exchange context and coordinate work, and how to make codebases easier
-for coding agents to understand, change, and verify.
+That mostly comes down to three things:
 
-Much of that work comes back to data: raw archives, event stores, long-term memory,
-search indexes, provenance, and the boundary between local and cloud storage. I
-like taking these ideas beyond experiments and turning them into products I can
-actually use. Most of what's here started that way.
+- **Build.** Personal agents, an LLM wiki that turns what I do and say into
+  long-term memory, and team products where the model observes and the code decides.
+- **Experiment.** How agents share context, split roles, and hand off work without
+  losing intent, and how to shape codebases that coding agents can find their way
+  around. Measured on more than one agent, because one is not evidence.
+- **Teach.** Machine learning and deep learning certification courses, so what I
+  learned by bleeding, other people can learn with fewer cuts.
+
+Most of what's here started because I wanted to use it myself.
 
 ## Lately
 
@@ -60,19 +62,19 @@ actually use. Most of what's here started that way.
 
 ## What I keep thinking about
 
-- Personal agents and LLM wikis that turn activity and conversations into durable knowledge
 - Agent-to-agent communication: exchanging context, dividing roles, and handing work off without losing intent
 - Agent-friendly development: codebases that coding agents can navigate, change, and verify reliably
-- Storage architecture for AI memory: raw archives, event stores, search indexes, provenance, and local/cloud boundaries
-- Shipping full-stack products from the data layer to the interface
+- Personal agents and LLM wikis that turn activity and conversations into durable knowledge
+- Memory for agents: raw archives, event stores, search indexes, provenance, and local/cloud boundaries
+- Keeping up with the agent ecosystem: new models, agent tools, and protocols like MCP, and which of them survive real use
 
 ## What I reach for
+
+`Claude Code` · `Codex` · `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `Multi-agent Systems` · `Long-term Memory` · `Event Store` · `Data Provenance` · `Streamlit`
 
 <p>
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, and GitHub Actions" />
 </p>
-
-`Streamlit` · `LangChain` · `LangGraph` · `Transformers` · `OpenAI API` · `MCP` · `RAG` · `pgvector` · `Event Store` · `Multi-agent Systems` · `Long-term Memory` · `Data Provenance`
 
 ## AI-assisted work
 

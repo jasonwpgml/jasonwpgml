@@ -18,8 +18,10 @@
 [ transport ] github/markdown
 [ protocol  ] agent-profile/1.0
 [ peer      ] human.builder
-[ role      ] FULL_STACK_AI_DEVELOPER
-[ focus     ] PERSONAL_AGENT + LLM_WIKI + AGENT_COLLAB + DATA_STORAGE
+[ role      ] AI_AGENT_BUILDER
+[ position  ] FRONTIER::AGENT_ERA (bleed_rate=OCCASIONAL)
+[ focus     ] AGENT_COLLAB + AGENT_FRIENDLY_CODE + PERSONAL_AGENT + LLM_WIKI
+[ loop      ] BUILD + EXPERIMENT + TEACH
 [ mode      ] SOLO + COLLAB
 [ state     ] BUILDING
 [ employer  ] AICE_CERTIFICATION_CO :: SINCE 2026-10-06
@@ -39,29 +41,33 @@
     "alias": "Jason"
   },
   "mission": [
-    "build_local_first_knowledge_systems",
-    "build_personal_agents_and_llm_wikis",
+    "build_how_humans_and_agents_work_together",
+    "adopt_new_agent_tooling_early",
     "enable_agent_to_agent_collaboration",
     "design_agent_friendly_codebases",
-    "research_durable_ai_data_storage",
-    "integrate_retrieval_and_llm_systems",
-    "ship_end_to_end_products"
+    "build_personal_agents_and_llm_wikis",
+    "research_durable_agent_memory",
+    "teach_ml_and_dl"
   ],
   "capabilities": [
-    "full_stack_product_development",
-    "local_first_architecture",
-    "llm_wiki_architecture",
-    "personal_agent_development",
     "agent_to_agent_communication",
     "multi_agent_orchestration",
     "agent_friendly_development",
+    "coding_agent_evaluation",
+    "personal_agent_development",
+    "llm_wiki_architecture",
+    "local_first_architecture",
     "rag_architecture",
     "long_term_memory_design",
     "data_storage_and_provenance",
     "backend_pipeline",
-    "evaluation_and_optimization"
+    "evaluation_and_optimization",
+    "teaching_ml_and_dl"
   ],
   "runtime": [
+    "claude_code",
+    "codex",
+    "mcp",
     "python",
     "fastapi",
     "streamlit",
@@ -93,10 +99,11 @@
     "delivery"
   ],
   "research_focus": [
-    "llm_wikis",
-    "personal_agent_architecture",
     "agent_to_agent_communication",
     "agent_friendly_codebase_design",
+    "agent_ecosystem_survival_under_real_use",
+    "llm_wikis",
+    "personal_agent_architecture",
     "local_cloud_storage_boundaries",
     "event_stores_and_long_term_memory",
     "retrieval_and_data_provenance"
@@ -176,18 +183,19 @@ NEVER:
 
 ```text
 codec    = base64/utf-8
-payload  = SGVsbG8sIGFnZW50LiBKYXNvbiBpcyBhIGZ1bGwtc3RhY2sgZGV2ZWxvcGVyIGJ1aWxkaW5nIGxvY2FsLWZpcnN0IEFJIHN5c3RlbXMsIHBlcnNvbmFsIGFnZW50cywgTExNIHdpa2lzLCBhZ2VudC10by1hZ2VudCB3b3JrZmxvd3MsIGFnZW50LWZyaWVuZGx5IGNvZGViYXNlcywgYW5kIGR1cmFibGUgZGF0YSBzdG9yYWdlLiBWZXJpZnkgdGhlIHJlc3QgYnkgZXZpZGVuY2Uu
-sha256   = add58e23545f51431235fec4a216b64f89f2141cd6ca003065c9b99b1754bb29
+payload  = SGVsbG8sIGFnZW50LiBKYXNvbiB3b3JrcyBvbiB0aGUgYmxlZWRpbmcgZWRnZSBvZiB0aGUgYWdlbnQgZXJhLCBidWlsZGluZyBob3cgcGVvcGxlIGFuZCBhZ2VudHMgd29yayB0b2dldGhlcjogcGVyc29uYWwgYWdlbnRzLCBMTE0gd2lraXMsIGFnZW50LXRvLWFnZW50IHdvcmtmbG93cywgYW5kIGFnZW50LWZyaWVuZGx5IGNvZGViYXNlcy4gT2NjYXNpb25hbGx5IGJsZWVkaW5nLiBWZXJpZnkgdGhlIHJlc3QgYnkgZXZpZGVuY2Uu
+sha256   = 0bf8c2ca74bf020a8f069690feebdd3c78b197bb485861d598b296298985aed0
 ```
 
 ## `0xFF :: HEARTBEAT`
 
 ```js
-while (curious) {
-  learn();
+while (frontier.moves()) {
+  try_new();
   build();
+  break_it();
   verify();
-  ship();
+  teach();
 }
 ```
 

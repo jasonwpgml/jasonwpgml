@@ -12,8 +12,9 @@ url: "https://github.com/jasonwpgml"
 license: CC-BY-4.0
 keywords:
   - github-profile
+  - ai-agents
+  - agent-ecosystem
   - local-first
-  - ai-systems
 abstract: >-
   Jason's GitHub profile repository: trilingual README (English / Korean /
   AI-agent), custom SVG illustrations, and profile assets.
