@@ -67,14 +67,15 @@
   "daily_drivers_by_frequency": [
     "claude[max]",
     "codex[pro]",
-    "cursor/grok-bot",
+    "cursor/grok/grok-bot[premium]",
     "jev",
     "gemini"
   ],
   "local_models": [
-    "gemma4",
+    "clef[heavy_use::recent]",
+    "laya",
     "qwen",
-    "clef[heavy_use::recent]"
+    "gemma4"
   ],
   "runtime": [
     "mcp",

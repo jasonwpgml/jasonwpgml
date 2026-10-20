@@ -71,9 +71,9 @@ AI 에이전트가 가장 빠르게 바뀌는 곳에서 대부분의 시간을 �
 ## 자주 쓰는 도구
 
 **주력**, 자주 쓰는 순서대로:
-`Claude (Max)` → `Codex (Pro)` → `Cursor / grok-bot` → `jev` → `Gemini`
+`Claude (Max)` → `Codex (Pro)` → `Cursor / Grok / grok-bot (Premium)` → `jev` → `Gemini`
 
-**로컬:** `Gemma 4` · `Qwen` · `clef` (요즘 제일 잘 쓰는 중)
+**로컬:** `clef` (요즘 제일 잘 쓰는 중) · `laya` · `Qwen` · `Gemma 4`
 
 **만들 때 쓰는 것:** `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `멀티 에이전트 시스템` · `장기 기억` · `Event Store` · `데이터 계보` · `Streamlit`
 

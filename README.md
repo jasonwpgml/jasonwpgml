@@ -71,9 +71,9 @@ Most of what's here started because I wanted to use it myself.
 ## What I reach for
 
 **Daily drivers**, most-used first:
-`Claude (Max)` → `Codex (Pro)` → `Cursor / grok-bot` → `jev` → `Gemini`
+`Claude (Max)` → `Codex (Pro)` → `Cursor / Grok / grok-bot (Premium)` → `jev` → `Gemini`
 
-**Running locally:** `Gemma 4` · `Qwen` · `clef` (using this one a lot lately)
+**Running locally:** `clef` (using this one a lot lately) · `laya` · `Qwen` · `Gemma 4`
 
 **Building with:** `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `Multi-agent Systems` · `Long-term Memory` · `Event Store` · `Data Provenance` · `Streamlit`
 
