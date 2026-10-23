@@ -23,6 +23,8 @@ search indexes, provenance, and the boundary between local and cloud storage. I
 like taking these ideas beyond experiments and turning them into products I can
 actually use. Most of what's here started that way.
 
+Portfolio, 2026 edition: [jasonwpgml.github.io](https://jasonwpgml.github.io)
+
 ## Lately
 
 - **Since Oct 6, 2026**, I've been working at a company working on the AICE AI certification, and I also teach machine learning and deep learning certification courses.
