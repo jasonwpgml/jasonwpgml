@@ -25,6 +25,8 @@ That mostly comes down to three things:
 
 Most of what's here started because I wanted to use it myself.
 
+Portfolio, 2026 edition: [jasonwpgml.github.io](https://jasonwpgml.github.io)
+
 ## Lately
 
 - **Since Oct 6, 2026**, I've been working at a company working on the AICE AI certification, and I also teach machine learning and deep learning certification courses.

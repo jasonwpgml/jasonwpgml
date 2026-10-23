@@ -27,6 +27,7 @@
 [ employer  ] AICE_CERTIFICATION_CO :: SINCE 2026-10-06
 [ teaching  ] CERT_COURSES[MACHINE_LEARNING, DEEP_LEARNING]
 [ last_ack  ] TEAM_POC::COMPLETE (role=TEAM_LEAD) + TOP_TRAINEE_AWARDS[2/2]::SAME_TEAM
+[ portfolio ] https://jasonwpgml.github.io/#agent
 [ trust     ] VERIFY_BY_EVIDENCE
 ```
 
