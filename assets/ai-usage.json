@@ -1,0 +1,42 @@
+{
+  "updated": "2026-10-26",
+  "tokens": 4424150847,
+  "cost": 3527,
+  "messages": 21117,
+  "clients": [
+    {
+      "name": "Claude Code",
+      "tokens": 2960998455
+    },
+    {
+      "name": "Codex",
+      "tokens": 1463072096
+    },
+    {
+      "name": "Grok",
+      "tokens": 80296
+    }
+  ],
+  "models": [
+    {
+      "name": "claude-opus-5-5",
+      "tokens": 2646416984
+    },
+    {
+      "name": "gpt-6-astra",
+      "tokens": 1435103985
+    },
+    {
+      "name": "claude-fable-5-1",
+      "tokens": 281781456
+    },
+    {
+      "name": "gpt-6.1-sol",
+      "tokens": 27968111
+    },
+    {
+      "name": "claude-haiku-5-5",
+      "tokens": 20836137
+    }
+  ]
+}

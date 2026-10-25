@@ -76,7 +76,8 @@ function aggregate(entries) {
     [...map].map(([name, t]) => ({ name, tokens: t })).filter((x) => x.tokens > 0)
       .sort((a, b) => b.tokens - a.tokens);
   return {
-    updated: new Date().toISOString().slice(0, 10),
+    // Local date (sv-SE formats as YYYY-MM-DD); toISOString would be UTC.
+    updated: new Date().toLocaleDateString("sv-SE"),
     tokens,
     cost: Math.round(cost),
     messages,
@@ -115,7 +116,8 @@ function renderSvg(s) {
     const col = i % 2, row = Math.floor(i / 2);
     const lx = X + col * 270, ly = 246 + row * 26;
     const pct = s.tokens ? Math.round((c.tokens / s.tokens) * 100) : 0;
-    return `<g transform="translate(${lx} ${ly})"><rect width="10" height="10" y="-9" rx="2" fill="${PALETTE[i % PALETTE.length]}"/><text class="lg" x="18">${esc(c.name)}</text><text class="lg dim" x="250" text-anchor="end">${pct}%</text></g>`;
+    const label = pct === 0 && c.tokens > 0 ? "<1%" : `${pct}%`;
+    return `<g transform="translate(${lx} ${ly})"><rect width="10" height="10" y="-9" rx="2" fill="${PALETTE[i % PALETTE.length]}"/><text class="lg" x="18">${esc(c.name)}</text><text class="lg dim" x="250" text-anchor="end">${esc(label)}</text></g>`;
   }).join("\n    ");
 
   const top = s.models[0]?.tokens || 1;

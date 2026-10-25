@@ -84,6 +84,13 @@ Portfolio, 2026 edition: [jasonwpgml.github.io](https://jasonwpgml.github.io)
 </p>
 
 <!--START_SECTION:ai_usage-->
+## Tokens I've burned
+
+Everything Claude Code, Codex and Grok have read and written for me, summed from local logs
+with [tokscale](https://github.com/junhoyeo/tokscale). Only the totals leave my machine.
+
+<img src="./assets/ai-usage.svg" alt="4.42B tokens through AI coding tools, as of 2026-10-26" width="100%">
+
 <!--END_SECTION:ai_usage-->
 
 ## Contributions
