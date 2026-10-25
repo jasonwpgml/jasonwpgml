@@ -84,10 +84,14 @@ Most of what's here started because I wanted to use it myself.
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, and GitHub Actions" />
 </p>
 
-## AI-assisted work
-
 <!--START_SECTION:ai_usage-->
-> Live stats will appear here after WakaTime is connected.
+## Tokens I've burned
+
+Everything Claude Code, Codex and Grok have read and written for me, summed from local logs
+with [tokscale](https://github.com/junhoyeo/tokscale). Only the totals leave my machine.
+
+<img src="./assets/ai-usage.svg" alt="4.42B tokens through AI coding tools, as of 2026-10-26" width="100%">
+
 <!--END_SECTION:ai_usage-->
 
 ## Contributions

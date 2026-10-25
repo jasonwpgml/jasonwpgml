@@ -82,10 +82,15 @@ AI 에이전트와 같이 일하면서 업무와 일상에서 반복되는 작�
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, GitHub Actions" />
 </p>
 
-## AI와 함께한 작업 기록
+<!--START_SECTION:ai_usage-->
+## 지금까지 태운 토큰
 
-AI 코딩 사용량은 WakaTime을 연결한 뒤 영문 프로필의
-[실시간 통계](./README.md#ai-assisted-work)에서 볼 수 있습니다.
+AI 도구(Claude Code, Codex, Grok)가 저 대신 읽고 쓴 토큰을 [tokscale](https://github.com/junhoyeo/tokscale)로 로컬 로그에서 합산했습니다.
+밖으로 나가는 건 합계뿐입니다.
+
+<img src="./assets/ai-usage.svg" alt="2026-10-26 기준 AI 코딩 도구로 쓴 토큰 4.42B" width="100%">
+
+<!--END_SECTION:ai_usage-->
 
 ## 기여 기록
 
