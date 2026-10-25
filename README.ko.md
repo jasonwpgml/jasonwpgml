@@ -83,11 +83,8 @@
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, GitHub Actions" />
 </p>
 
-## AI와 함께한 작업 기록
-
-AI 코딩 사용량은 영문 프로필의 [실시간 통계](./README.md#ai-assisted-work)에서
-확인할 수 있습니다. WakaTime이 기록한 AI 작업 시간, AI와 제가 각각 작성한 코드의
-비율, 토큰 사용량과 예상 비용 등 최근 일주일 통계를 매일 갱신합니다.
+<!--START_SECTION:ai_usage-->
+<!--END_SECTION:ai_usage-->
 
 ## 기여 기록
 

@@ -83,10 +83,7 @@ Portfolio, 2026 edition: [jasonwpgml.github.io](https://jasonwpgml.github.io)
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, and GitHub Actions" />
 </p>
 
-## AI-assisted work
-
 <!--START_SECTION:ai_usage-->
-> Live stats will appear here after WakaTime is connected.
 <!--END_SECTION:ai_usage-->
 
 ## Contributions
