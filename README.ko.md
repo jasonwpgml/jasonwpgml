@@ -85,10 +85,10 @@ AI 에이전트와 같이 일하면서 업무와 일상에서 반복되는 작�
 <!--START_SECTION:ai_usage-->
 ## 지금까지 태운 토큰
 
-AI 도구(Claude Code, Codex, Grok)가 저 대신 읽고 쓴 토큰을 [tokscale](https://github.com/junhoyeo/tokscale)로 로컬 로그에서 합산했습니다.
+AI 도구(Claude Code, Codex, Cursor, Grok)가 저 대신 읽고 쓴 토큰을 [tokscale](https://github.com/junhoyeo/tokscale)로 로컬 로그에서 합산했습니다.
 밖으로 나가는 건 합계뿐입니다.
 
-<img src="./assets/ai-usage.svg" alt="2026-10-26 기준 AI 코딩 도구로 쓴 토큰 4.42B" width="100%">
+<img src="./assets/ai-usage.svg" alt="2026-10-26 기준 AI 코딩 도구로 쓴 토큰 5.05B" width="100%">
 
 <!--END_SECTION:ai_usage-->
 
