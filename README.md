@@ -8,31 +8,32 @@
 
 # Jason
 
-### On the bleeding edge of the agent era, building how people and agents work together. Occasionally bleeding.
+I work with AI agents and automate recurring tasks in my work and daily life.
+I build personal agents and an LLM wiki for organizing activity and conversation
+records. I also build and use tools that collect and organize card transactions
+and connect my phone and desktop to get things done.
 
-I spend most of my time where AI agents are changing fastest. When a new model or
-agent tool lands, I try it, build something with it, and find out where it breaks.
+I keep up with new models and agents, try them myself, and put them to use in my
+work. I liked jev after trying it, and lately I've been enjoying clef and trying
+out different things with it.
 
-That mostly comes down to three things:
+I divide work among agents and share context so they can pick up where another
+agent left off. I also organize project instructions and code navigation so
+coding agents can understand a project's structure and intent.
 
-- **Build.** Personal agents, an LLM wiki that turns what I do and say into
-  long-term memory, and team products where the model observes and the code decides.
-- **Experiment.** How agents share context, split roles, and hand off work without
-  losing intent, and how to shape codebases that coding agents can find their way
-  around. Measured on more than one agent, because one is not evidence.
-- **Teach.** Machine learning and deep learning certification courses, so what I
-  learned by bleeding, other people can learn with fewer cuts.
+I studied mathematics and have taught for nine years. I now also teach machine
+learning and deep learning certification courses.
 
 Most of what's here started because I wanted to use it myself.
 
-Portfolio, 2026 edition: [jasonwpgml.github.io](https://jasonwpgml.github.io)
+2026 portfolio: [jasonwpgml.github.io](https://jasonwpgml.github.io)
 
 ## Lately
 
-- **Since Oct 6, 2026**, I've been working at a company working on the AICE AI certification, and I also teach machine learning and deep learning certification courses.
-- I led my team through our PoC and we wrapped it up well. Both top-trainee awards in the program went to people on that team.
+- **Since Oct 6, 2026**, I've been working at a company involved in AICE certification. I also teach machine learning and deep learning certification courses.
+- I led our team through a successful PoC. Both top-trainee awards in the program went to members of our team.
 
-## Where I currently am (allegedly)
+## Where I think I am
 
 <img src="./assets/dunning-kruger-current-state.en.svg" alt="Dunning–Kruger curve with a red marker placing my current state at the summit of Mount Stupid" width="100%">
 
@@ -40,35 +41,35 @@ Portfolio, 2026 edition: [jasonwpgml.github.io](https://jasonwpgml.github.io)
 
 | Project | The short version |
 | --- | --- |
-| [Beorimi](https://github.com/TrinityBalance/beorimi) | Photograph the junk you want to throw out and it figures out the category and the disposal fee under Gangnam-gu's rules. The AI looks at the photo, the code does the pricing. |
-| [My Summer Vacation Diary](https://github.com/TossHackathonTMD/SummerVacationDiary) | A Toss mini app that turns one photo and a few lines into a crayon picture diary. A teacher marks it up and stamps it. |
-| [Publium](https://github.com/hansol-dev/team-pubmed) | A workspace for collecting PubMed papers and then talking to them. It shows which sentence an answer came from, not just the answer. |
-| [Intero](https://github.com/InteroGames/Intero) | An interrogation game you survive by lying. There are no dialogue options, so whatever you say is whatever you make up. |
-| [Byeolil](https://github.com/TrivialOkay/TrivialOkay_toss) | A Toss mini app that takes the most ordinary thing that happened to you today, records it with complete seriousness, and hands back a fortune and an honorary title. |
+| [Beorimi](https://github.com/TrinityBalance/beorimi) | Take a photo of items you want to throw out to get their categories, sizes, and estimated disposal fees under Gangnam-gu's rules. AI reads the photo, and code applies the official rules to make the final determination and calculate fees. |
+| [My Summer Vacation Diary](https://github.com/TossHackathonTMD/SummerVacationDiary) | A Toss mini app that turns a photo and a short entry into a crayon picture diary, complete with teacher-style feedback and a "Well done!" stamp. |
+| [Publium](https://github.com/hansol-dev/team-pubmed) | Find and collect PubMed papers, then ask AI about their contents. Answers include the passages they are based on. |
+| [Intero](https://github.com/InteroGames/Intero) | An interrogation game where you answer a detective in your own words, without dialogue options. An LLM interprets your statements, and code decides the outcome. |
+| [Byeolil](https://github.com/TrivialOkay/TrivialOkay_toss) | A Toss mini app that turns small events from your day into news reports and awards. Each entry also gets a fortune and an unusual title. |
 
 ## What I'm working on
 
 | Project | The short version |
 | --- | --- |
-| [Galpi](https://github.com/jasonwpgml/galpi) | A navigation protocol that helps coding agents find their way around a codebase. Tested on more than one agent, because one is not evidence. |
-| [Autonomous Neuro Drive](https://github.com/jasonwpgml/autonomous-neuro-drive) | A local-first LLM wiki. Everything I do and talk about goes in, and hopefully comes back out as something I can still use next year. |
-| [Momento](https://github.com/jasonwpgml/Momento) | Scheduling PWA for tutoring and study groups. Full stack, and yes, it has to work on a phone. |
-| [AQR](https://github.com/jasonwpgml/AQR) | A queue-based runner for AI workflows, so a long job failing halfway isn't the end of the world. |
+| [Galpi](https://github.com/jasonwpgml/galpi) | A protocol that gives coding agents the structure, current state, and intent behind a large codebase. I measure how it works with Claude Code and Codex and revise it based on the results. |
+| [Autonomous Neuro Drive](https://github.com/jasonwpgml/autonomous-neuro-drive) | An LLM wiki that stores computer activity and AI conversations locally, organized so I can find and reuse what I need later. |
+| [Momento](https://github.com/jasonwpgml/Momento) | A PWA for managing tutoring and study schedules, student information, lesson records, and communication in one place. It works in a phone browser without installation. |
+| [AQR](https://github.com/jasonwpgml/AQR) | A tool that queues and runs long AI tasks. If a task fails partway through, it doesn't have to start over from the beginning. |
 
 ## Smaller things I still like
 
 | Project | The short version |
 | --- | --- |
-| [ExRater](https://github.com/jasonwpgml/ExRater) | Live exchange rates, with an AI search you can just talk to. |
-| [drinklister](https://github.com/jasonwpgml/drinklister) | Turns messy Discord drink orders into clean, exportable data. Exactly as niche as it sounds. |
+| [ExRater](https://github.com/jasonwpgml/ExRater) | An app for converting amounts at live exchange rates and asking AI about exchange rates. |
+| [drinklister](https://github.com/jasonwpgml/drinklister) | A desktop tool that organizes drink orders from Discord messages by person, drink, and options, then exports them to CSV. |
 
 ## What I keep thinking about
 
-- Agent-to-agent communication: exchanging context, dividing roles, and handing work off without losing intent
-- Agent-friendly development: codebases that coding agents can navigate, change, and verify reliably
-- Personal agents and LLM wikis that turn activity and conversations into durable knowledge
-- Memory for agents: raw archives, event stores, search indexes, provenance, and local/cloud boundaries
-- Keeping up with the agent ecosystem: new models, agent tools, and protocols like MCP, and which of them survive real use
+- Sharing context, dividing roles, and handing work from one agent to another
+- Organizing projects so coding agents can understand code quickly, make changes safely, and verify them
+- Organizing activity and conversation records in personal agents and LLM wikis so they remain useful later
+- Structuring agent memory as raw records, event stores, and search indexes; tracking data sources and changes; and deciding what stays local
+- Trying new models, agent tools, and protocols like MCP to see what remains useful in practice
 
 ## What I reach for
 
