@@ -90,7 +90,7 @@ Most of what's here started because I wanted to use it myself.
 Everything Claude Code, Codex, Cursor and Grok have read and written for me, summed from local logs
 with [tokscale](https://github.com/junhoyeo/tokscale). Only the totals leave my machine.
 
-<img src="./assets/ai-usage.svg" alt="5.05B tokens through AI coding tools, as of 2026-10-26" width="100%">
+<img src="./assets/ai-usage.svg" alt="5.99B tokens through AI coding tools, as of 2026-10-26" width="100%">
 
 <!--END_SECTION:ai_usage-->
 

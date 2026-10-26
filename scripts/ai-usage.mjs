@@ -8,11 +8,16 @@
 //   node scripts/ai-usage.mjs --commit   # same, then git commit + push
 //   node scripts/ai-usage.mjs --input usage.json   # use a saved `tokscale models --json`
 //
+// Other machines: save their `tokscale models --json` output (or run tokscale
+// here with `--home <copied home>`) into ~/.config/ai-usage/machines/<name>.json.
+// Every file there is added on top of this machine's numbers on each run.
+//
 // Only aggregate totals (per tool, per model) are written to the repo.
 // Nothing from prompts, sessions or project paths leaves the machine.
 
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { homedir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -38,6 +43,15 @@ const CLIENTS = {
 };
 const PALETTE = ["#d97757", "#7aa2f7", "#9ece6a", "#bb9af7", "#e0af68", "#7dcfff", "#f7768e"];
 
+const MACHINES = join(homedir(), ".config/ai-usage/machines");
+
+function parseEntries(raw, source) {
+  // tokscale may print a banner before the JSON; start at the first brace.
+  const data = JSON.parse(raw.slice(raw.indexOf("{")));
+  if (!Array.isArray(data.entries)) throw new Error(`${source}: expected \`entries\` in tokscale JSON`);
+  return data.entries;
+}
+
 function loadEntries() {
   const input = opt("--input");
   const raw = input
@@ -47,10 +61,14 @@ function loadEntries() {
         maxBuffer: 256 * 1024 * 1024,
         stdio: ["ignore", "pipe", "inherit"],
       });
-  // tokscale may print a banner before the JSON; start at the first brace.
-  const data = JSON.parse(raw.slice(raw.indexOf("{")));
-  if (!Array.isArray(data.entries)) throw new Error("expected `entries` in tokscale JSON");
-  return data.entries;
+  const entries = parseEntries(raw, input || "tokscale");
+  const others = existsSync(MACHINES) ? readdirSync(MACHINES).filter((f) => f.endsWith(".json")).sort() : [];
+  for (const f of others) {
+    const path = join(MACHINES, f);
+    entries.push(...parseEntries(readFileSync(path, "utf8"), path));
+    console.log(`+ ${f}`);
+  }
+  return entries;
 }
 
 // Reasoning tokens are already counted inside output for OpenAI-style usage,
