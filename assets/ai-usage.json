@@ -1,16 +1,16 @@
 {
   "updated": "2026-10-26",
-  "tokens": 5050356503,
-  "cost": 3925,
-  "messages": 27648,
+  "tokens": 5991190112,
+  "cost": 5235,
+  "messages": 34485,
   "clients": [
     {
       "name": "Claude Code",
-      "tokens": 2998952635
+      "tokens": 3194622763
     },
     {
       "name": "Codex",
-      "tokens": 1470581424
+      "tokens": 2215744905
     },
     {
       "name": "Cursor",
@@ -24,15 +24,15 @@
   "models": [
     {
       "name": "claude-opus-5-5",
-      "tokens": 2684371164
+      "tokens": 2817530903
     },
     {
       "name": "gpt-6-astra",
-      "tokens": 1442613313
+      "tokens": 2160201129
     },
     {
       "name": "claude-fable-5-1",
-      "tokens": 281781456
+      "tokens": 344102025
     },
     {
       "name": "grok-bot-default",
