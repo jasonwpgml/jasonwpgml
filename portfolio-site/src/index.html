@@ -130,7 +130,6 @@ p{margin:0}
 .scope h4{font-size:1.4rem;margin-bottom:12px}
 .scope ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:16px}
 
-.apps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,120px)}
 .app .sub{font:400 1.15rem/1.55 var(--serif);margin-top:10px;max-width:22em}
 .app .facts{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:18px;font-size:14px;color:var(--ink-2)}
 .app .phones{margin-top:36px}
@@ -142,7 +141,7 @@ p{margin:0}
 .own-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 40px;margin-top:48px}
 .own-grid h3{font-size:1.5rem;font-weight:400}
 .own-grid p{color:#d9d9d9;font-size:15.5px;margin-top:8px}
-.contact{margin-top:clamp(96px,12vw,180px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
 .contact .mail{font:400 clamp(2rem,6.4vw,6rem)/1.05 var(--serif);letter-spacing:-.02em;text-decoration:none;word-break:break-all}
 .contact .mail:hover{text-decoration:underline;text-decoration-thickness:2px}
 .colophon{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:64px;padding-top:20px;border-top:1px solid #333;font-size:13px;color:var(--night-2)}
@@ -155,6 +154,55 @@ html[data-edition="agent"] .human{display:none}
 html[data-edition="agent"] .agent{display:block}
 html[data-edition="agent"] body{background:#000}
 html[data-edition="agent"] .head .now{visibility:hidden}
+
+/* one screen per page on wide screens: each section fills the viewport and its content sits inside it */
+@media (min-width:861px){
+  main.human>section{min-height:100svh}
+  .cover{display:grid;grid-template-rows:minmax(0,1fr) auto;align-items:center;padding-block:clamp(88px,12svh,140px) clamp(48px,8svh,96px)}
+  .news,.page,.own{display:grid;grid-template-columns:minmax(0,1fr);align-content:center;padding-block:clamp(88px,12svh,132px) clamp(48px,7svh,88px)}
+  .news{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+  .page+.page{padding-top:clamp(88px,12svh,132px)}
+  .page .bleed{margin-inline:auto;width:min(100%,calc((100svh - 260px) * 1.6))}
+  .page .bleed figcaption{padding-inline:0}
+  .phones .shot{max-width:min(300px,calc((100svh - 330px) * .6))}
+  .statement{font-size:clamp(2rem,min(4.6vw,6.2svh),4rem)}
+  .scope{margin-top:clamp(28px,5svh,56px)}
+  .opener{padding-block:clamp(80px,12svh,110px) clamp(40px,7svh,64px)}
+  .opener .chap{top:clamp(80px,12svh,110px)}
+  .opener .num{font-size:clamp(9rem,min(34vw,40svh),34rem)}
+  .opener h2{font-size:clamp(2.6rem,min(7vw,11svh),6.5rem)}
+  .meta{gap:clamp(8px,1.6svh,14px)}
+  .app.split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(48px,6vw,104px);align-items:center}
+  .app.split .phones{margin-top:0;justify-content:center}
+  .app.split.rev{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+  .app.split.rev .phones{order:-1}
+  .app .did{margin-top:clamp(24px,4svh,40px)}
+  .end{display:grid;grid-template-rows:minmax(0,1fr) auto;align-content:stretch}
+  .end .contact{align-self:center}
+}
+/* short laptop screens: tighten text pages so each still fits one screen */
+@media (min-width:861px) and (max-height:820px){
+  body{font-size:15.5px;line-height:1.6}
+  .h3{font-size:clamp(1.4rem,2.4vw,2rem)}
+  .did{gap:16px}
+  .did dt{font-size:1.08rem}
+  .decide{margin-top:20px}
+  .decide article{padding-block:16px;gap:8px 32px}
+  .decide h4{font-size:1.15rem}
+  .seq{margin-top:20px}
+  .seq li{padding-block:12px}
+  .links{margin-top:18px}
+  .app .sub{font-size:1.05rem}
+  .app .facts{margin-top:12px}
+  .cols3{margin-top:24px;gap:32px}
+  .cols3 h4{margin-bottom:8px}
+  .cols3 .lbl{margin-top:8px}
+  .page{padding-bottom:36px}
+  .flow{margin-top:18px}
+  .flow li{padding-top:12px}
+  .scope h4{margin-bottom:6px}
+  .statement{font-size:clamp(1.8rem,min(4.2vw,5.6svh),3.4rem)}
+}
 
 /* scroll-linked drift for the giant numerals, only where supported */
 /* motion: one load sequence on the cover, scroll-linked movement elsewhere; everything rests visible */
@@ -191,7 +239,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
 
 @media (max-width:860px){
   body{font-size:16px}
-  .cover-foot,.news,.two,.apps,.scope{grid-template-columns:minmax(0,1fr)}
+  .cover-foot,.news,.two,.scope{grid-template-columns:minmax(0,1fr)}
   .opener{grid-template-columns:minmax(0,1fr)}
   .opener .chap{display:none}
   .decide article{grid-template-columns:minmax(0,1fr)}
@@ -260,7 +308,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   <div class="num" aria-hidden="true">01</div>
   <div class="ttl">
     <h2>Publium</h2>
-    <p class="one">PubMed 논문을 모아 두고, 질문하면 모은 논문을 검색해 답하면서 근거 논문의 PMID를 붙이는 서비스</p>
+    <p class="one">모아 둔 PubMed 논문에서 질문에 맞는 내용을 검색해 답하고, 근거 논문의 PMID를 함께 보여 주는 서비스</p>
   </div>
   <dl class="meta">
     <div><dt>기간</dt><dd>2026.07, 8일 개발</dd></div>
@@ -282,7 +330,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
     <div>
       <p class="k">문제와 접근</p>
       <div class="body">
-        <p>논문 탐색에는 반복 검색과 출처 확인이 필요합니다. 사용자가 수집한 논문을 검색하는 도구를 연결하고, 검색 결과를 근거로 답변하도록 지시했습니다. 답변 끝에는 사용한 PMID를 표시합니다.</p>
+        <p>논문을 찾으려면 검색을 반복하고 출처도 확인해야 합니다. 이를 위해 사용자가 모은 논문을 검색하는 도구를 연결했습니다. 검색 결과를 근거로 답하도록 지시하고, 답변 끝에는 사용한 PMID를 표시합니다.</p>
       </div>
       <div class="links">
         <a href="https://github.com/hansol-dev/team-pubmed">github.com/hansol-dev/team-pubmed</a>
@@ -293,10 +341,10 @@ html[data-edition="agent"] .head .now{visibility:hidden}
       <p class="k">직접 구현한 것</p>
       <dl class="did">
         <div><dt>FastAPI 백엔드와 데이터 계층</dt><dd>PubMed E-utilities 수집, 논문 목록과 채팅 기록 저장, 삭제 API. Supabase Postgres 연결과 구글 로그인.</dd></div>
-        <div><dt>툴콜링 에이전트</dt><dd>LangChain create_agent에 수집 논문 검색 툴을 연결. 근거가 필요한 질문에는 검색을 먼저 하도록 프롬프트로 지시하고, 사용한 PMID를 표시.</dd></div>
-        <div><dt>서버 측 가드</dt><dd>진단, 처방, 복용량 같은 의료 조언 요청은 LLM에 보내기 전에 정규식으로 차단하고 고정 안내문을 반환.</dd></div>
-        <div><dt>스트리밍과 응답성</dt><dd>토큰 단위 스트리밍 응답. 동기 DB와 PubMed 호출은 스레드로 분리해 이벤트 루프가 멈추지 않게 함.</dd></div>
-        <div><dt>배포</dt><dd>Render에서 Supabase Postgres 기반 무료 배포. 이후 리뉴얼(pgvector, 그래프 RAG)은 팀원 담당.</dd></div>
+        <div><dt>툴콜링 에이전트</dt><dd>LangChain create_agent에 수집 논문용 검색 툴을 붙였습니다. 근거가 필요한 질문은 검색부터 하도록 프롬프트로 지시하며, 사용한 PMID를 표시합니다.</dd></div>
+        <div><dt>서버 측 가드</dt><dd>진단, 처방, 복용량 같은 의료 조언은 정규식으로 요청을 차단해 LLM에 보내지 않고, 고정 안내문으로 답합니다.</dd></div>
+        <div><dt>스트리밍과 응답성</dt><dd>토큰 단위로 스트리밍하며, 동기 DB와 PubMed 호출은 스레드로 분리해 이벤트 루프가 멈추지 않게 했습니다.</dd></div>
+        <div><dt>배포</dt><dd>Supabase Postgres 기반으로 Render에 무료 배포했고, 이후 리뉴얼(pgvector, 그래프 RAG)은 팀원이 담당합니다.</dd></div>
       </dl>
     </div>
   </div>
@@ -330,10 +378,10 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   <p class="k">트러블슈팅</p>
   <p class="trouble-q">논문 수집 요청이 길어지면 서버 전체가 응답하지 않았습니다.</p>
   <ol class="seq">
-    <li><b>증상</b><span>PubMed 수집 요청이 진행되는 동안 다른 요청과 상태 확인까지 전부 대기.</span></li>
-    <li><b>원인</b><span>async def 핸들러 안에서 동기 PubMed, DB 호출을 그대로 실행해 이벤트 루프 전체가 막힘.</span></li>
-    <li><b>조치</b><span>동기 호출을 asyncio.to_thread로 스레드풀에 넘기고, 동시 수집은 세마포어로 2개까지 제한. 수집 중에도 /health가 응답하는지 확인하는 테스트 추가.</span></li>
-    <li><b>다시 한다면</b><span>처음부터 async 드라이버를 쓰거나, 동기 라이브러리를 쓰는 핸들러는 def로 선언해 FastAPI가 스레드풀에서 돌리게 함.</span></li>
+    <li><b>증상</b><span>PubMed 수집 요청 중에는 다른 요청도 상태 확인도 모두 기다려야 했습니다.</span></li>
+    <li><b>원인</b><span>동기 PubMed, DB 호출이 async def 핸들러 안에서 그대로 실행되면서 이벤트 루프 전체를 막았습니다.</span></li>
+    <li><b>조치</b><span>동기 호출을 asyncio.to_thread로 스레드풀에 넘기고, 동시 수집은 세마포어로 2개까지 제한했습니다. 수집 중 /health 응답을 확인하는 테스트도 추가했습니다.</span></li>
+    <li><b>다시 한다면</b><span>처음부터 async 드라이버를 쓰거나, 동기 라이브러리를 쓰는 핸들러는 def로 선언해 FastAPI가 스레드풀에서 실행하게 하겠습니다.</span></li>
   </ol>
 </section>
 
@@ -343,7 +391,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   <div class="num" aria-hidden="true">02</div>
   <div class="ttl">
     <h2>버리미 (Beorimi)</h2>
-    <p class="one">사진 한 장에서 여러 대형폐기물을 나누어 보고, 강남구 공식 수수료 기준과 신고 경로까지 연결한 서비스</p>
+    <p class="one">사진 한 장에 담긴 여러 대형폐기물을 구분해 강남구 공식 기준의 수수료와 신고 경로를 안내하는 서비스</p>
   </div>
   <dl class="meta">
     <div><dt>기간</dt><dd>2026.08, 28시간 MVP</dd></div>
@@ -362,13 +410,13 @@ html[data-edition="agent"] .head .now{visibility:hidden}
     <div>
       <h3 class="h3">사진 한 장에서 예상 수수료까지</h3>
       <div class="body" style="margin-top:20px">
-        <p>사진 속 여러 폐기물을 품목별로 분리한 뒤 행정 기준과 연결했습니다. VLM의 추정값을 그대로 노출하지 않고 고정 스키마로 받은 뒤, 강남구 공식 수수료 카탈로그와 다시 매칭했습니다.</p>
+        <p>사진 속 여러 폐기물을 품목별로 나눠 행정 기준과 연결했습니다. VLM의 추정값을 그대로 보여 주지 않도록 고정 스키마로 받은 값을 강남구 공식 수수료 카탈로그와 다시 매칭했습니다.</p>
       </div>
       <ol class="seq">
-        <li><b>사진 촬영</b><span>여러 품목이 한 프레임에 있어도 그대로 촬영.</span></li>
-        <li><b>다중 품목 인식</b><span>의자, 서랍장 등을 각각 분리 인식하고 규격을 추정.</span></li>
-        <li><b>사용자 확인</b><span>잘못 인식된 품목은 사용자가 직접 고칠 수 있게 설계.</span></li>
-        <li><b>수수료 산출</b><span>강남구 수수료 기준표와 매칭해 품목별, 합계 금액 안내.</span></li>
+        <li><b>사진 촬영</b><span>여러 품목을 한 프레임에 담아 그대로 촬영합니다.</span></li>
+        <li><b>다중 품목 인식</b><span>의자, 서랍장 등을 구분해 각각의 규격을 추정합니다.</span></li>
+        <li><b>사용자 확인</b><span>잘못 인식된 품목은 사용자가 직접 고치도록 설계했습니다.</span></li>
+        <li><b>수수료 산출</b><span>강남구 수수료 기준표에 맞춰 품목별 금액과 합계를 안내합니다.</span></li>
       </ol>
       <div class="links"><a href="https://github.com/TrinityBalance/beorimi">github.com/TrinityBalance/beorimi</a></div>
     </div>
@@ -382,13 +430,13 @@ html[data-edition="agent"] .head .now{visibility:hidden}
       <h4>인프라</h4>
       <span class="lbl">선택</span><p>Supabase 하나로 Auth, Storage, Postgres, 큐, 워커까지</p>
       <span class="lbl">대안</span><p>AWS Cognito, S3, DynamoDB, SQS, Lambda 조합 (첫날 설계)</p>
-      <span class="lbl">이유</span><p>28시간 안에 구현과 배포를 마치기 위해, 사용 경험이 있는 Supabase로 전환했습니다. SQS가 맡을 큐는 Postgres 행과 pg_net으로 구현해 인프라 설정 범위를 줄였습니다.</p>
+      <span class="lbl">이유</span><p>28시간 안에 구현과 배포를 마치려고, 사용해 본 Supabase로 전환했습니다. SQS 대신 Postgres 행과 pg_net으로 큐를 구현하면서 인프라 설정 범위도 줄였습니다.</p>
     </div>
     <div>
       <h4>분석 처리</h4>
       <span class="lbl">선택</span><p>202 반환 후 Postgres 큐와 워커, 브라우저는 폴링</p>
       <span class="lbl">대안</span><p>요청 핸들러에서 VLM 응답까지 동기로 대기</p>
-      <span class="lbl">이유</span><p>동기로 붙였을 때 로딩만 걸리고, 요청이 서버에 닿았는지 VLM이 실패했는지 화면에서 알 수 없었습니다. 작업을 행으로 남기면 어느 단계에서 멈췄는지 상태와 오류 메시지가 남습니다.</p>
+      <span class="lbl">이유</span><p>요청이 서버에 닿았는지, VLM이 실패했는지 구분해야 했지만 동기로 연결한 화면에는 로딩만 보였습니다. 작업을 행으로 남기면 상태와 오류 메시지가 남아 어느 단계에서 멈췄는지 확인할 수 있습니다.</p>
     </div>
     <div>
       <h4>VLM 출력</h4>
@@ -397,7 +445,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
       <span class="lbl">이유</span><p>수수료 매칭에 필요한 입력을 strict JSON Schema로 고정했습니다. 모델이 반환한 guardrail 필드에 프롬프트 인젝션 신호가 있으면 결과를 저장하지 않고 실패 처리합니다.</p>
     </div>
   </div>
-  <p class="k" style="margin-top:72px">비동기 분석 흐름</p>
+  <p class="k" style="margin-top:clamp(32px,6svh,72px)">비동기 분석 흐름</p>
   <ol class="flow">
     <li>사진 업로드</li>
     <li>작업 등록, 202 반환</li>
@@ -413,7 +461,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   <div class="num" aria-hidden="true">03</div>
   <div class="ttl">
     <h2>베어러블 PoC</h2>
-    <p class="one">스타트업 베어러블과 진행한 PoC로, 대학 정보와 고교학점제 화면을 베어러블의 마이폴리오에 연결했습니다.</p>
+    <p class="one">스타트업 베어러블과 PoC를 진행하며, 대학 정보와 고교학점제 화면을 베어러블의 마이폴리오에 연결했습니다.</p>
   </div>
   <dl class="meta">
     <div><dt>기간</dt><dd>2026.08 시작, 완료</dd></div>
@@ -424,7 +472,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
 </section>
 
 <section class="page wrap" data-run="03 베어러블 PoC">
-  <p class="statement">개발 2인과 기획 3인으로 구성된 팀을 이끌며 화면 구현과 요구사항 조율, 배포를 맡았습니다.</p>
+  <p class="statement">개발 2인과 기획 3인으로 구성된 팀을 이끌면서 화면 구현과 배포, 요구사항 조율을 맡았습니다.</p>
   <div class="scope">
     <div>
       <h4>대학 정보</h4>
@@ -435,13 +483,13 @@ html[data-edition="agent"] .head .now{visibility:hidden}
       <ul><li>주간 시간표</li><li>개설 과목</li><li>진로 과목 추천</li></ul>
     </div>
   </div>
-  <dl class="did two" style="margin-top:80px">
+  <dl class="did two" style="margin-top:clamp(32px,6svh,80px)">
     <div><dt>화면 구현과 배포</dt><dd>React와 Vite로 두 화면을 구현하고 Vercel에 배포했습니다.</dd></div>
     <div><dt>요구사항 조율</dt><dd>기업 담당 개발자와 매주 요구사항을 조율하며 스프린트를 진행했습니다.</dd></div>
     <div><dt>팀 운영과 협업 기준</dt><dd>개발 2인, 기획 3인의 역할을 나누고 GitHub 저장소와 브랜치 운영 규칙을 정했습니다.</dd></div>
     <div><dt>고2 학생 인터뷰</dt><dd>과외 중인 고2 학생을 인터뷰해 화면과 다음 기능의 방향을 잡았습니다.</dd></div>
   </dl>
-  <p class="k" style="margin-top:56px">기업 연계 프로젝트라 저장소는 비공개입니다.</p>
+  <p class="k" style="margin-top:clamp(24px,4svh,56px)">기업 연계 프로젝트라 저장소는 비공개입니다.</p>
 </section>
 
 <!-- 04 Apps in Toss -->
@@ -450,7 +498,7 @@ html[data-edition="agent"] .head .now{visibility:hidden}
   <div class="num" aria-hidden="true">04</div>
   <div class="ttl">
     <h2>앱인토스 미니앱 2종</h2>
-    <p class="one">두 앱을 토스 앱인토스에 정식 출시했습니다. 나의 여름방학 일기는 기획을 주도했고, 별일에서는 팀장을 맡았습니다.</p>
+    <p class="one">두 앱을 토스 앱인토스에 정식 출시했습니다. 나의 여름방학 일기에서는 기획을 주도했고, 별일에서는 팀장을 맡았습니다.</p>
   </div>
   <dl class="meta">
     <div><dt>기간</dt><dd>2026.07, 08</dd></div>
@@ -461,55 +509,62 @@ html[data-edition="agent"] .head .now{visibility:hidden}
 </section>
 
 <section class="page wrap" data-run="04 앱인토스 미니앱">
-  <div class="apps">
-    <article class="app">
+  <article class="app split">
+    <div>
       <h3 class="h3">나의 여름방학 일기</h3>
       <p class="sub">사진과 짧은 글을 올리면 AI가 문장을 다듬고 크레파스 그림일기로 바꿔 주는 미니앱</p>
       <p class="facts"><span>2026.07</span><span>기획 주도, 작성부 구현</span></p>
-      <div class="phones">
-        <figure class="shot"><img src="img/diary-write.webp" width="600" height="1000" alt="일기 쓰기 화면. 제목, 날씨, 일기 내용을 손글씨처럼 입력한다."><figcaption>작성 화면</figcaption></figure>
-        <figure class="shot"><img src="img/diary-result.webp" width="600" height="1000" alt="변환 결과. 크레파스로 그린 폭포 그림과 원고지 칸에 쓴 일기, 선생님 도장이 있다."><figcaption>변환 결과</figcaption></figure>
-      </div>
       <dl class="did">
         <div><dt>팀 구성과 조율</dt><dd>필요한 팀원을 직접 영입하고 의견을 조율해 방향을 정했습니다.</dd></div>
         <div><dt>작성부 구현</dt><dd>일기 입력, 미리보기, 공유 모달과 이미지 처리 유틸을 React와 TypeScript로 구현했습니다.</dd></div>
-        <div><dt>금칙어와 프롬프트</dt><dd>본문의 금칙어를 감지해 표시하는 로직을 만들고, 분석 프롬프트의 강조어와 금칙어 규칙을 다듬었습니다.</dd></div>
-        <div><dt>출시와 홍보</dt><dd>앱인토스 심사를 거쳐 출시하고, 완성된 그림일기를 SNS에 공유하기 쉬운 형태로 만들어 홍보했습니다.</dd></div>
+        <div><dt>금칙어와 프롬프트</dt><dd>본문의 금칙어를 찾아 표시하도록 로직을 구현했습니다. 분석 프롬프트에서는 강조어와 금칙어 규칙을 다듬었습니다.</dd></div>
+        <div><dt>출시와 홍보</dt><dd>앱인토스 심사를 거쳐 출시하고, 완성된 그림일기를 SNS에 공유하기 쉽게 만들어 홍보했습니다.</dd></div>
       </dl>
       <div class="links"><a href="https://github.com/TossHackathonTMD/SummerVacationDiary">github.com/TossHackathonTMD/SummerVacationDiary</a></div>
-    </article>
-    <article class="app">
+    </div>
+    <div class="phones">
+      <figure class="shot"><img src="img/diary-write.webp" width="600" height="1000" alt="일기 쓰기 화면. 제목, 날씨, 일기 내용을 손글씨처럼 입력한다."><figcaption>작성 화면</figcaption></figure>
+      <figure class="shot"><img src="img/diary-result.webp" width="600" height="1000" alt="변환 결과. 크레파스로 그린 폭포 그림과 원고지 칸에 쓴 일기, 선생님 도장이 있다."><figcaption>변환 결과</figcaption></figure>
+    </div>
+  </article>
+</section>
+
+<section class="page wrap" data-run="04 앱인토스 미니앱">
+  <article class="app split rev">
+    <div>
       <h3 class="h3">별일 (Byeolil)</h3>
       <p class="sub">사소한 하루를 진지하게 관측하고 시상하는 운세 기록 미니앱</p>
       <p class="facts"><span>2026.08</span><span>팀장, 3D와 기록 흐름 구현</span><span>React 19, TypeScript, three.js</span></p>
-      <div class="phones">
-        <figure class="shot"><img src="img/byeolil-home.webp" width="600" height="1000" alt="별일 관측국 메인 화면. 어두운 우주 배경에 주황색 구슬이 떠 있고, 왁뿌볼 안에 든 운세를 꺼내보세요라고 적혀 있다."><figcaption>별일 메인 화면</figcaption></figure>
-        <figure class="shot"><img src="img/diary-home.webp" width="600" height="1000" alt="나의 여름방학 일기 첫 화면. 크레파스 바닷가 그림 위에 제목이 있다."><figcaption>나의 여름방학 일기 첫 화면</figcaption></figure>
-      </div>
       <dl class="did">
         <div><dt>역할 분배와 온보딩</dt><dd>입문자 팀원의 숙련도에 맞춰 작업을 나누고 구현 기준을 설명했습니다.</dd></div>
-        <div><dt>작업 규칙</dt><dd>AGENTS.md와 CLAUDE.md를 공통 규칙으로 관리해 AI 코딩 도구의 작업 기준을 맞췄습니다.</dd></div>
+        <div><dt>작업 규칙</dt><dd>AI 코딩 도구의 작업 기준을 맞추기 위해 AGENTS.md와 CLAUDE.md를 공통 규칙으로 관리했습니다.</dd></div>
         <div><dt>직접 구현</dt><dd>3D 오브젝트 파괴 상호작용, 기록과 보관함 흐름, 숨은 카드와 사운드를 구현했습니다.</dd></div>
         <div><dt>출시</dt><dd>앱인토스 심사 대응을 거쳐 개발 시작부터 한 달 안에 정식 출시했습니다.</dd></div>
       </dl>
       <div class="links"><a href="https://github.com/TrivialOkay/TrivialOkay_toss">github.com/TrivialOkay/TrivialOkay_toss</a></div>
-    </article>
-  </div>
+    </div>
+    <div class="phones">
+      <figure class="shot"><img src="img/byeolil-home.webp" width="600" height="1000" alt="별일 관측국 메인 화면. 어두운 우주 배경에 주황색 구슬이 떠 있고, 왁뿌볼 안에 든 운세를 꺼내보세요라고 적혀 있다."><figcaption>별일 메인 화면</figcaption></figure>
+      <figure class="shot"><img src="img/diary-home.webp" width="600" height="1000" alt="나의 여름방학 일기 첫 화면. 크레파스 바닷가 그림 위에 제목이 있다."><figcaption>나의 여름방학 일기 첫 화면</figcaption></figure>
+    </div>
+  </article>
 </section>
 
 <section class="own wrap" data-run="개인 프로젝트" aria-labelledby="own-h">
   <p class="k">개인 프로젝트</p>
   <h2 id="own-h" class="h3">직접 만든 Agent와 도구를 사용하여 AI 자동화를 실생활에 접목하여 사용 중입니다.</h2>
   <div class="own-grid">
-    <div><h3>cogito</h3><p>개인 AI 에이전트. 반복 작업을 에이전트에 맡길지 코드로 고정할지 실험하는 기반.</p></div>
-    <div><h3><a href="https://github.com/jasonwpgml/autonomous-neuro-drive">AND</a></h3><p>Autonomous Neuro Drive. 활동과 대화를 넣어 장기 지식으로 쌓는 local-first LLM 위키.</p></div>
-    <div><h3><a href="https://github.com/jasonwpgml/galpi">galpi</a></h3><p>코딩 에이전트가 코드베이스의 의도와 주의점을 찾도록 만든 코드 탐색, 맥락 규약.</p></div>
-    <div><h3>나비서</h3><p>휴대폰과 데스크톱을 연결해 배달 주문을 결제 직전 화면까지 자동으로 진행하는 MCP 기반 자동화 도구. LifeTrace(활동 기록)와 연동.</p></div>
-    <div><h3>FAPA</h3><p>개인 재무 에이전트. Playwright MCP로 카드 사용 내역을 수집해 지출을 정리하고 소비를 관리. 나비서와 연동.</p></div>
+    <div><h3>cogito</h3><p>반복 작업을 에이전트에 맡길지 코드로 고정할지, 개인 AI 에이전트로 실험합니다.</p></div>
+    <div><h3><a href="https://github.com/jasonwpgml/autonomous-neuro-drive">AND</a></h3><p>Autonomous Neuro Drive. local-first LLM 위키로, 활동과 대화를 넣어 장기 지식으로 쌓습니다.</p></div>
+    <div><h3><a href="https://github.com/jasonwpgml/galpi">galpi</a></h3><p>코딩 에이전트가 코드베이스의 의도와 주의점을 찾도록 만든 코드 탐색과 맥락 규약.</p></div>
+    <div><h3>나비서</h3><p>휴대폰과 데스크톱을 연결한 MCP 기반 자동화 도구로, 배달 주문을 결제 직전 화면까지 자동으로 진행합니다. LifeTrace(활동 기록)와도 연동합니다.</p></div>
+    <div><h3>FAPA</h3><p>Playwright MCP로 카드 사용 내역을 수집해 지출 정리와 소비 관리에 쓰는 개인 재무 에이전트로, 나비서와 연동합니다.</p></div>
     <div><h3><a href="https://github.com/jasonwpgml/Momento">Momento</a></h3><p>과외 일정을 강사, 학생, 보호자가 역할별로 나눠 보는 PWA. 기획, 개발, 배포, 운영을 혼자 맡았고, 실사용자 피드백으로 기능을 고치고 있습니다.</p></div>
   </div>
+</section>
 
-  <div class="contact" data-run="연락처">
+<section class="own end wrap" data-run="연락처">
+  <div class="contact">
     <div>
       <p class="k">연락처</p>
       <a class="mail" href="mailto:jae1450@naver.com">jae1450@naver.com</a>
@@ -573,6 +628,78 @@ html[data-edition="agent"] .head .now{visibility:hidden}
     for (const e of es) if (e.isIntersecting) running.textContent = e.target.dataset.run;
   }, { rootMargin: '-8% 0px -88% 0px' });
   document.querySelectorAll('[data-run]').forEach(s => io.observe(s));
+
+  // Wheel stops at the top of each page, so a flick or one notch never slides past where the next page starts.
+  // Smooth trackpad scrolling stays native until it crosses a page top; separate mouse-wheel notches glide 110ms each.
+  const pages = [...document.querySelectorAll('main.human > section')];
+  let stops = [];
+
+  const wheel = { last: -Infinity, value: 0, repeats: 0, continuousUntil: 0 };
+  const read = (e, now) => {
+    const raw = e.deltaY * (e.deltaMode === 1 ? 18 : e.deltaMode === 2 ? innerHeight : 1);
+    const amount = Math.abs(raw), gap = now - wheel.last;
+    const similar = amount > 0 && Math.sign(raw) === Math.sign(wheel.value) && Math.abs(amount - Math.abs(wheel.value)) <= 1;
+    wheel.repeats = gap >= 70 && gap <= 1800 && similar ? wheel.repeats + 1 : 0;
+    if (gap < 36) { wheel.continuousUntil = now + 140; wheel.repeats = 0; }
+    wheel.last = now; wheel.value = raw;
+    const coarse = e.deltaMode !== 0 || (amount >= 24 && Number.isInteger(raw)) || wheel.repeats >= 2;
+    const pulse = amount > 0 && now >= wheel.continuousUntil && gap >= 36 && coarse;
+    return { raw, pulse, delta: pulse ? Math.sign(raw) * Math.min(180, Math.max(54, amount)) : raw };
+  };
+
+  let glide = null, hold = null;
+  // After landing on a page top, the rest of that gesture is absorbed: a mouse spin while notches keep coming (up to 700ms),
+  // trackpad momentum while it decays (up to 1.5s). A push that holds its size for 6 events after 300ms is the reader going on.
+  const holdAt = (dir, now, pulse, size) => { hold = { dir, at: now, until: now + (pulse ? 180 : 140), prev: size, steady: 0 }; };
+  const stopGlide = () => { if (glide) cancelAnimationFrame(glide.raf); glide = null; };
+  const glideTo = (to, atStop) => {
+    stopGlide();
+    const g = glide = { from: scrollY, to, t0: 0, atStop, dir: Math.sign(to - scrollY) };
+    const frame = now => {
+      if (glide !== g) return;
+      if (!g.t0 || now <= g.t0) { g.t0 = g.t0 || now; g.raf = requestAnimationFrame(frame); return; }
+      const p = reduce ? 1 : Math.min(1, (now - g.t0) / 110);
+      scrollTo({ top: g.from + (g.to - g.from) * (1 - Math.pow(1 - p, 3)), behavior: 'instant' });
+      if (p < 1) { g.raf = requestAnimationFrame(frame); return; }
+      glide = null;
+      if (g.atStop) holdAt(g.dir, performance.now(), true, 0);
+    };
+    g.raf = requestAnimationFrame(frame);
+  };
+  // The first page top strictly between `from` and `to`, or the end of the travel itself.
+  const crossing = (from, to) => to > from
+    ? stops.find(s => s > from + 1 && s <= to)
+    : stops.findLast(s => s < from - 1 && s >= to);
+
+  addEventListener('wheel', e => {
+    if (e.ctrlKey || e.defaultPrevented || root.dataset.edition === 'agent' || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    const now = performance.now(), input = read(e, now), dir = Math.sign(input.raw), size = Math.abs(input.raw);
+    if (!dir) return;
+    if (hold && hold.dir === dir && now < hold.until) {
+      hold.steady = !input.pulse && size > 4 && size >= hold.prev * 0.97 ? hold.steady + 1 : 0;
+      hold.prev = size;
+      if (hold.steady < 6 || now - hold.at < 300) {
+        e.preventDefault();
+        hold.until = Math.min(hold.at + (input.pulse ? 700 : 1500), now + (input.pulse ? 180 : 140));
+        return;
+      }
+    }
+    hold = null;
+    if (glide && glide.dir !== dir) stopGlide();
+    if (glide && glide.atStop) { e.preventDefault(); return; }
+    // Switching from notches to smooth input: finish the pending notch at once, then follow the input directly.
+    if (glide && !input.pulse) { const to = glide.to; stopGlide(); scrollTo({ top: to, behavior: 'instant' }); }
+    if (!glide) stops = pages.map(s => Math.round(s.getBoundingClientRect().top + scrollY));
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const to = Math.min(max, Math.max(0, (glide ? glide.to : scrollY) + input.delta));
+    const stop = crossing(scrollY, to);
+    if (input.pulse) { e.preventDefault(); glideTo(stop ?? to, stop !== undefined); return; }
+    if (stop === undefined) return;
+    e.preventDefault();
+    scrollTo({ top: stop, behavior: 'instant' });
+    holdAt(dir, now, false, size);
+  }, { passive: false });
+  for (const type of ['pointerdown', 'touchstart', 'keydown']) addEventListener(type, () => { stopGlide(); hold = null; }, { passive: true });
 
   // Agent edition: the same facts as structured text, decoded in place.
   const data = JSON.parse(document.getElementById('profile-data').textContent);
