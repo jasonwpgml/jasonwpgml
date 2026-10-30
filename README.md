@@ -25,7 +25,7 @@ I divide work among agents and share context so they can pick up where another
 agent left off. I also organize project instructions and code navigation so
 coding agents can understand a project's structure and intent.
 
-I studied mathematics and have taught for nine years. I now also teach machine
+I studied mathematics and have been teaching for ten years. I now also teach machine
 learning and deep learning certification courses.
 
 Most of what's here started because I wanted to use it myself.
