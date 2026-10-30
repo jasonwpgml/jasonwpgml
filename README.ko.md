@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./assets/jason-banner.svg" alt="Jason 프로필 배너" width="100%" />
+  <a href="https://jasonwpgml.github.io"><img src="./assets/jason-banner.svg" alt="Jason 프로필 배너" width="100%" /></a>
+</p>
+
+<p align="center">
+  2026년 포트폴리오: <a href="https://jasonwpgml.github.io">jasonwpgml.github.io</a>
 </p>
 
 <p align="right">
@@ -23,8 +27,6 @@ AI 에이전트와 같이 일하면서 업무와 일상에서 반복되는 작�
 수학을 전공했고, 9년간 강의해 왔습니다. 지금은 머신러닝·딥러닝 자격증 강의도 하고 있습니다.
 
 여기 있는 프로젝트는 대부분 제가 쓰려고 만들기 시작했습니다.
-
-2026년 포트폴리오: [jasonwpgml.github.io](https://jasonwpgml.github.io)
 
 ## 근황
 

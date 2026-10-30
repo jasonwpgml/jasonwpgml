@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./assets/jason-banner.svg" alt="Jason profile banner" width="100%" />
+  <a href="https://jasonwpgml.github.io"><img src="./assets/jason-banner.svg" alt="Jason profile banner" width="100%" /></a>
+</p>
+
+<p align="center">
+  2026 portfolio: <a href="https://jasonwpgml.github.io">jasonwpgml.github.io</a>
 </p>
 
 <p align="right">
@@ -25,8 +29,6 @@ I studied mathematics and have taught for nine years. I now also teach machine
 learning and deep learning certification courses.
 
 Most of what's here started because I wanted to use it myself.
-
-2026 portfolio: [jasonwpgml.github.io](https://jasonwpgml.github.io)
 
 ## Lately
 
