@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -24 1208 478" role="img" aria-labelledby="title">
+  <title id="title">AgentHub 구조. Claude Code, Codex, Cursor, Grok CLI가 MCP로 AgentHub에 연결되고, AgentHub는 Git 동기화와 SSH 작업 위임으로 맥북, 삼성 노트북, 데스크톱과 이어진다.</title>
+  <metadata>Copyright (c) 2026 Jason (https://github.com/jasonwpgml). Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.</metadata>
+  <style>
+    text { fill: #f0f6fc; font: 500 16px "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    .t1 { font-weight: 600; }
+    .t2 { fill: #9ea7b3; font-size: 13.5px; }
+    .t3 { fill: #9ea7b3; font-size: 12.5px; }
+    .t3b { font-size: 14px; }
+    .code { font: 600 14.5px ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    .h { font-weight: 700; font-size: 25px; }
+    .num { font-weight: 700; font-size: 28px; fill: #3fb950; }
+    .b { fill: #161b22; stroke: #3d444d; stroke-width: 1.2; }
+    .b.hub { fill: #3fb950; fill-opacity: .1; stroke: #3fb950; stroke-opacity: .6; }
+    .b.dash { stroke-dasharray: 5 5; }
+    .b.pg { fill: #0d1117; }
+    .ln { fill: none; stroke: #9ea7b3; stroke-width: 1.4; }
+    .ln.a { stroke: #3fb950; stroke-width: 2.2; }
+    .ln.d { stroke-dasharray: 5 5; }
+    .ln.thin { stroke-width: 1; opacity: .6; }
+    .mk { fill: #9ea7b3; }
+    .mk.a { fill: #3fb950; }
+    .dot { fill: #0d1117; stroke: #9ea7b3; stroke-width: 1.4; }
+    .tick { fill: #3fb950; }
+  </style>
+  <rect x="-24" y="-24" width="1208" height="478" rx="20" fill="#0d1117"/>
+  <defs><marker id="ah-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0 1L9 5L0 9z"/></marker><marker id="ah-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk a" d="M0 1L9 5L0 9z"/></marker></defs><text class="t2" x="135" y="44" text-anchor="middle">에이전트</text><rect class="b" x="20" y="62" width="230" height="56" rx="12"/><text class="t1" x="135.0" y="96.0" text-anchor="middle">Claude Code</text><path class="ln" d="M250 90L388 150" marker-end="url(#ah-n)"/><rect class="b" x="20" y="136" width="230" height="56" rx="12"/><text class="t1" x="135.0" y="170.0" text-anchor="middle">Codex</text><path class="ln" d="M250 164L388 190" marker-end="url(#ah-n)"/><rect class="b" x="20" y="210" width="230" height="56" rx="12"/><text class="t1" x="135.0" y="244.0" text-anchor="middle">Cursor</text><path class="ln" d="M250 238L388 230" marker-end="url(#ah-n)"/><rect class="b" x="20" y="284" width="230" height="56" rx="12"/><text class="t1" x="135.0" y="318.0" text-anchor="middle">Grok CLI</text><path class="ln" d="M250 312L388 270" marker-end="url(#ah-n)"/><text class="t2" x="322" y="88" text-anchor="middle">MCP, 스킬, 규칙</text><rect class="b hub" x="390" y="62" width="380" height="278" rx="16"/><text class="h" x="580" y="118" text-anchor="middle">AgentHub</text><text class="t2" x="580" y="146" text-anchor="middle">단일 Git 저장소</text><rect class="b" x="404" y="186" width="66" height="112" rx="10"/><text class="num" x="437" y="240" text-anchor="middle">22</text><text class="t3" x="437" y="268" text-anchor="middle">스킬</text><rect class="b" x="478" y="186" width="66" height="112" rx="10"/><text class="num" x="511" y="240" text-anchor="middle">17</text><text class="t3" x="511" y="268" text-anchor="middle">MCP 도구</text><rect class="b" x="552" y="186" width="66" height="112" rx="10"/><text class="num" x="585" y="240" text-anchor="middle">12</text><text class="t3" x="585" y="268" text-anchor="middle">노트</text><rect class="b" x="626" y="186" width="66" height="112" rx="10"/><text class="num" x="659" y="240" text-anchor="middle">4</text><text class="t3" x="659" y="268" text-anchor="middle">규칙</text><rect class="b" x="700" y="186" width="66" height="112" rx="10"/><text class="num" x="733" y="240" text-anchor="middle">3</text><text class="t3" x="733" y="268" text-anchor="middle">모드</text><text class="t2" x="1025" y="44" text-anchor="middle">기기</text><rect class="b" x="910" y="62" width="230" height="70" rx="12"/><text class="t1" x="1025.0" y="94.0" text-anchor="middle">맥북 에어</text><text class="t2" x="1025.0" y="114.0" text-anchor="middle">주 작업</text><path class="ln" d="M772 130L908 97" marker-end="url(#ah-n)"/><text class="t2" x="840" y="78" text-anchor="middle">Git 동기화</text><rect class="b" x="910" y="166" width="230" height="70" rx="12"/><text class="t1" x="1025.0" y="198.0" text-anchor="middle">삼성 노트북</text><text class="t2" x="1025.0" y="218.0" text-anchor="middle">상시 서버</text><path class="ln a" d="M772 200L908 201" marker-end="url(#ah-a)"/><text class="t2" x="840" y="190" text-anchor="middle">작업 위임 (SSH)</text><rect class="b" x="910" y="270" width="230" height="70" rx="12"/><text class="t1" x="1025.0" y="302.0" text-anchor="middle">데스크톱</text><text class="t2" x="1025.0" y="322.0" text-anchor="middle">GPU</text><path class="ln" d="M772 270L908 305" marker-end="url(#ah-n)"/><text class="t2" x="840" y="326" text-anchor="middle">전원 제어 (WOL)</text><text class="t2" x="580" y="408" text-anchor="middle">작업 위임 순서: Cursor → Grok → Codex → Claude (사용량 90% 이상은 건너뜀) · 2026.11 기준</text>
+</svg>

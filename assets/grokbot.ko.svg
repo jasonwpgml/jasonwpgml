@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -24 1208 448" role="img" aria-labelledby="title">
+  <title id="title">그록봇 연결도. 코딩 에이전트의 할 일 등록과 AgentHub 알림이 웹훅으로 그록봇 클라우드 루틴에 들어가고, 그록봇은 할 일 목록, 마감 알림, 아침 브리핑을 내보낸다. 작업 위임은 MCP로 보내고 결과를 회수한다.</title>
+  <metadata>Copyright (c) 2026 Jason (https://github.com/jasonwpgml). Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.</metadata>
+  <style>
+    text { fill: #f0f6fc; font: 500 16px "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    .t1 { font-weight: 600; }
+    .t2 { fill: #9ea7b3; font-size: 13.5px; }
+    .t3 { fill: #9ea7b3; font-size: 12.5px; }
+    .t3b { font-size: 14px; }
+    .code { font: 600 14.5px ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    .h { font-weight: 700; font-size: 25px; }
+    .num { font-weight: 700; font-size: 28px; fill: #58a6ff; }
+    .b { fill: #161b22; stroke: #3d444d; stroke-width: 1.2; }
+    .b.hub { fill: #58a6ff; fill-opacity: .1; stroke: #58a6ff; stroke-opacity: .6; }
+    .b.dash { stroke-dasharray: 5 5; }
+    .b.pg { fill: #0d1117; }
+    .ln { fill: none; stroke: #9ea7b3; stroke-width: 1.4; }
+    .ln.a { stroke: #58a6ff; stroke-width: 2.2; }
+    .ln.d { stroke-dasharray: 5 5; }
+    .ln.thin { stroke-width: 1; opacity: .6; }
+    .mk { fill: #9ea7b3; }
+    .mk.a { fill: #58a6ff; }
+    .dot { fill: #0d1117; stroke: #9ea7b3; stroke-width: 1.4; }
+    .tick { fill: #58a6ff; }
+  </style>
+  <rect x="-24" y="-24" width="1208" height="448" rx="20" fill="#0d1117"/>
+  <defs><marker id="au-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0 1L9 5L0 9z"/></marker><marker id="au-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk a" d="M0 1L9 5L0 9z"/></marker></defs><rect class="b" x="20" y="56" width="300" height="72" rx="12"/><text class="t1" x="170.0" y="89.0" text-anchor="middle">Claude Code, Codex, Cursor</text><text class="t2" x="170.0" y="109.0" text-anchor="middle">할 일 등록</text><rect class="b" x="20" y="172" width="300" height="72" rx="12"/><text class="t1" x="170.0" y="205.0" text-anchor="middle">AgentHub</text><text class="t2" x="170.0" y="225.0" text-anchor="middle">업데이트, 여유 토큰 알림</text><rect class="b" x="20" y="300" width="300" height="72" rx="12"/><text class="t1" x="170.0" y="333.0" text-anchor="middle">Claude Code, Codex</text><text class="t2" x="170.0" y="353.0" text-anchor="middle">작업 위임 (MCP)</text><rect class="b" x="410" y="118" width="120" height="50" rx="25"/><text class="t1" x="470" y="149" text-anchor="middle">웹훅</text><path class="ln" d="M320 92L410 134" marker-end="url(#au-n)"/><path class="ln" d="M320 208L410 154" marker-end="url(#au-n)"/><path class="ln a" d="M530 143L618 143" marker-end="url(#au-a)"/><rect class="b hub" x="620" y="56" width="220" height="316" rx="16"/><text class="h" x="730" y="200" text-anchor="middle">그록봇</text><text class="t2" x="730" y="228" text-anchor="middle">클라우드 루틴</text><path class="ln a" d="M320 324L618 324" marker-end="url(#au-a)"/><text class="t2" x="469.0" y="314" text-anchor="middle">승인 후 실행</text><path class="ln d" d="M618 352L322 352" marker-end="url(#au-n)"/><text class="t2" x="470" y="374" text-anchor="middle">결과 회수</text><rect class="b" x="930" y="56" width="210" height="70" rx="12"/><text class="t1" x="1035.0" y="88.0" text-anchor="middle">할 일 목록</text><text class="t2" x="1035.0" y="108.0" text-anchor="middle">중복 제거</text><path class="ln" d="M840 110L928 91" marker-end="url(#au-n)"/><rect class="b" x="930" y="138" width="210" height="70" rx="12"/><text class="t1" x="1035.0" y="170.0" text-anchor="middle">마감 알림</text><text class="t2" x="1035.0" y="190.0" text-anchor="middle">1일 전, 1시간 전</text><path class="ln" d="M840 180L928 173" marker-end="url(#au-n)"/><rect class="b" x="930" y="220" width="210" height="70" rx="12"/><text class="t1" x="1035.0" y="252.0" text-anchor="middle">아침 브리핑</text><text class="t2" x="1035.0" y="272.0" text-anchor="middle">일정, 메일, 뉴스</text><path class="ln" d="M840 250L928 255" marker-end="url(#au-n)"/><rect class="b" x="930" y="302" width="210" height="70" rx="12"/><text class="t1" x="1035.0" y="334.0" text-anchor="middle">미확인 항목</text><text class="t2" x="1035.0" y="354.0" text-anchor="middle">다음 보고로 이월</text><path class="ln" d="M840 320L928 337" marker-end="url(#au-n)"/>
+</svg>

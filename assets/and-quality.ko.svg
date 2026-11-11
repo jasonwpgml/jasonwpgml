@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -24 1208 348" role="img" aria-labelledby="title">
+  <title id="title">AND 검색 품질. 질문 30개 중 8위 안에 정답이 든 수: 어휘 검색 24, 어휘와 벡터 26, LLM 재순위 추가 30.</title>
+  <metadata>Copyright (c) 2026 Jason (https://github.com/jasonwpgml). Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.</metadata>
+  <style>
+    text { fill: #f0f6fc; font: 500 16px "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    .t1 { font-weight: 600; }
+    .t2 { fill: #9ea7b3; font-size: 13.5px; }
+    .t3 { fill: #9ea7b3; font-size: 12.5px; }
+    .t3b { font-size: 14px; }
+    .code { font: 600 14.5px ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    .h { font-weight: 700; font-size: 25px; }
+    .num { font-weight: 700; font-size: 28px; fill: #bc8cff; }
+    .b { fill: #161b22; stroke: #3d444d; stroke-width: 1.2; }
+    .b.hub { fill: #bc8cff; fill-opacity: .1; stroke: #bc8cff; stroke-opacity: .6; }
+    .b.dash { stroke-dasharray: 5 5; }
+    .b.pg { fill: #0d1117; }
+    .ln { fill: none; stroke: #9ea7b3; stroke-width: 1.4; }
+    .ln.a { stroke: #bc8cff; stroke-width: 2.2; }
+    .ln.d { stroke-dasharray: 5 5; }
+    .ln.thin { stroke-width: 1; opacity: .6; }
+    .mk { fill: #9ea7b3; }
+    .mk.a { fill: #bc8cff; }
+    .dot { fill: #0d1117; stroke: #9ea7b3; stroke-width: 1.4; }
+    .tick { fill: #bc8cff; }
+  </style>
+  <rect x="-24" y="-24" width="1208" height="348" rx="20" fill="#0d1117"/>
+  <text class="t1" x="0" y="20">질문 30개 중 8위 안에 정답이 든 수 (2026.11.09)</text><text class="t2" x="0" y="75">어휘 검색</text><rect x="220" y="56" width="780" height="26" rx="6" fill="#161b22" stroke="#3d444d"/><rect x="220" y="56" width="624.0" height="26" rx="6" fill="#bc8cff" fill-opacity="0.45"/><text class="num" x="1024" y="79" style="font-size:24px">24<tspan class="t2" dx="2">/30</tspan></text><text class="t2" x="0" y="127">어휘 + 벡터</text><rect x="220" y="108" width="780" height="26" rx="6" fill="#161b22" stroke="#3d444d"/><rect x="220" y="108" width="676.0" height="26" rx="6" fill="#bc8cff" fill-opacity="0.63"/><text class="num" x="1024" y="131" style="font-size:24px">26<tspan class="t2" dx="2">/30</tspan></text><text class="t2" x="0" y="179">LLM 재순위 추가</text><rect x="220" y="160" width="780" height="26" rx="6" fill="#161b22" stroke="#3d444d"/><rect x="220" y="160" width="780.0" height="26" rx="6" fill="#bc8cff" fill-opacity="0.81"/><text class="num" x="1024" y="183" style="font-size:24px">30<tspan class="t2" dx="2">/30</tspan></text><rect class="b" x="0.0" y="216" width="275.0" height="84" rx="12"/><text class="num" x="137.5" y="256" text-anchor="middle">18,579</text><text class="t2" x="137.5" y="284" text-anchor="middle">검색 색인 행</text><rect class="b" x="295.0" y="216" width="275.0" height="84" rx="12"/><text class="num" x="432.5" y="256" text-anchor="middle">18</text><text class="t2" x="432.5" y="284" text-anchor="middle">마이그레이션</text><rect class="b" x="590.0" y="216" width="275.0" height="84" rx="12"/><text class="num" x="727.5" y="256" text-anchor="middle">21</text><text class="t2" x="727.5" y="284" text-anchor="middle">ADR</text><rect class="b" x="885.0" y="216" width="275.0" height="84" rx="12"/><text class="num" x="1022.5" y="256" text-anchor="middle">312</text><text class="t2" x="1022.5" y="284" text-anchor="middle">테스트</text>
+</svg>

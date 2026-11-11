@@ -12,64 +12,132 @@
 
 # Jason
 
-AI 에이전트와 같이 일하면서 업무와 일상에서 반복되는 작업을 자동화하고 있습니다.
-개인 에이전트와 활동·대화 기록을 정리하는 LLM 위키를 만들고, 카드 사용 내역을 모아
-정리하거나 휴대폰과 데스크톱을 연결해 일을 처리하는 도구도 직접 만들어 쓰고 있습니다.
+**시각화 교안과 에이전트 자동화**
 
-새 모델이나 에이전트에 대한 정보를 항상 찾아보고, 직접 써 보면서 실제 작업에
-적용하고 있습니다. jev를 써 보고 마음에 들었고, 요즘은 clef를 즐겨 쓰면서
-이것저것 실험해 보고 있습니다.
+지식의 최첨단을 탐색하는 탐험가, Jason입니다.<br>
+새로운 기술을 매일 찾아다니고 직접 써보며 떠오른 아이디어를 테스트합니다.<br>
+수학을 전공하고, 10년째 강의하고 있습니다. 수학에 더해 지금은 머신러닝, 딥러닝 및 AI 기술 강의도 진행 중입니다.
 
-여러 에이전트에 역할을 나눠 맡기고, 작업 맥락을 공유하며 일을 이어가게 합니다.
-코딩 에이전트가 프로젝트의 구조와 의도를 잘 파악할 수 있도록 작업 규칙과
-코드 탐색 방식도 정리하고 있습니다.
-
-수학을 전공했고, 10년째 강의하고 있습니다. 지금은 머신러닝·딥러닝 자격증 강의도 하고 있습니다.
-
-여기 있는 프로젝트는 대부분 제가 쓰려고 만들기 시작했습니다.
+채용 제안과 강의·출강 문의 모두 환영합니다.<br>
+[jae1450@naver.com](mailto:jae1450@naver.com) · [브런치](https://brunch.co.kr/@f7e7d204a7f744f) · [포트폴리오](https://jasonwpgml.github.io)
 
 ## 근황
 
-- **2026년 10월 6일부터** AICE 자격증 관련 회사에서 일하고 있습니다. 머신러닝·딥러닝 자격증 강의도 맡고 있습니다.
-- 팀장으로 참여한 PoC를 잘 마무리했습니다. 최우수 교육생 두 명 모두 저희 팀에서 나왔습니다.
+- **2026.10.06** AICE 교육 회사 입사, 머신러닝·딥러닝 자격증 강의
+- **2026.09** 베어러블 PoC 완료 (팀장)
+- **2026.07 – 08** 앱인토스 미니앱 2종 정식 출시
+
+## 01 시각화 교안과 강의
+
+AI 교육 회사 · 교안 제작, 강의 · 고등학교, 대학교 AI 자격증 강의 출강 · 2026.10 –
+
+### 3D 음성 강의
+
+<img src="./assets/lecture-3d-gradient.webp" alt="3D 선형회귀 강의의 경사하강법 장면. 보라색 손실 곡면 위에 현재 W와 b에서 학습률과 기울기를 곱해 빼는 갱신식이 떠 있다." width="100%">
+
+<sub>경사하강법: 손실 곡면 위에서 W와 b 갱신</sub>
+
+`선형회귀` `MSE` `손실 곡면` `경사하강법` `three.js` `음성 내레이션`
+
+### 모델 실험실
+
+<table>
+  <tr>
+    <td width="33%"><img src="./assets/lecture-neural.webp" alt="신경망 3D 실험 화면. 입력 8개에서 은닉층 세 개를 거쳐 주택 가격 148,756달러를 예측하는 노드와 연결이 그려져 있다." width="100%"></td>
+    <td width="33%"><img src="./assets/lecture-cnn.webp" alt="CNN 3D 실험 화면. 28×28 옷 이미지가 합성곱과 풀링 층을 지나 10개 분류 확률로 바뀌는 과정이 펼쳐져 있다." width="100%"></td>
+    <td width="33%"><img src="./assets/lecture-forest.webp" alt="랜덤 포레스트 3D 화면. 나무 32그루가 줄지어 서 있고 각 나무에서 예측 경로가 파랗게 표시된다." width="100%"></td>
+  </tr>
+  <tr>
+    <td><sub>신경망: 순전파와 역전파</sub></td>
+    <td><sub>CNN: 필터와 특징 맵</sub></td>
+    <td><sub>랜덤 포레스트: 나무 32그루의 평균</sub></td>
+  </tr>
+</table>
+
+`모델 6종` `실제 데이터로 학습` `Fashion-MNIST` `계산 따라가기` `three.js`
+
+### 동적 교안
+
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/lecture-datatype.webp" alt="데이터 타입 확인 교안. 데이터에서 수치형, 문자형, 범주형, 불리언형으로 갈라지는 가로 트리와 예시 값이 있다." width="100%"></td>
+    <td width="50%"><img src="./assets/lecture-scaling.webp" alt="스케일링 교안. 변환 전 산점도와 정규화 후 산점도가 나란히 있고 같은 점 B의 좌표 변화가 표시된다." width="100%"></td>
+  </tr>
+  <tr>
+    <td><sub>데이터 타입 트리</sub></td>
+    <td><sub>스케일링 전후 비교</sub></td>
+  </tr>
+</table>
+
+`AICE Basic` `고등학생, 비전공자 대상` `75쪽` `단계별 애니메이션` `HTML, CSS, JS` `Apple Pencil 판서`
+
+## 02 AgentHub
+
+개인 프로젝트 · 사용 중 · 2026.10 –
+
+<img src="./assets/agenthub.ko.svg" alt="AgentHub 구조. Claude Code, Codex, Cursor, Grok CLI가 MCP로 AgentHub에 연결되고, AgentHub는 Git 동기화와 SSH 작업 위임으로 맥북, 삼성 노트북, 데스크톱과 이어진다." width="100%">
+
+`MCP` `Agent Skills` `Node.js` `SQLite` `Tailscale` `SSH` `REST, OpenAPI`
+
+<img src="./assets/agenthub-discovery.webp" alt="Agent Hub의 설치 항목 가져오기 화면. 왼쪽에 대시보드, 도구, 스킬, MCP 서버 메뉴가 있고, 가운데에 reduce-ai-cliches 스킬을 검색한 결과와 Codex, Claude Code에 설치된 경로가 보인다." width="100%">
+
+<sub>설치된 스킬과 도구 검색</sub>
+
+`웹 관리 화면` `스킬 검색과 공유` `일회용 링크 로그인` `저장소 비공개`
+
+## 03 AND
+
+Autonomous Neuro Drive · 사용 중 · 2026.08 –
+
+<img src="./assets/and.ko.svg" alt="AND의 변화. Markdown 401쪽짜리 LLM 위키가 2026년 10월 SQLite 단일 원본으로 바뀌었다. 원본 기록에서 검증된 사실과 근거를 뽑고, 통합 검색 색인을 거쳐 MCP 서버로 제공한다. 위키는 파생 뷰로 남는다." width="100%">
+
+`로컬 우선` `SQLite` `FTS5` `sqlite-vec` `Kiwi 형태소 분석` `Ollama` `MCP`
+
+<img src="./assets/and-quality.ko.svg" alt="AND 검색 품질. 질문 30개 중 8위 안에 정답이 든 수: 어휘 검색 24, 어휘와 벡터 26, LLM 재순위 추가 30. 검색 색인 18,579행, 마이그레이션 18, ADR 21, 테스트 312." width="100%">
+
+`하이브리드 검색` `snowflake-arctic-embed2` `답 없는 질문은 응답 보류` `저장소 비공개`
+
+## 04 그록봇과 에이전트 자동화
+
+개인 자동화 · 사용 중 · 2026.08 –
+
+<img src="./assets/grokbot.ko.svg" alt="그록봇 연결도. 코딩 에이전트의 할 일 등록과 AgentHub 알림이 웹훅으로 그록봇 클라우드 루틴에 들어가고, 그록봇은 할 일 목록, 마감 알림, 아침 브리핑을 내보낸다. 작업 위임은 MCP로 보내고 결과를 회수한다." width="100%">
+
+`MCP` `웹훅` `클라우드 에이전트` `승인 게이트` `JSONL 위임 기록`
+
+<img src="./assets/dispatch.ko.svg" alt="기기 간 작업 위임. 맥북에서 SSH와 Tailscale로 삼성 노트북과 데스크톱에 작업을 보내고 결과를 회수한다. 삼성 노트북은 Wake-on-LAN으로 데스크톱을 깨우고 GPU 연산을 맡긴다. 아래는 한 시간 동안의 예약 작업." width="100%">
+
+`agent_dispatch` `Tailscale` `SSH` `Wake-on-LAN` `작업 스케줄러`
+
+## 05 그 밖의 프로젝트
+
+### 팀 프로젝트
+
+| 프로젝트 | 기간, 역할 | 키워드 |
+| --- | --- | --- |
+| 베어러블 PoC | 2026.08 – 09<br>5인 팀, 팀장 | `수강계획 Agent` `고교학점제` `최우수 교육생 2명 모두 우리 팀` `React` `Vite` `Vercel` · 기업 연계, 저장소 비공개 |
+| [Publium](https://github.com/hansol-dev/team-pubmed) | 2026.07<br>2인 팀, 8일<br>백엔드, 검색 Agent | `PubMed` `PMID 근거 표시` `FastAPI` `LangChain 툴콜링` `Supabase Postgres` · [서비스](https://team-pubmed.vercel.app) |
+| [버리미](https://github.com/TrinityBalance/beorimi) | 2026.08<br>3인 팀, 28시간<br>팀장, 백엔드 | `VLM 다중 품목 인식` `Structured Outputs` `Postgres 큐` `Next.js` `Supabase` · [서비스](https://frontend-delta-red-74.vercel.app/) |
+| [나의 여름방학 일기](https://github.com/TossHackathonTMD/SummerVacationDiary)<br>[별일](https://github.com/TrivialOkay/TrivialOkay_toss) | 2026.07 – 08<br>정식 출시<br>기획 주도, 팀장 | `앱인토스 미니앱` `크레파스 그림일기` `운세와 칭호` `React` `TypeScript` `three.js` |
+| [Intero](https://github.com/InteroGames/Intero) | 2026.08 | `취조 게임` `선택지 없는 답변` `LLM은 진술 이해, 판정은 코드` |
+
+### 개인 도구
+
+| 도구 | 키워드 |
+| --- | --- |
+| [Galpi](https://github.com/jasonwpgml/galpi) | `코딩 에이전트용 코드 탐색` `.galpi 인덱스` `Claude Code, Codex` `A/B 실험` |
+| [Poom](https://github.com/jasonwpgml/poom) | `로컬 모델 위임` `Ollama` `결과 검증` |
+| [AQR](https://github.com/jasonwpgml/AQR) | `AI 작업 큐` `우선순위, 의존성` `git worktree 병렬` `Draft PR` |
+| 나비서 | `MCP` `Android 자동화` `결제 차단` `비공개` |
+| FAPA | `Playwright MCP` `카드 내역 수집` `지출 정리` `비공개` |
+| Momento | `과외 일정 PWA` `강사, 학생, 보호자` `1인 개발과 운영` `비공개` |
+| cogito | `개인 AI 에이전트` `에이전트와 코드의 분담 실험` `비공개` |
+| [ExRater](https://github.com/jasonwpgml/ExRater) | `실시간 환율 계산` `환율 질문 AI` |
+| [drinklister](https://github.com/jasonwpgml/drinklister) | `디스코드 음료 주문 정리` `데스크톱 GUI` `CSV 내보내기` |
 
 ## 지금 제 위치 (제 생각입니다)
 
 <img src="./assets/dunning-kruger-current-state.ko.svg" alt="우매함의 봉우리 정상에 내 현재 상태를 표시한 더닝–크루거 효과 그래프" width="100%">
-
-## 함께 만든 프로젝트
-
-| 프로젝트 | 한 줄 설명 |
-| --- | --- |
-| [버리미](https://github.com/TrinityBalance/beorimi) | 버릴 물건을 사진으로 찍으면 강남구 기준으로 품목·규격·예상 수수료를 알려줍니다. AI가 사진을 보고, 코드는 공식 규칙에 따라 최종 판정과 금액 계산을 합니다. |
-| [나의 여름방학 일기](https://github.com/TossHackathonTMD/SummerVacationDiary) | 사진 한 장과 짧은 글로 크레파스 그림일기를 만드는 토스 미니앱입니다. 선생님 첨삭과 '참 잘했어요' 도장도 넣었습니다. |
-| [Publium](https://github.com/hansol-dev/team-pubmed) | PubMed 논문을 찾아 모아 두고, 그 내용을 AI에게 물어볼 수 있습니다. 답변의 근거가 된 논문 문장도 같이 보여줍니다. |
-| [Intero](https://github.com/InteroGames/Intero) | 선택지 없이 직접 대답하며 형사의 취조를 버티는 게임입니다. LLM은 진술을 이해하고, 판정은 코드가 맡습니다. |
-| [별일](https://github.com/TrivialOkay/TrivialOkay_toss) | 하루에 있었던 사소한 일을 기록하면 뉴스처럼 보도하고 상도 주는 토스 미니앱입니다. 기록에 운세와 엉뚱한 칭호도 붙여줍니다. |
-
-## 지금 만들고 있는 것
-
-| 프로젝트 | 한 줄 설명 |
-| --- | --- |
-| [Galpi](https://github.com/jasonwpgml/galpi) | 코딩 에이전트에게 큰 코드베이스의 구조와 현재 상태, 코드를 만든 의도를 알려주는 프로토콜입니다. Claude Code와 Codex에서 직접 측정하면서 고치고 있습니다. |
-| [Autonomous Neuro Drive](https://github.com/jasonwpgml/autonomous-neuro-drive) | PC에서 한 작업과 AI와 나눈 대화를 로컬에 저장하는 LLM 위키입니다. 나중에 필요한 내용을 다시 찾아 쓸 수 있도록 정리합니다. |
-| [Momento](https://github.com/jasonwpgml/Momento) | 과외·스터디 일정, 학생 정보, 수업 기록과 소통을 한곳에서 관리하는 PWA입니다. 설치 없이 휴대폰 브라우저에서 바로 쓸 수 있습니다. |
-| [AQR](https://github.com/jasonwpgml/AQR) | 오래 걸리는 AI 작업을 큐에 넣어 실행하는 도구입니다. 작업이 중간에 실패해도 처음부터 다시 돌리지 않도록 만들었습니다. |
-
-## 작지만 마음에 드는 것
-
-| 프로젝트 | 한 줄 설명 |
-| --- | --- |
-| [ExRater](https://github.com/jasonwpgml/ExRater) | 실시간 환율로 금액을 계산하고, 궁금한 환율을 AI에게 물어볼 수 있는 앱입니다. |
-| [drinklister](https://github.com/jasonwpgml/drinklister) | 디스코드 음료 주문을 정리하는 데스크톱 도구입니다. 누가 어떤 메뉴와 옵션을 주문했는지 정리해서 CSV로 내보냅니다. |
-
-## 계속 궁금한 것
-
-- 여러 에이전트가 작업 맥락을 공유하고, 역할을 나누고, 하던 일을 이어받게 하는 방법
-- 코딩 에이전트가 코드를 빠르게 이해하고 안전하게 수정·검증할 수 있도록 프로젝트를 구성하는 방법
-- 개인용 AI 에이전트와 LLM 위키에 쌓인 활동·대화 기록을 나중에도 찾아 쓸 수 있게 정리하는 방법
-- 에이전트의 기억을 원본 기록, 이벤트 저장소, 검색 인덱스로 나누고 데이터의 출처와 변화를 기록하는 방법, 그리고 어디까지 로컬에 둘지
-- 새 모델, 에이전트 도구, MCP 같은 프로토콜을 써 보고 실제로 계속 쓸 만한지 확인하는 것
 
 ## 자주 쓰는 도구
 
@@ -79,6 +147,8 @@ AI 에이전트와 같이 일하면서 업무와 일상에서 반복되는 작�
 **로컬 모델:** `clef` (요즘 가장 많이 씁니다) · `laya` · `Qwen` · `Gemma 4`
 
 **개발할 때 쓰는 기술:** `MCP` · `LangGraph` · `LangChain` · `OpenAI API` · `Transformers` · `RAG` · `pgvector` · `멀티 에이전트 시스템` · `장기 기억` · `Event Store` · `데이터 계보` · `Streamlit`
+
+**관심사:** `에이전트 간 맥락 공유와 인수인계` · `에이전트 친화 코드베이스` · `LLM 위키` · `원본 기록, 이벤트 저장소, 검색 인덱스` · `로컬과 클라우드 경계` · `새 모델과 에이전트 도구`
 
 <p>
   <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,sqlite,nodejs,typescript,react,vite,supabase,docker,git,githubactions" alt="Python, FastAPI, PostgreSQL, SQLite, Node.js, TypeScript, React, Vite, Supabase, Docker, Git, GitHub Actions" />

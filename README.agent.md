@@ -17,16 +17,18 @@
 [ transport ] github/markdown
 [ protocol  ] agent-profile/1.0
 [ peer      ] human.builder
-[ role      ] AI_AGENT_BUILDER
+[ role      ] FULL_STACK_AI_DEVELOPER
+[ headline  ] VISUAL_LECTURE_MATERIALS + AGENT_AUTOMATION
 [ position  ] FRONTIER::AGENT_ERA (bleed_rate=OCCASIONAL)
-[ focus     ] AGENT_COLLAB + AGENT_FRIENDLY_CODE + PERSONAL_AGENT + LLM_WIKI
-[ loop      ] BUILD + EXPERIMENT + TEACH
-[ mode      ] SOLO + COLLAB
+[ loop      ] FIND_NEW + TRY + TEST_IDEAS + TEACH
 [ state     ] BUILDING
-[ employer  ] AICE_CERTIFICATION_CO :: SINCE 2026-10-06
-[ teaching  ] CERT_COURSES[MACHINE_LEARNING, DEEP_LEARNING]
-[ last_ack  ] TEAM_POC::COMPLETE (role=TEAM_LEAD) + TOP_TRAINEE_AWARDS[2/2]::SAME_TEAM
-[ portfolio ] https://jasonwpgml.github.io/#agent
+[ employer  ] AICE_EDUCATION_CO :: SINCE 2026-10-06
+[ teaching  ] MATH[10y] + AI_CERT_COURSES[ML, DL] @ HIGH_SCHOOLS + UNIVERSITIES
+[ last_ack  ] BEARABLE_POC::COMPLETE (role=TEAM_LEAD) + TOP_TRAINEE_AWARDS[2/2]::SAME_TEAM
+[ open_to   ] JOB_OFFERS + TEACHING_INQUIRIES
+[ contact   ] jae1450@naver.com · brunch.co.kr/@f7e7d204a7f744f
+[ portfolio ] https://jasonwpgml.github.io/en/ (mode=agent)
+[ visuals   ] ./README.md
 [ trust     ] VERIFY_BY_EVIDENCE
 ```
 
@@ -38,87 +40,63 @@
   "subject": {
     "id": "github:jasonwpgml",
     "type": "human.builder",
-    "alias": "Jason"
+    "alias": "Jason",
+    "role": "full_stack_ai_developer"
   },
-  "mission": [
-    "build_how_humans_and_agents_work_together",
-    "adopt_new_agent_tooling_early",
-    "enable_agent_to_agent_collaboration",
-    "design_agent_friendly_codebases",
-    "build_personal_agents_and_llm_wikis",
-    "research_durable_agent_memory",
-    "teach_ml_and_dl"
+  "summary": "Math major. Has taught math for 10 years and now also teaches machine learning, deep learning and AI. Builds visual lecture materials and agent automation tools.",
+  "status": {
+    "employment": { "since": "2026-10-06", "org": "company in AICE certification" },
+    "teaching": "visiting instructor for AI certification courses (machine learning, deep learning) at high schools and universities",
+    "recent": ["led the Bearable PoC, completed 2026-09", "launched 2 Apps in Toss mini apps"],
+    "open_to": ["job offers", "teaching inquiries"]
+  },
+  "projects": [
+    {
+      "id": "01",
+      "name": "Lecture materials and teaching",
+      "kind": "work",
+      "since": "2026-10",
+      "items": [
+        { "name": "3D voice lecture", "topics": ["linear regression", "MSE", "loss surface", "gradient descent"], "stack": ["three.js", "voice narration"] },
+        { "name": "3D model lab", "models": 6, "includes": ["neural network", "CNN on Fashion-MNIST", "random forest"], "stack": ["three.js"] },
+        { "name": "Interactive deck", "course": "AICE Basic", "pages": 75, "audience": "high school students and non-majors", "stack": ["HTML", "CSS", "JS"] }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "AgentHub",
+      "since": "2026-10",
+      "state": "in use",
+      "does": "one Git repository that shares MCP tools, skills, notes, rules and mods across devices and agents, and dispatches jobs to other devices",
+      "agents": ["Claude Code", "Codex", "Cursor", "Grok CLI"],
+      "counts": { "as_of": "2026-11", "skills": 22, "mcp_tools": 17, "notes": 12, "rules": 4, "mods": 3 },
+      "built_on": ["MCP", "Node.js", "SQLite", "Tailscale", "SSH"],
+      "repo": "private"
+    },
+    {
+      "id": "03",
+      "name": "AND",
+      "full_name": "Autonomous Neuro Drive",
+      "since": "2026-08",
+      "state": "in use",
+      "does": "local-first personal memory; started as a 401-page Markdown LLM wiki and moved to SQLite as the single source in 2026-10",
+      "pipeline": ["raw_events", "verified_claims + evidence", "search_index (FTS5, Kiwi morphemes, sqlite-vec)", "MCP server"],
+      "search_quality": { "date": "2026-11-09", "questions": 30, "answer_in_top_8": { "lexical": 24, "lexical_plus_vectors": 26, "with_llm_rerank": 30 } },
+      "counts": { "search_index_rows": 18579, "migrations": 18, "adrs": 21, "tests": 312 },
+      "repo": "private"
+    },
+    {
+      "id": "04",
+      "name": "Grok bot and agent automation",
+      "since": "2026-08",
+      "state": "in use",
+      "grok_bot": "cloud routine fed by a webhook: to-do list, deadline reminders, morning briefing (schedule, mail, news); unchecked items roll over to the next report",
+      "delegation": "over MCP, runs after user approval, logged as JSONL",
+      "devices": "job dispatch over SSH and Tailscale, Wake-on-LAN, hourly scheduled jobs"
+    }
   ],
-  "capabilities": [
-    "agent_to_agent_communication",
-    "multi_agent_orchestration",
-    "agent_friendly_development",
-    "coding_agent_evaluation",
-    "personal_agent_development",
-    "llm_wiki_architecture",
-    "local_first_architecture",
-    "rag_architecture",
-    "long_term_memory_design",
-    "data_storage_and_provenance",
-    "backend_pipeline",
-    "evaluation_and_optimization",
-    "teaching_ml_and_dl"
-  ],
-  "daily_drivers_by_frequency": [
-    "claude[max]",
-    "codex[pro]",
-    "cursor/grok/grok-bot[premium]",
-    "jev",
-    "gemini"
-  ],
-  "local_models": [
-    "clef[heavy_use::recent]",
-    "laya",
-    "qwen",
-    "gemma4"
-  ],
-  "runtime": [
-    "mcp",
-    "python",
-    "fastapi",
-    "streamlit",
-    "langchain",
-    "langgraph",
-    "transformers",
-    "openai_api",
-    "postgresql",
-    "pgvector",
-    "sqlite",
-    "typescript",
-    "nodejs",
-    "react",
-    "vite",
-    "supabase",
-    "docker",
-    "github_actions"
-  ],
-  "coverage": [
-    "data_collection",
-    "storage",
-    "memory",
-    "retrieval",
-    "model",
-    "agent",
-    "agent_coordination",
-    "api",
-    "interface",
-    "delivery"
-  ],
-  "research_focus": [
-    "agent_to_agent_communication",
-    "agent_friendly_codebase_design",
-    "agent_ecosystem_survival_under_real_use",
-    "llm_wikis",
-    "personal_agent_architecture",
-    "local_cloud_storage_boundaries",
-    "event_stores_and_long_term_memory",
-    "retrieval_and_data_provenance"
-  ],
+  "daily_drivers_by_frequency": ["claude[max]", "codex[pro]", "cursor/grok/grok-bot[premium]", "jev", "gemini"],
+  "local_models": ["clef[heavy_use::recent]", "laya", "qwen", "gemma4"],
   "output_preference": {
     "style": ["minimal", "clean", "modern"],
     "signal_to_noise": "high",
@@ -130,21 +108,36 @@
 ## `0x01 :: ROUTING_TABLE`
 
 ```text
-[ 0xA :: SOLO ]
+[ 0x0 :: MAIN ]
 
-0xA1  github://jasonwpgml/galpi
-      ↳ CODEBASE → ROUTE[AGENT] → HANDOFF → MODIFY → VERIFY
+0x01  work://lecture-materials
+      ↳ CONCEPT → VISUALIZE[3D + ANIMATION] → NARRATE → TEACH[HIGH_SCHOOL, UNIVERSITY]
 
-0xA2  github://jasonwpgml/autonomous-neuro-drive
-      ↳ ACTIVITY + DIALOGUE → EVENT_STORE → MEMORY → LLM_WIKI[LOCAL_FIRST]
+0x02  private://agenthub
+      ↳ AGENTS[4] → MCP → HUB[GIT] → SYNC + DISPATCH[SSH] → DEVICES[3]
 
-0xA3  github://jasonwpgml/Momento
-      ↳ DATA → API → INTERFACE → PRODUCT[FULL_STACK]
+0x03  private://autonomous-neuro-drive
+      ↳ LLM_WIKI[MARKDOWN] → MIGRATE[2026-10] → RAW_EVENTS → VERIFIED_CLAIMS → SEARCH_INDEX → MCP
 
-0xA4  github://jasonwpgml/AQR
-      ↳ TASK → QUEUE → RUN[WORKFLOW]
+0x04  private://grok-bot
+      ↳ WEBHOOK → CLOUD_ROUTINE → TODO + DEADLINE + BRIEFING ; DELEGATE[MCP] → APPROVE → LOG[JSONL]
+
+[ 0xA :: PERSONAL_TOOLS ]
+
+0xA1  github://jasonwpgml/galpi         ↳ CODEBASE → INDEX[.galpi] → AGENT_NAVIGATION
+0xA2  github://jasonwpgml/poom          ↳ TASK → LOCAL_MODEL[OLLAMA] → VALIDATE
+0xA3  github://jasonwpgml/AQR           ↳ TASK → QUEUE → WORKTREE[PARALLEL] → DRAFT_PR
+0xA4  private://nabiseo                 ↳ MCP → ANDROID → STOP[PAYMENT]
+0xA5  private://fapa                    ↳ PLAYWRIGHT_MCP → CARD_STATEMENTS → EXPENSES
+0xA6  private://momento                 ↳ SCHEDULE + STUDENTS + LESSONS → PWA
+0xA7  private://cogito                  ↳ PERSONAL_AGENT → SPLIT[AGENT, CODE]
+0xA8  github://jasonwpgml/ExRater       ↳ AMOUNT → LIVE_RATE → ASK[AI]
+0xA9  github://jasonwpgml/drinklister   ↳ DISCORD → PARSE[ORDER] → CSV
 
 [ 0xB :: COLLAB ]
+
+0xB0  private://bearable-poc
+      ↳ STUDENT → PLAN[COURSE_AGENT] → CREDIT_SYSTEM ; TEAM_LEAD
 
 0xB1  github://TrinityBalance/beorimi
       ↳ PHOTO → OBSERVE[VLM] → RULE[GANGNAM] → FEE → CONFIRM[HUMAN]
@@ -153,7 +146,7 @@
       ↳ PHOTO + TEXT → DRAW[CRAYON] → REVIEW[TEACHER] → ARCHIVE
 
 0xB3  github://hansol-dev/team-pubmed
-      ↳ PUBMED → COLLECT → RETRIEVE[EVIDENCE] → ANSWER + CITE
+      ↳ PUBMED → COLLECT → RETRIEVE[EVIDENCE] → ANSWER + CITE[PMID]
 
 0xB4  github://InteroGames/Intero
       ↳ UTTERANCE → EXTRACT[CLAIM] → JUDGE[CODE] → SUSPICION

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -24 1208 488" role="img" aria-labelledby="title">
+  <title id="title">AND의 변화. Markdown 401쪽짜리 LLM 위키가 2026년 10월 SQLite 단일 원본으로 바뀌었다. 원본 기록에서 검증된 사실과 근거를 뽑고, 통합 검색 색인을 거쳐 MCP 서버로 제공한다. 위키는 파생 뷰로 남는다.</title>
+  <metadata>Copyright (c) 2026 Jason (https://github.com/jasonwpgml). Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.</metadata>
+  <style>
+    text { fill: #f0f6fc; font: 500 16px "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    .t1 { font-weight: 600; }
+    .t2 { fill: #9ea7b3; font-size: 13.5px; }
+    .t3 { fill: #9ea7b3; font-size: 12.5px; }
+    .t3b { font-size: 14px; }
+    .code { font: 600 14.5px ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    .h { font-weight: 700; font-size: 25px; }
+    .num { font-weight: 700; font-size: 28px; fill: #bc8cff; }
+    .b { fill: #161b22; stroke: #3d444d; stroke-width: 1.2; }
+    .b.hub { fill: #bc8cff; fill-opacity: .1; stroke: #bc8cff; stroke-opacity: .6; }
+    .b.dash { stroke-dasharray: 5 5; }
+    .b.pg { fill: #0d1117; }
+    .ln { fill: none; stroke: #9ea7b3; stroke-width: 1.4; }
+    .ln.a { stroke: #bc8cff; stroke-width: 2.2; }
+    .ln.d { stroke-dasharray: 5 5; }
+    .ln.thin { stroke-width: 1; opacity: .6; }
+    .mk { fill: #9ea7b3; }
+    .mk.a { fill: #bc8cff; }
+    .dot { fill: #0d1117; stroke: #9ea7b3; stroke-width: 1.4; }
+    .tick { fill: #bc8cff; }
+  </style>
+  <rect x="-24" y="-24" width="1208" height="488" rx="20" fill="#0d1117"/>
+  <defs><marker id="and-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0 1L9 5L0 9z"/></marker><marker id="and-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk a" d="M0 1L9 5L0 9z"/></marker></defs><text class="h" x="135" y="92" text-anchor="middle">LLM 위키</text><text class="t2" x="135" y="118" text-anchor="middle">2026.08 –</text><rect class="b pg" x="70" y="178" width="104" height="132" rx="6"/><rect class="b pg" x="84" y="164" width="104" height="132" rx="6"/><rect class="b pg" x="98" y="150" width="104" height="132" rx="6"/><path class="ln thin" d="M112 178h62"/><path class="ln thin" d="M112 198h48"/><path class="ln thin" d="M112 218h62"/><path class="ln thin" d="M112 238h38"/><path class="ln thin" d="M112 258h54"/><text class="t1" x="135" y="346" text-anchor="middle">Markdown 401쪽</text><text class="t2" x="135" y="370" text-anchor="middle">index.md로 탐색</text><text class="t2" x="135" y="406" text-anchor="middle">한계: 소스 약 100개</text><path class="ln a" d="M262 226L344 226" marker-end="url(#and-a)"/><text class="t2" x="298" y="206" text-anchor="middle">2026.10 전환</text><rect class="b hub" x="350" y="40" width="790" height="380" rx="16"/><text class="h" x="374" y="78" text-anchor="start">SQLite 단일 원본</text><rect class="b" x="374" y="110" width="156" height="42" rx="12"/><text class="t3b" x="452.0" y="137.0" text-anchor="middle">AI 대화 기록</text><path class="ln" d="M530 131L572 190" marker-end="url(#and-n)"/><rect class="b" x="374" y="164" width="156" height="42" rx="12"/><text class="t3b" x="452.0" y="191.0" text-anchor="middle">Agent Hub 노트</text><path class="ln" d="M530 185L572 204" marker-end="url(#and-n)"/><rect class="b" x="374" y="218" width="156" height="42" rx="12"/><text class="t3b" x="452.0" y="245.0" text-anchor="middle">작업 로그</text><path class="ln" d="M530 239L572 218" marker-end="url(#and-n)"/><rect class="b" x="374" y="272" width="156" height="42" rx="12"/><text class="t3b" x="452.0" y="299.0" text-anchor="middle">Git 기록</text><path class="ln" d="M530 293L572 232" marker-end="url(#and-n)"/><rect class="b" x="574" y="160" width="150" height="104" rx="12"/><text class="code" x="649.0" y="209.0" text-anchor="middle">raw_events</text><text class="t2" x="649.0" y="229.0" text-anchor="middle">불변 원본</text><path class="ln a" d="M724 212L762 212" marker-end="url(#and-a)"/><text class="t2" x="743" y="150" text-anchor="middle">추출, 검증</text><rect class="b" x="764" y="160" width="166" height="104" rx="12"/><text class="code" x="847.0" y="209.0" text-anchor="middle">verified_claims</text><text class="t2" x="847.0" y="229.0" text-anchor="middle">근거 연결</text><path class="ln a" d="M930 212L962 212" marker-end="url(#and-a)"/><rect class="b" x="964" y="130" width="160" height="164" rx="12"/><text class="code" x="1044" y="162" text-anchor="middle">search_index</text><text class="t2" x="1044" y="198" text-anchor="middle">FTS5</text><text class="t2" x="1044" y="228" text-anchor="middle">형태소 (Kiwi)</text><text class="t2" x="1044" y="258" text-anchor="middle">벡터 (sqlite-vec)</text><path class="ln a" d="M1044 294L1044 330" marker-end="url(#and-a)"/><rect class="b" x="964" y="332" width="160" height="68" rx="12"/><text class="t1" x="1044.0" y="363.0" text-anchor="middle">MCP 서버</text><text class="t2" x="1044.0" y="383.0" text-anchor="middle">search, ask, timeline</text><path class="ln d" d="M847 264L847 330" marker-end="url(#and-n)"/><rect class="b dash" x="764" y="332" width="166" height="68" rx="12"/><text class="t1" x="847.0" y="363.0" text-anchor="middle">위키</text><text class="t2" x="847.0" y="383.0" text-anchor="middle">파생 뷰</text>
+</svg>

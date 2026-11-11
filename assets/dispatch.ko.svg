@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -24 1208 438" role="img" aria-labelledby="title">
+  <title id="title">기기 간 작업 위임. 맥북에서 SSH와 Tailscale로 삼성 노트북과 데스크톱에 작업을 보내고 결과를 회수한다. 삼성 노트북은 Wake-on-LAN으로 데스크톱을 깨우고 GPU 연산을 맡긴다. 아래는 한 시간 동안의 예약 작업.</title>
+  <metadata>Copyright (c) 2026 Jason (https://github.com/jasonwpgml). Part of https://github.com/jasonwpgml/jasonwpgml - licensed CC BY 4.0.</metadata>
+  <style>
+    text { fill: #f0f6fc; font: 500 16px "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    .t1 { font-weight: 600; }
+    .t2 { fill: #9ea7b3; font-size: 13.5px; }
+    .t3 { fill: #9ea7b3; font-size: 12.5px; }
+    .t3b { font-size: 14px; }
+    .code { font: 600 14.5px ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    .h { font-weight: 700; font-size: 25px; }
+    .num { font-weight: 700; font-size: 28px; fill: #58a6ff; }
+    .b { fill: #161b22; stroke: #3d444d; stroke-width: 1.2; }
+    .b.hub { fill: #58a6ff; fill-opacity: .1; stroke: #58a6ff; stroke-opacity: .6; }
+    .b.dash { stroke-dasharray: 5 5; }
+    .b.pg { fill: #0d1117; }
+    .ln { fill: none; stroke: #9ea7b3; stroke-width: 1.4; }
+    .ln.a { stroke: #58a6ff; stroke-width: 2.2; }
+    .ln.d { stroke-dasharray: 5 5; }
+    .ln.thin { stroke-width: 1; opacity: .6; }
+    .mk { fill: #9ea7b3; }
+    .mk.a { fill: #58a6ff; }
+    .dot { fill: #0d1117; stroke: #9ea7b3; stroke-width: 1.4; }
+    .tick { fill: #58a6ff; }
+  </style>
+  <rect x="-24" y="-24" width="1208" height="438" rx="20" fill="#0d1117"/>
+  <defs><marker id="a2-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0 1L9 5L0 9z"/></marker><marker id="a2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk a" d="M0 1L9 5L0 9z"/></marker></defs><rect class="b" x="40" y="50" width="260" height="84" rx="12"/><text class="t1" x="170.0" y="89.0" text-anchor="middle">맥북 에어</text><text class="t2" x="170.0" y="109.0" text-anchor="middle">주 작업</text><rect class="b hub" x="450" y="50" width="260" height="84" rx="12"/><text class="t1" x="580.0" y="89.0" text-anchor="middle">삼성 노트북</text><text class="t2" x="580.0" y="109.0" text-anchor="middle">상시 서버</text><rect class="b" x="860" y="50" width="260" height="84" rx="12"/><text class="t1" x="990.0" y="89.0" text-anchor="middle">데스크톱</text><text class="t2" x="990.0" y="109.0" text-anchor="middle">GPU</text><path class="ln a" d="M300 76L448 76" marker-end="url(#a2-a)"/><text class="t2" x="374.0" y="40" text-anchor="middle">작업 위임 (SSH, Tailscale)</text><path class="ln d" d="M448 108L302 108" marker-end="url(#a2-n)"/><text class="t2" x="375" y="130" text-anchor="middle">결과 회수</text><path class="ln" d="M710 76L858 76" marker-end="url(#a2-n)"/><text class="t2" x="784.0" y="62" text-anchor="middle">Wake-on-LAN</text><path class="ln" d="M710 108L858 108" marker-end="url(#a2-n)"/><text class="t2" x="785" y="130" text-anchor="middle">GPU 연산 (SSH)</text><text class="t2" x="580" y="176" text-anchor="middle">헤드리스 실행: cursor-agent, grok, codex, claude</text><text class="t1" x="60" y="240" text-anchor="start">예약 작업 (1시간)</text><path class="ln" d="M60 300H1100"/><path class="ln thin" d="M60 292v16"/><text class="t2" x="60" y="334" text-anchor="middle">:00</text><circle class="dot" cx="60" cy="300" r="5"/><path class="ln thin" d="M233 292v16"/><text class="t2" x="233" y="334" text-anchor="middle">:10</text><circle class="dot" cx="233" cy="300" r="5"/><path class="ln thin" d="M407 292v16"/><text class="t2" x="407" y="334" text-anchor="middle">:20</text><circle class="dot" cx="407" cy="300" r="5"/><path class="ln thin" d="M580 292v16"/><text class="t2" x="580" y="334" text-anchor="middle">:30</text><circle class="dot" cx="580" cy="300" r="5"/><path class="ln thin" d="M753 292v16"/><text class="t2" x="753" y="334" text-anchor="middle">:40</text><circle class="dot" cx="753" cy="300" r="5"/><path class="ln thin" d="M927 292v16"/><text class="t2" x="927" y="334" text-anchor="middle">:50</text><circle class="dot" cx="927" cy="300" r="5"/><path class="ln thin" d="M1100 292v16"/><text class="t2" x="1100" y="334" text-anchor="middle">:60</text><rect class="tick" x="56" y="262" width="8" height="38" rx="2"/><text class="t1" x="72" y="276" text-anchor="start">수집</text><rect class="tick" x="143" y="262" width="8" height="38" rx="2"/><text class="t1" x="159" y="276" text-anchor="start">처리</text><circle class="dot" cx="66" cy="366" r="5"/><text class="t2" x="80" y="371" text-anchor="start">여유 토큰 작업 (10분마다)</text>
+</svg>
