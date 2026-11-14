@@ -52,7 +52,7 @@ Job offers and teaching inquiries are both welcome.<br>
 Everything Claude Code, Codex, Cursor and Grok have read and written for me, summed from local logs
 with [tokscale](https://github.com/junhoyeo/tokscale). Only the totals leave my machine.
 
-<img src="./assets/ai-usage.svg" alt="5.99B tokens through AI coding tools, as of 2026-10-26" width="100%">
+<img src="./assets/ai-usage.svg" alt="11.6B tokens through AI coding tools, as of 2026-11-14" width="100%">
 
 <!--END_SECTION:ai_usage-->
 

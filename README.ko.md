@@ -52,7 +52,7 @@
 AI 도구(Claude Code, Codex, Cursor, Grok)가 저 대신 읽고 쓴 토큰을 [tokscale](https://github.com/junhoyeo/tokscale)로 로컬 로그에서 합산했습니다.
 밖으로 나가는 건 합계뿐입니다.
 
-<img src="./assets/ai-usage.svg" alt="2026-10-26 기준 AI 코딩 도구로 쓴 토큰 5.99B" width="100%">
+<img src="./assets/ai-usage.svg" alt="2026-11-14 기준 AI 코딩 도구로 쓴 토큰 11.6B" width="100%">
 
 <!--END_SECTION:ai_usage-->
 
